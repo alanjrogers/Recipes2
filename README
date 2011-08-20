@@ -112,6 +112,9 @@ A table view cell that displays temperature in Centigrade, Fahrenheit, and Gas M
 ===========================================================================
 CHANGES FROM PREVIOUS VERSIONS:
 
+Version 1.5
+- Removed Editing/Adding/Deleting Recipe functionality.
+
 Version 1.4
 - Deployment target set to iPhone OS 3.2.
 

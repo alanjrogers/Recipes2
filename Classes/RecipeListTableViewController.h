@@ -47,12 +47,10 @@
  
  */
 
-#import "RecipeAddViewController.h"
-
 @class Recipe;
 @class RecipeTableViewCell;
 
-@interface RecipeListTableViewController : UITableViewController <RecipeAddDelegate, NSFetchedResultsControllerDelegate> {
+@interface RecipeListTableViewController : UITableViewController <NSFetchedResultsControllerDelegate> {
     @private
         NSFetchedResultsController *fetchedResultsController;
         NSManagedObjectContext *managedObjectContext;

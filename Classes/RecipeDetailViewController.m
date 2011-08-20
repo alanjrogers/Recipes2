@@ -57,7 +57,6 @@
 #import "RecipePhotoViewController.h"
 #import "IngredientDetailViewController.h"
 
-
 @interface RecipeDetailViewController (PrivateMethods)
 - (void)updatePhotoButton;
 @end
