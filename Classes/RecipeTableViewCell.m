@@ -2,47 +2,7 @@
      File: RecipeTableViewCell.m 
  Abstract: A table view cell that displays information about a Recipe.  It uses individual subviews of its content view to show the name, picture, description, and preparation time for each recipe.  If the table view switches to editing mode, the cell reformats itself to move the preparation time off-screen, and resizes the name and description fields accordingly.
   
-  Version: 1.4 
-  
- Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple 
- Inc. ("Apple") in consideration of your agreement to the following 
- terms, and your use, installation, modification or redistribution of 
- this Apple software constitutes acceptance of these terms.  If you do 
- not agree with these terms, please do not use, install, modify or 
- redistribute this Apple software. 
-  
- In consideration of your agreement to abide by the following terms, and 
- subject to these terms, Apple grants you a personal, non-exclusive 
- license, under Apple's copyrights in this original Apple software (the 
- "Apple Software"), to use, reproduce, modify and redistribute the Apple 
- Software, with or without modifications, in source and/or binary forms; 
- provided that if you redistribute the Apple Software in its entirety and 
- without modifications, you must retain this notice and the following 
- text and disclaimers in all such redistributions of the Apple Software. 
- Neither the name, trademarks, service marks or logos of Apple Inc. may 
- be used to endorse or promote products derived from the Apple Software 
- without specific prior written permission from Apple.  Except as 
- expressly stated in this notice, no other rights or licenses, express or 
- implied, are granted by Apple herein, including but not limited to any 
- patent rights that may be infringed by your derivative works or by other 
- works in which the Apple Software may be incorporated. 
-  
- The Apple Software is provided by Apple on an "AS IS" basis.  APPLE 
- MAKES NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION 
- THE IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS 
- FOR A PARTICULAR PURPOSE, REGARDING THE APPLE SOFTWARE OR ITS USE AND 
- OPERATION ALONE OR IN COMBINATION WITH YOUR PRODUCTS. 
-  
- IN NO EVENT SHALL APPLE BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL 
- OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
- SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
- INTERRUPTION) ARISING IN ANY WAY OUT OF THE USE, REPRODUCTION, 
- MODIFICATION AND/OR DISTRIBUTION OF THE APPLE SOFTWARE, HOWEVER CAUSED 
- AND WHETHER UNDER THEORY OF CONTRACT, TORT (INCLUDING NEGLIGENCE), 
- STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE 
- POSSIBILITY OF SUCH DAMAGE. 
-  
- Copyright (C) 2010 Apple Inc. All Rights Reserved. 
+  Version: 1.5
   
  */
 
@@ -64,7 +24,7 @@
 
 @implementation RecipeTableViewCell
 
-@synthesize recipe, imageView, nameLabel, overviewLabel, prepTimeLabel;
+@synthesize recipe = _recipe, nameLabel = _nameLabel, overviewLabel = _overviewLabel, prepTimeLabel = _prepTimeLabel;
 
 
 #pragma mark -
@@ -73,35 +33,32 @@
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
 
 	if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
-		imageView.contentMode = UIViewContentModeScaleAspectFit;
-        [self.contentView addSubview:imageView];
+		self.imageView.contentMode = UIViewContentModeScaleAspectFit;
 
-        overviewLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-        [overviewLabel setFont:[UIFont systemFontOfSize:12.0]];
-        [overviewLabel setTextColor:[UIColor darkGrayColor]];
-        [overviewLabel setHighlightedTextColor:[UIColor whiteColor]];
-        [self.contentView addSubview:overviewLabel];
+        _overviewLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+        [_overviewLabel setFont:[UIFont systemFontOfSize:12.0]];
+        [_overviewLabel setTextColor:[UIColor darkGrayColor]];
+        [_overviewLabel setHighlightedTextColor:[UIColor whiteColor]];
+        [self.contentView addSubview:_overviewLabel];
 
-        prepTimeLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-        prepTimeLabel.textAlignment = UITextAlignmentRight;
-        [prepTimeLabel setFont:[UIFont systemFontOfSize:12.0]];
-        [prepTimeLabel setTextColor:[UIColor blackColor]];
-        [prepTimeLabel setHighlightedTextColor:[UIColor whiteColor]];
-		prepTimeLabel.minimumFontSize = 7.0;
-		prepTimeLabel.lineBreakMode = UILineBreakModeTailTruncation;
-        [self.contentView addSubview:prepTimeLabel];
+        _prepTimeLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+        _prepTimeLabel.textAlignment = UITextAlignmentRight;
+        [_prepTimeLabel setFont:[UIFont systemFontOfSize:12.0]];
+        [_prepTimeLabel setTextColor:[UIColor blackColor]];
+        [_prepTimeLabel setHighlightedTextColor:[UIColor whiteColor]];
+		_prepTimeLabel.minimumFontSize = 7.0;
+		_prepTimeLabel.lineBreakMode = UILineBreakModeTailTruncation;
+        [self.contentView addSubview:_prepTimeLabel];
 
-        nameLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-        [nameLabel setFont:[UIFont boldSystemFontOfSize:14.0]];
-        [nameLabel setTextColor:[UIColor blackColor]];
-        [nameLabel setHighlightedTextColor:[UIColor whiteColor]];
-        [self.contentView addSubview:nameLabel];
+        _nameLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+        [_nameLabel setFont:[UIFont boldSystemFontOfSize:14.0]];
+        [_nameLabel setTextColor:[UIColor blackColor]];
+        [_nameLabel setHighlightedTextColor:[UIColor whiteColor]];
+        [self.contentView addSubview:_nameLabel];
     }
 
     return self;
 }
-
 
 #pragma mark -
 #pragma mark Laying out subviews
@@ -112,17 +69,16 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
 	
-    [imageView setFrame:[self _imageViewFrame]];
-    [nameLabel setFrame:[self _nameLabelFrame]];
-    [overviewLabel setFrame:[self _descriptionLabelFrame]];
-    [prepTimeLabel setFrame:[self _prepTimeLabelFrame]];
+    [self.imageView setFrame:[self _imageViewFrame]];
+    [self.nameLabel setFrame:[self _nameLabelFrame]];
+    [self.overviewLabel setFrame:[self _descriptionLabelFrame]];
+    [self.prepTimeLabel setFrame:[self _prepTimeLabelFrame]];
     if (self.editing) {
-        prepTimeLabel.alpha = 0.0;
+        self.prepTimeLabel.alpha = 0.0;
     } else {
-        prepTimeLabel.alpha = 1.0;
+        self.prepTimeLabel.alpha = 1.0;
     }
 }
-
 
 #define IMAGE_SIZE          42.0
 #define EDITING_INSET       10.0
@@ -170,14 +126,14 @@
 #pragma mark Recipe set accessor
 
 - (void)setRecipe:(Recipe *)newRecipe {
-    if (newRecipe != recipe) {
-        [recipe release];
-        recipe = [newRecipe retain];
+    if (newRecipe != _recipe) {
+        [_recipe release];
+        _recipe = [newRecipe retain];
 	}
-	imageView.image = recipe.thumbnailImage;
-	nameLabel.text = recipe.name;
-	overviewLabel.text = recipe.overview;
-	prepTimeLabel.text = recipe.prepTime;
+	self.imageView.image = self.recipe.thumbnailImage;
+	self.nameLabel.text = self.recipe.name;
+	self.overviewLabel.text = self.recipe.overview;
+	self.prepTimeLabel.text = self.recipe.prepTime;
 }
 
 
@@ -185,11 +141,10 @@
 #pragma mark Memory management
 
 - (void)dealloc {
-    [recipe release];
-    [imageView release];
-    [nameLabel release];
-    [overviewLabel release];
-    [prepTimeLabel release];
+    [_recipe release], _recipe = nil;
+    [_nameLabel release], _nameLabel = nil;
+    [_overviewLabel release], _overviewLabel = nil;
+    [_prepTimeLabel release], _prepTimeLabel = nil;
     [super dealloc];
 }
 

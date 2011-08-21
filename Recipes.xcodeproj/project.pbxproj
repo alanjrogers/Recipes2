@@ -19,7 +19,6 @@
 		2858E6570FC63C2500DEACE0 /* RecipeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F09150DCA9C0500D424D6 /* RecipeDetailViewController.m */; };
 		2858E66B0FC6404C00DEACE0 /* InstructionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 286DD99F0DE747BF005EF016 /* InstructionsViewController.m */; };
 		2858E70B0FC6583300DEACE0 /* Ingredient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2858E70A0FC6583300DEACE0 /* Ingredient.m */; };
-		2858E7790FC6625400DEACE0 /* EditingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2858E7780FC6625400DEACE0 /* EditingTableViewCell.m */; };
 		28963B450DFC7F5F005CC955 /* TemperatureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28963B440DFC7F5F005CC955 /* TemperatureCell.m */; };
 		28963B800DFC8214005CC955 /* TemperatureData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28963B7F0DFC8214005CC955 /* TemperatureData.plist */; };
 		28B35EC40FC5DCD100ED0C40 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B35EC30FC5DCD100ED0C40 /* CoreData.framework */; };
@@ -41,7 +40,6 @@
 		53CE978F11C6E9DC00594C94 /* InstructionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53CE978D11C6E9DC00594C94 /* InstructionsView.xib */; };
 		53CE979211C6E9E800594C94 /* TemperatureConverter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53CE979011C6E9E800594C94 /* TemperatureConverter.xib */; };
 		53CE979511C6E9EF00594C94 /* WeightConverter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53CE979311C6E9EF00594C94 /* WeightConverter.xib */; };
-		53CE979811C6E9FD00594C94 /* EditingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53CE979611C6E9FD00594C94 /* EditingTableViewCell.xib */; };
 		53CE979B11C6EA0600594C94 /* TemperatureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53CE979911C6EA0600594C94 /* TemperatureCell.xib */; };
 		53CE97A011C6EA1000594C94 /* choosePhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 53CE979C11C6EA1000594C94 /* choosePhoto.png */; };
 		53CE97A111C6EA1000594C94 /* convert.png in Resources */ = {isa = PBXBuildFile; fileRef = 53CE979D11C6EA1000594C94 /* convert.png */; };
@@ -70,8 +68,6 @@
 		283EA3630DEE388300DBD352 /* RecipeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecipeTableViewCell.m; path = Classes/RecipeTableViewCell.m; sourceTree = "<group>"; };
 		2858E7090FC6583300DEACE0 /* Ingredient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Ingredient.h; path = Classes/Ingredient.h; sourceTree = "<group>"; };
 		2858E70A0FC6583300DEACE0 /* Ingredient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Ingredient.m; path = Classes/Ingredient.m; sourceTree = "<group>"; };
-		2858E7770FC6625400DEACE0 /* EditingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditingTableViewCell.h; path = Classes/EditingTableViewCell.h; sourceTree = "<group>"; };
-		2858E7780FC6625400DEACE0 /* EditingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditingTableViewCell.m; path = Classes/EditingTableViewCell.m; sourceTree = "<group>"; };
 		286DD99E0DE747BF005EF016 /* InstructionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstructionsViewController.h; sourceTree = "<group>"; };
 		286DD99F0DE747BF005EF016 /* InstructionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstructionsViewController.m; sourceTree = "<group>"; };
 		28963B430DFC7F5F005CC955 /* TemperatureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TemperatureCell.h; path = Classes/TemperatureCell.h; sourceTree = "<group>"; };
@@ -101,7 +97,6 @@
 		53CE978E11C6E9DC00594C94 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/InstructionsView.xib; sourceTree = SOURCE_ROOT; };
 		53CE979111C6E9E800594C94 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TemperatureConverter.xib; sourceTree = "<group>"; };
 		53CE979411C6E9EF00594C94 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WeightConverter.xib; sourceTree = "<group>"; };
-		53CE979711C6E9FD00594C94 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EditingTableViewCell.xib; sourceTree = "<group>"; };
 		53CE979A11C6EA0600594C94 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TemperatureCell.xib; sourceTree = "<group>"; };
 		53CE979C11C6EA1000594C94 /* choosePhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = choosePhoto.png; path = images/choosePhoto.png; sourceTree = "<group>"; };
 		53CE979D11C6EA1000594C94 /* convert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = convert.png; path = images/convert.png; sourceTree = "<group>"; };
@@ -261,9 +256,6 @@
 		966654DF0DED0F0D009F55E3 /* Table Cells */ = {
 			isa = PBXGroup;
 			children = (
-				2858E7770FC6625400DEACE0 /* EditingTableViewCell.h */,
-				2858E7780FC6625400DEACE0 /* EditingTableViewCell.m */,
-				53CE979611C6E9FD00594C94 /* EditingTableViewCell.xib */,
 				283EA3620DEE388300DBD352 /* RecipeTableViewCell.h */,
 				283EA3630DEE388300DBD352 /* RecipeTableViewCell.m */,
 				28963B430DFC7F5F005CC955 /* TemperatureCell.h */,
@@ -340,7 +332,6 @@
 				53CE978F11C6E9DC00594C94 /* InstructionsView.xib in Resources */,
 				53CE979211C6E9E800594C94 /* TemperatureConverter.xib in Resources */,
 				53CE979511C6E9EF00594C94 /* WeightConverter.xib in Resources */,
-				53CE979811C6E9FD00594C94 /* EditingTableViewCell.xib in Resources */,
 				53CE979B11C6EA0600594C94 /* TemperatureCell.xib in Resources */,
 				53CE97A011C6EA1000594C94 /* choosePhoto.png in Resources */,
 				53CE97A111C6EA1000594C94 /* convert.png in Resources */,
@@ -377,7 +368,6 @@
 				2858E6570FC63C2500DEACE0 /* RecipeDetailViewController.m in Sources */,
 				2858E66B0FC6404C00DEACE0 /* InstructionsViewController.m in Sources */,
 				2858E70B0FC6583300DEACE0 /* Ingredient.m in Sources */,
-				2858E7790FC6625400DEACE0 /* EditingTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,14 +412,6 @@
 				53CE979411C6E9EF00594C94 /* en */,
 			);
 			name = WeightConverter.xib;
-			sourceTree = "<group>";
-		};
-		53CE979611C6E9FD00594C94 /* EditingTableViewCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				53CE979711C6E9FD00594C94 /* en */,
-			);
-			name = EditingTableViewCell.xib;
 			sourceTree = "<group>";
 		};
 		53CE979911C6EA0600594C94 /* TemperatureCell.xib */ = {
