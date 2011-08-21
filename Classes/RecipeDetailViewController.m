@@ -13,7 +13,6 @@
 #import "Ingredient.h"
 
 #import "InstructionsViewController.h"
-#import "RecipePhotoViewController.h"
 
 @implementation RecipeDetailViewController
 
@@ -32,7 +31,8 @@
 #pragma mark -
 #pragma mark View controller
 
-- (void)viewDidLoad {    
+- (void)viewDidLoad {
+	[super viewDidLoad];
     // Create and set the table header view.
     if (self.tableHeaderView == nil) {
         [[NSBundle mainBundle] loadNibNamed:@"DetailHeaderView" owner:self options:nil];

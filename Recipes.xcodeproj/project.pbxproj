@@ -17,7 +17,6 @@
 		282FFCBB0FC8AAB500A28FE2 /* Recipes.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 282FFCBA0FC8AAB500A28FE2 /* Recipes.sqlite */; };
 		283EA3640DEE388300DBD352 /* RecipeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 283EA3630DEE388300DBD352 /* RecipeTableViewCell.m */; };
 		2858E6570FC63C2500DEACE0 /* RecipeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F09150DCA9C0500D424D6 /* RecipeDetailViewController.m */; };
-		2858E65E0FC63FEB00DEACE0 /* RecipePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A0E6150DE92A470087803E /* RecipePhotoViewController.m */; };
 		2858E66B0FC6404C00DEACE0 /* InstructionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 286DD99F0DE747BF005EF016 /* InstructionsViewController.m */; };
 		2858E70B0FC6583300DEACE0 /* Ingredient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2858E70A0FC6583300DEACE0 /* Ingredient.m */; };
 		2858E7790FC6625400DEACE0 /* EditingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2858E7780FC6625400DEACE0 /* EditingTableViewCell.m */; };
@@ -107,8 +106,6 @@
 		53CE979C11C6EA1000594C94 /* choosePhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = choosePhoto.png; path = images/choosePhoto.png; sourceTree = "<group>"; };
 		53CE979D11C6EA1000594C94 /* convert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = convert.png; path = images/convert.png; sourceTree = "<group>"; };
 		53CE979E11C6EA1000594C94 /* fork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fork.png; path = images/fork.png; sourceTree = "<group>"; };
-		69A0E6140DE92A470087803E /* RecipePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipePhotoViewController.h; sourceTree = "<group>"; };
-		69A0E6150DE92A470087803E /* RecipePhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipePhotoViewController.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6516D3313FF7D690022E6CE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -140,8 +137,6 @@
 				286DD99E0DE747BF005EF016 /* InstructionsViewController.h */,
 				286DD99F0DE747BF005EF016 /* InstructionsViewController.m */,
 				53CE978D11C6E9DC00594C94 /* InstructionsView.xib */,
-				69A0E6140DE92A470087803E /* RecipePhotoViewController.h */,
-				69A0E6150DE92A470087803E /* RecipePhotoViewController.m */,
 			);
 			name = "Recipe View Controllers";
 			path = Classes;
@@ -380,7 +375,6 @@
 				280CEB6D0E38093400021185 /* MetricPickerController.m in Sources */,
 				28D3D9AD0FC33C27000F9EF1 /* Recipes.xcdatamodel in Sources */,
 				2858E6570FC63C2500DEACE0 /* RecipeDetailViewController.m in Sources */,
-				2858E65E0FC63FEB00DEACE0 /* RecipePhotoViewController.m in Sources */,
 				2858E66B0FC6404C00DEACE0 /* InstructionsViewController.m in Sources */,
 				2858E70B0FC6583300DEACE0 /* Ingredient.m in Sources */,
 				2858E7790FC6625400DEACE0 /* EditingTableViewCell.m in Sources */,

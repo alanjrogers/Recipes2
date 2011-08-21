@@ -20,6 +20,7 @@
 #pragma mark UIViewController overrides
 
 - (void)viewDidLoad {
+	[super viewDidLoad];
     // Configure the navigation bar
     self.title = @"Recipes";
 	

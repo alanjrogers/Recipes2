@@ -70,6 +70,8 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+	self.title = @"Converter";
+
 	UISegmentedControl* segmentedControl = [((RecipesAppDelegate*)[[UIApplication sharedApplication] delegate]) segmentedControlWithSelectedIndex:1];
 	
 	self.navigationItem.titleView = segmentedControl;
