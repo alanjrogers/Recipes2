@@ -23,7 +23,7 @@
 @synthesize ingredients = _ingredients;
 
 @synthesize tableHeaderView = _tableHeaderView;
-@synthesize photoButton = _photoButton;
+@synthesize photoImageView = _photoImageView;
 @synthesize nameTextField = _nameTextField, overviewTextField = _overviewTextField, prepTimeTextField = _prepTimeTextField;
 
 #define TYPE_SECTION 0
@@ -46,7 +46,7 @@
     
     [super viewWillAppear:animated];
 	
-    [self.photoButton setImage:self.recipe.thumbnailImage forState:UIControlStateNormal];
+    self.photoImageView.image = self.recipe.thumbnailImage;
 	self.navigationItem.title = self.recipe.name;
     self.nameTextField.text = self.recipe.name;    
     self.overviewTextField.text = self.recipe.overview;    
@@ -76,7 +76,7 @@
 
 - (void)viewDidUnload {
     self.tableHeaderView = nil;
-	self.photoButton = nil;
+	self.photoImageView = nil;
 	self.nameTextField = nil;
 	self.overviewTextField = nil;
 	self.prepTimeTextField = nil;
@@ -230,7 +230,7 @@
 
 - (void)dealloc {
     [_tableHeaderView release], _tableHeaderView = nil;
-    [_photoButton release], _photoButton = nil;
+    [_photoImageView release], _photoImageView = nil;
     [_nameTextField release], _nameTextField = nil;
     [_overviewTextField release], _overviewTextField = nil;
     [_prepTimeTextField release], _prepTimeTextField = nil;

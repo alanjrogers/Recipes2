@@ -15,7 +15,7 @@
 @property (nonatomic, retain) NSMutableArray *ingredients;
 
 @property (nonatomic, retain) IBOutlet UIView *tableHeaderView;
-@property (nonatomic, retain) IBOutlet UIButton *photoButton;
+@property (nonatomic, retain) IBOutlet UIImageView *photoImageView;
 @property (nonatomic, retain) IBOutlet UITextField *nameTextField;
 @property (nonatomic, retain) IBOutlet UITextField *overviewTextField;
 @property (nonatomic, retain) IBOutlet UITextField *prepTimeTextField;
