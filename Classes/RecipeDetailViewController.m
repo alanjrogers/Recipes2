@@ -13,9 +13,7 @@
 #import "Ingredient.h"
 
 #import "InstructionsViewController.h"
-#import "TypeSelectionViewController.h"
 #import "RecipePhotoViewController.h"
-#import "IngredientDetailViewController.h"
 
 @implementation RecipeDetailViewController
 

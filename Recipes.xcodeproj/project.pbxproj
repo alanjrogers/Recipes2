@@ -19,9 +19,7 @@
 		2858E6570FC63C2500DEACE0 /* RecipeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F09150DCA9C0500D424D6 /* RecipeDetailViewController.m */; };
 		2858E65E0FC63FEB00DEACE0 /* RecipePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A0E6150DE92A470087803E /* RecipePhotoViewController.m */; };
 		2858E66B0FC6404C00DEACE0 /* InstructionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 286DD99F0DE747BF005EF016 /* InstructionsViewController.m */; };
-		2858E6C00FC6464700DEACE0 /* TypeSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 286DDA6E0DE77039005EF016 /* TypeSelectionViewController.m */; };
 		2858E70B0FC6583300DEACE0 /* Ingredient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2858E70A0FC6583300DEACE0 /* Ingredient.m */; };
-		2858E7430FC65DDE00DEACE0 /* IngredientDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966D0AFB0DF4CB4D0054F11F /* IngredientDetailViewController.m */; };
 		2858E7790FC6625400DEACE0 /* EditingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2858E7780FC6625400DEACE0 /* EditingTableViewCell.m */; };
 		28963B450DFC7F5F005CC955 /* TemperatureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28963B440DFC7F5F005CC955 /* TemperatureCell.m */; };
 		28963B800DFC8214005CC955 /* TemperatureData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28963B7F0DFC8214005CC955 /* TemperatureData.plist */; };
@@ -77,8 +75,6 @@
 		2858E7780FC6625400DEACE0 /* EditingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditingTableViewCell.m; path = Classes/EditingTableViewCell.m; sourceTree = "<group>"; };
 		286DD99E0DE747BF005EF016 /* InstructionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstructionsViewController.h; sourceTree = "<group>"; };
 		286DD99F0DE747BF005EF016 /* InstructionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstructionsViewController.m; sourceTree = "<group>"; };
-		286DDA6D0DE77039005EF016 /* TypeSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeSelectionViewController.h; sourceTree = "<group>"; };
-		286DDA6E0DE77039005EF016 /* TypeSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeSelectionViewController.m; sourceTree = "<group>"; };
 		28963B430DFC7F5F005CC955 /* TemperatureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TemperatureCell.h; path = Classes/TemperatureCell.h; sourceTree = "<group>"; };
 		28963B440DFC7F5F005CC955 /* TemperatureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TemperatureCell.m; path = Classes/TemperatureCell.m; sourceTree = "<group>"; };
 		28963B7F0DFC8214005CC955 /* TemperatureData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = TemperatureData.plist; path = RecipeData/TemperatureData.plist; sourceTree = "<group>"; };
@@ -114,8 +110,6 @@
 		69A0E6140DE92A470087803E /* RecipePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipePhotoViewController.h; sourceTree = "<group>"; };
 		69A0E6150DE92A470087803E /* RecipePhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipePhotoViewController.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		966D0AFA0DF4CB4D0054F11F /* IngredientDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IngredientDetailViewController.h; sourceTree = "<group>"; };
-		966D0AFB0DF4CB4D0054F11F /* IngredientDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IngredientDetailViewController.m; sourceTree = "<group>"; };
 		F6516D3313FF7D690022E6CE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -143,10 +137,6 @@
 				180F09140DCA9C0500D424D6 /* RecipeDetailViewController.h */,
 				180F09150DCA9C0500D424D6 /* RecipeDetailViewController.m */,
 				53CE978711C6E9A200594C94 /* DetailHeaderView.xib */,
-				966D0AFA0DF4CB4D0054F11F /* IngredientDetailViewController.h */,
-				966D0AFB0DF4CB4D0054F11F /* IngredientDetailViewController.m */,
-				286DDA6D0DE77039005EF016 /* TypeSelectionViewController.h */,
-				286DDA6E0DE77039005EF016 /* TypeSelectionViewController.m */,
 				286DD99E0DE747BF005EF016 /* InstructionsViewController.h */,
 				286DD99F0DE747BF005EF016 /* InstructionsViewController.m */,
 				53CE978D11C6E9DC00594C94 /* InstructionsView.xib */,
@@ -392,9 +382,7 @@
 				2858E6570FC63C2500DEACE0 /* RecipeDetailViewController.m in Sources */,
 				2858E65E0FC63FEB00DEACE0 /* RecipePhotoViewController.m in Sources */,
 				2858E66B0FC6404C00DEACE0 /* InstructionsViewController.m in Sources */,
-				2858E6C00FC6464700DEACE0 /* TypeSelectionViewController.m in Sources */,
 				2858E70B0FC6583300DEACE0 /* Ingredient.m in Sources */,
-				2858E7430FC65DDE00DEACE0 /* IngredientDetailViewController.m in Sources */,
 				2858E7790FC6625400DEACE0 /* EditingTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

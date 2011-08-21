@@ -59,7 +59,6 @@
 - (void)viewDidLoad {
     UINavigationItem *navigationItem = self.navigationItem;
     navigationItem.title = @"Instructions";
-    self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 
