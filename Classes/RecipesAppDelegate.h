@@ -8,20 +8,22 @@
 @class RecipeListTableViewController;
 @class UnitConverterTableViewController;
 
-@interface RecipesAppDelegate : NSObject <UIApplicationDelegate>
+@interface RecipesAppDelegate : NSObject <UIApplicationDelegate> 
 
 @property (nonatomic, retain) IBOutlet UINavigationController *recipesNavigationController;
-@property (nonatomic, retain) IBOutlet UINavigationController *unitConverterNavigationController;
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet RecipeListTableViewController *recipeListController;
-@property (nonatomic, retain) IBOutlet UnitConverterTableViewController *unitConverterViewController;
+@property (nonatomic, retain) IBOutlet UINavigationController *converterNavigationController;
 
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 - (NSString *)applicationDocumentsDirectory;
+
+// Segmented Control
+- (UISegmentedControl*)segmentedControlWithSelectedIndex:(NSUInteger)selectedSegmentIndex;
 
 @end
 

@@ -238,6 +238,7 @@
 			children = (
 				28CB440A0DF7129800C7BCF9 /* README */,
 				28FCBE8F0DE69AD4007A15C7 /* Model and Model Classes */,
+				F6E6B6BD1400F5F2003032AA /* View Controller */,
 				286DDA180DE761A2005EF016 /* MainWindow */,
 				080E96DDFE201D6D7F000001 /* Recipe View Controllers */,
 				28E87BED0DF21E0D00EE412E /* Converter View Controllers */,
@@ -285,6 +286,13 @@
 				53CE979911C6EA0600594C94 /* TemperatureCell.xib */,
 			);
 			name = "Table Cells";
+			sourceTree = "<group>";
+		};
+		F6E6B6BD1400F5F2003032AA /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

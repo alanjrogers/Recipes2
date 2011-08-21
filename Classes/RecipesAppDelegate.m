@@ -16,15 +16,24 @@
 }
 
 @synthesize recipesNavigationController = _recipesNavigationController;
-@synthesize unitConverterNavigationController = _unitConverterNavigationController;
 @synthesize window = _window;
 @synthesize recipeListController = _recipeListController;
-@synthesize unitConverterViewController = _unitConverterViewController;
+@synthesize converterNavigationController = _converterNavigationController;
+
+#pragma mark -
+
+- (void)switchToRecipesView {
+	self.recipeListController.managedObjectContext = self.managedObjectContext;
+	self.window.rootViewController = self.recipesNavigationController;
+}
+
+- (void)switchToConverterView {
+	self.window.rootViewController = self.converterNavigationController;
+}
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
-    self.recipeListController.managedObjectContext = self.managedObjectContext;
-    [self.window addSubview:self.recipesNavigationController.view];
-    [self.window makeKeyAndVisible];
+	[self switchToRecipesView];
+	[self.window makeKeyAndVisible];
 }
 
 /**
@@ -138,6 +147,24 @@
 	return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
 }
 
+- (void)segmentedControlValueChanged:(id)sender {
+	if ([(UISegmentedControl*)sender selectedSegmentIndex] == 0) {
+		[self switchToRecipesView];
+	} else {
+		[self switchToConverterView];
+	}
+}
+
+- (UISegmentedControl*)segmentedControlWithSelectedIndex:(NSUInteger)selectedSegmentIndex {
+			
+	UISegmentedControl* segmentedControl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Recipes", @"Converter", nil]];
+	
+	[segmentedControl setSegmentedControlStyle:UISegmentedControlStyleBar];
+	[segmentedControl setSelectedSegmentIndex:selectedSegmentIndex];
+	[segmentedControl addTarget:self action:@selector(segmentedControlValueChanged:) forControlEvents:UIControlEventValueChanged];
+	
+	return [segmentedControl autorelease];
+}
 
 #pragma mark -
 #pragma mark Memory management
@@ -146,12 +173,10 @@
     [_managedObjectContext release], _managedObjectContext = nil;
     [_managedObjectModel release], _managedObjectModel = nil;
     [_persistentStoreCoordinator release], _persistentStoreCoordinator = nil;
-	
-    [_unitConverterViewController release], _unitConverterViewController = nil;
-    [_recipeListController release], _recipeListController = nil;
+	[_recipeListController release], _recipeListController = nil;
     [_window release], _window = nil;
 	[_recipesNavigationController release], _recipesNavigationController = nil;
-	[_unitConverterNavigationController release], _unitConverterNavigationController = nil;
+	[_converterNavigationController release], _converterNavigationController = nil;
     [super dealloc];
 }
 

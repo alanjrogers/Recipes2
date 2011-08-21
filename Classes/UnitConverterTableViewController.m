@@ -51,6 +51,7 @@
 
 #import "WeightConverterViewController.h"
 #import "TemperatureConverterViewController.h"
+#import "RecipesAppDelegate.h"
 
 @implementation UnitConverterTableViewController
 
@@ -67,6 +68,20 @@
     return self;
 }
 
+- (void)viewDidLoad {
+	[super viewDidLoad];
+	UISegmentedControl* segmentedControl = [((RecipesAppDelegate*)[[UIApplication sharedApplication] delegate]) segmentedControlWithSelectedIndex:1];
+	
+	self.navigationItem.titleView = segmentedControl;
+}
+
+// TODO: Figure out how to fix this :P
+- (void)viewWillAppear:(BOOL)animated {
+	
+	[((UISegmentedControl*)self.navigationItem.titleView) setSelectedSegmentIndex:1];
+	
+	[super viewWillAppear:animated];
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 2;

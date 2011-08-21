@@ -10,6 +10,7 @@
 #import "RecipeDetailViewController.h"
 #import "Recipe.h"
 #import "RecipeTableViewCell.h"
+#import "RecipesAppDelegate.h"
 
 @implementation RecipeListTableViewController
 
@@ -21,7 +22,11 @@
 - (void)viewDidLoad {
     // Configure the navigation bar
     self.title = @"Recipes";
-       
+	
+	UISegmentedControl* segmentedControl = [((RecipesAppDelegate*)[[UIApplication sharedApplication] delegate]) segmentedControlWithSelectedIndex:0];
+	
+	self.navigationItem.titleView = segmentedControl;
+	
     // Set the table view's row height
     self.tableView.rowHeight = 44.;
 	
@@ -35,6 +40,13 @@
 		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 		abort();
 	}		
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+	
+	[((UISegmentedControl*)self.navigationItem.titleView) setSelectedSegmentIndex:0];
+	
+	[super viewWillAppear:animated];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
