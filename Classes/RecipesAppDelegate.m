@@ -9,6 +9,27 @@
 #import "RecipeListTableViewController.h"
 #import "UnitConverterTableViewController.h"
 
+void HandleCoreDataError(const char* function, const char* file, const int line, NSError* error);
+
+void HandleCoreDataError(const char* function, const char* file, const int line, NSError* error)
+{
+	// Handle the error...
+	NSLog(@"%s:%d - %s - Core Data error: %@", file, line, function, [error localizedDescription]);
+	NSArray* detailedErrors = [[error userInfo] objectForKey:NSDetailedErrorsKey];
+	if(detailedErrors != nil && [detailedErrors count] > 0) 
+	{
+		for(NSError* detailedError in detailedErrors) 
+		{
+			NSLog(@"  DetailedError: %@", [detailedError userInfo]);
+		}
+	}
+	else 
+	{
+		NSLog(@"  %@", [error userInfo]);
+	}
+}
+
+
 @implementation RecipesAppDelegate {
 	NSManagedObjectContext* _managedObjectContext;
 	NSManagedObjectModel* _managedObjectModel;
@@ -44,13 +65,7 @@
     NSError *error;
     if (self.managedObjectContext != nil) {
         if ([self.managedObjectContext hasChanges] && ![self.managedObjectContext save:&error]) {
-			/*
-			 Replace this implementation with code to handle the error appropriately.
-			 
-			 abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
-			 */
-			NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-			abort();
+			HandleCoreDataError(__PRETTY_FUNCTION__, __FILE__, __LINE__, error);
         } 
     }
 }
@@ -117,23 +132,74 @@
 	
 	NSURL *storeUrl = [NSURL fileURLWithPath:storePath];
 	
-	NSError *error;
+	NSError *error = nil;
+	
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeUrl options:nil error:&error]) {
-		/*
-		 Replace this implementation with code to handle the error appropriately.
-		 
-		 abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
-		 
-		 Typical reasons for an error here include:
-		 * The persistent store is not accessible
-		 * The schema for the persistent store is incompatible with current managed object model
-		 Check the error message to determine what the actual problem was.
-		 */
-		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-		abort();
-    }    
+    
+	
+	NSDictionary *sourceMetadata = [NSPersistentStoreCoordinator metadataForPersistentStoreOfType:NSSQLiteStoreType
+																							  URL:storeUrl
+																							error:&error];
+	
+	if (sourceMetadata == nil) {
+		HandleCoreDataError(__PRETTY_FUNCTION__, __FILE__, __LINE__, error);
+		return nil;
+	}
+	
+	NSManagedObjectModel *destinationModel = [_persistentStoreCoordinator managedObjectModel];
+	BOOL pscCompatibile = [destinationModel isConfiguration:nil compatibleWithStoreMetadata:sourceMetadata];
+	
+	if (!pscCompatibile) {
+		// need to migrate
+		NSManagedObjectModel *sourceModel = [NSManagedObjectModel mergedModelFromBundles:nil forStoreMetadata:sourceMetadata];
 		
+		if (sourceModel == nil) {
+			// deal with error
+			return nil;
+		}
+		
+		NSMigrationManager *migrationManager = [[NSMigrationManager alloc] initWithSourceModel:sourceModel destinationModel:destinationModel];
+		
+		NSMappingModel *mappingModel = [NSMappingModel mappingModelFromBundles:nil forSourceModel:sourceModel destinationModel:destinationModel];
+		
+		if (mappingModel == nil) {
+			// deal with the error
+			[migrationManager release];
+			return nil;
+		}
+		NSString *newStorePath = [[self applicationDocumentsDirectory] stringByAppendingPathComponent:@"RecipesTemp.sqlite"];
+		NSURL* newStoreURL = [NSURL fileURLWithPath:newStorePath];
+		
+		BOOL ok = [migrationManager migrateStoreFromURL:storeUrl
+												   type:NSSQLiteStoreType
+												options:nil
+									   withMappingModel:mappingModel
+									   toDestinationURL:newStoreURL
+										destinationType:NSSQLiteStoreType
+									 destinationOptions:nil
+												  error:&error];
+		
+		if (!ok) {
+			// handle error
+			HandleCoreDataError(__PRETTY_FUNCTION__, __FILE__, __LINE__, error);
+			[migrationManager release];
+			return nil;
+		}
+		[migrationManager release];
+		
+		NSString *backupStorePath = [[self applicationDocumentsDirectory] stringByAppendingPathComponent:@"RecipesOLD.sqlite"];
+		NSURL* backupStoreURL = [NSURL fileURLWithPath:backupStorePath];
+		
+		[[NSFileManager defaultManager] removeItemAtURL:backupStoreURL error:NULL];
+		[[NSFileManager defaultManager] moveItemAtURL:storeUrl toURL:backupStoreURL error:NULL];
+		[[NSFileManager defaultManager] moveItemAtURL:newStoreURL toURL:storeUrl error:NULL];
+	}
+	
+	if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeUrl options:nil error:&error]) {
+		HandleCoreDataError(__PRETTY_FUNCTION__, __FILE__, __LINE__, error);
+		return nil;
+	}
+
     return _persistentStoreCoordinator;
 }
 

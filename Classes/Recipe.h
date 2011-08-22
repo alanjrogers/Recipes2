@@ -15,7 +15,8 @@
 @property (nonatomic, retain) NSString *overview;
 @property (nonatomic, retain) NSString *prepTime;
 @property (nonatomic, retain) NSSet *ingredients;
-@property (nonatomic, retain) UIImage *thumbnailImage;
+@property (nonatomic, retain) NSString *thumbnailPath;
+@property (nonatomic, readonly) UIImage* thumbnailImage;
 
 @property (nonatomic, retain) NSManagedObject *image;
 @property (nonatomic, retain) NSManagedObject *type;

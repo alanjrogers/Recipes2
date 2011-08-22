@@ -9,7 +9,15 @@
 
 @implementation Recipe
 
-@dynamic name, image, overview, thumbnailImage, instructions, ingredients, type, prepTime;
+@dynamic name, image, overview, thumbnailPath, instructions, ingredients, type, prepTime;
+
+- (UIImage*)thumbnailImage {
+	NSString* documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+	
+	NSString* imagesFolder = [documentsDirectory stringByAppendingPathComponent:@"images"];
+	
+	return [UIImage imageWithContentsOfFile:[imagesFolder stringByAppendingPathComponent:[self thumbnailPath]]];
+}
 
 @end
 
