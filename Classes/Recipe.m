@@ -12,11 +12,7 @@
 @dynamic name, image, overview, thumbnailPath, instructions, ingredients, type, prepTime;
 
 - (UIImage*)thumbnailImage {
-	NSString* documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-	
-	NSString* imagesFolder = [documentsDirectory stringByAppendingPathComponent:@"images"];
-	
-	return [UIImage imageWithContentsOfFile:[imagesFolder stringByAppendingPathComponent:[self thumbnailPath]]];
+	return [UIImage imageNamed:self.thumbnailPath];
 }
 
 @end

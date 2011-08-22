@@ -40,6 +40,13 @@
 		53CE979211C6E9E800594C94 /* TemperatureConverter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53CE979011C6E9E800594C94 /* TemperatureConverter.xib */; };
 		53CE979511C6E9EF00594C94 /* WeightConverter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53CE979311C6E9EF00594C94 /* WeightConverter.xib */; };
 		53CE979B11C6EA0600594C94 /* TemperatureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53CE979911C6EA0600594C94 /* TemperatureCell.xib */; };
+		F6334B06140221470012ADD5 /* ChocolateCake.png in Resources */ = {isa = PBXBuildFile; fileRef = F6334AFF140221470012ADD5 /* ChocolateCake.png */; };
+		F6334B07140221470012ADD5 /* CrepesSuzette.png in Resources */ = {isa = PBXBuildFile; fileRef = F6334B00140221470012ADD5 /* CrepesSuzette.png */; };
+		F6334B08140221470012ADD5 /* GaufresdeLiege.png in Resources */ = {isa = PBXBuildFile; fileRef = F6334B01140221470012ADD5 /* GaufresdeLiege.png */; };
+		F6334B09140221470012ADD5 /* GingerSnaps.png in Resources */ = {isa = PBXBuildFile; fileRef = F6334B02140221470012ADD5 /* GingerSnaps.png */; };
+		F6334B0A140221470012ADD5 /* Macarons.png in Resources */ = {isa = PBXBuildFile; fileRef = F6334B03140221470012ADD5 /* Macarons.png */; };
+		F6334B0B140221470012ADD5 /* TarteauxFraises.png in Resources */ = {isa = PBXBuildFile; fileRef = F6334B04140221470012ADD5 /* TarteauxFraises.png */; };
+		F6334B0C140221470012ADD5 /* ThreeBerryCobbler.png in Resources */ = {isa = PBXBuildFile; fileRef = F6334B05140221470012ADD5 /* ThreeBerryCobbler.png */; };
 		F6516D3413FF7D690022E6CE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6516D3313FF7D690022E6CE /* QuartzCore.framework */; };
 		F6B657891401D44C008DE9CD /* Recipes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F66BD8491401D03200A2F113 /* Recipes.xcdatamodeld */; };
 		F6C833791401D620002CB750 /* ExtractImagesMigrationPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C833781401D620002CB750 /* ExtractImagesMigrationPolicy.m */; };
@@ -97,6 +104,13 @@
 		53CE979411C6E9EF00594C94 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WeightConverter.xib; sourceTree = "<group>"; };
 		53CE979A11C6EA0600594C94 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TemperatureCell.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6334AFF140221470012ADD5 /* ChocolateCake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ChocolateCake.png; path = RecipeData/images/ChocolateCake.png; sourceTree = "<group>"; };
+		F6334B00140221470012ADD5 /* CrepesSuzette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CrepesSuzette.png; path = RecipeData/images/CrepesSuzette.png; sourceTree = "<group>"; };
+		F6334B01140221470012ADD5 /* GaufresdeLiege.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GaufresdeLiege.png; path = RecipeData/images/GaufresdeLiege.png; sourceTree = "<group>"; };
+		F6334B02140221470012ADD5 /* GingerSnaps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GingerSnaps.png; path = RecipeData/images/GingerSnaps.png; sourceTree = "<group>"; };
+		F6334B03140221470012ADD5 /* Macarons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Macarons.png; path = RecipeData/images/Macarons.png; sourceTree = "<group>"; };
+		F6334B04140221470012ADD5 /* TarteauxFraises.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TarteauxFraises.png; path = RecipeData/images/TarteauxFraises.png; sourceTree = "<group>"; };
+		F6334B05140221470012ADD5 /* ThreeBerryCobbler.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ThreeBerryCobbler.png; path = RecipeData/images/ThreeBerryCobbler.png; sourceTree = "<group>"; };
 		F6516D3313FF7D690022E6CE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F66BD84A1401D03200A2F113 /* Recipesv2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Recipesv2.xcdatamodel; sourceTree = "<group>"; };
 		F66BD84B1401D03200A2F113 /* Recipes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Recipes.xcdatamodel; sourceTree = "<group>"; };
@@ -191,6 +205,7 @@
 		28EDDE6E0E043EF10085763B /* Application Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F6334AFD140221330012ADD5 /* Recipe Images */,
 				282FFCBA0FC8AAB500A28FE2 /* Recipes.sqlite */,
 				28963B7F0DFC8214005CC955 /* TemperatureData.plist */,
 				8D1107310486CEB800E47090 /* Info.plist */,
@@ -263,6 +278,20 @@
 				53CE979911C6EA0600594C94 /* TemperatureCell.xib */,
 			);
 			name = "Table Cells";
+			sourceTree = "<group>";
+		};
+		F6334AFD140221330012ADD5 /* Recipe Images */ = {
+			isa = PBXGroup;
+			children = (
+				F6334AFF140221470012ADD5 /* ChocolateCake.png */,
+				F6334B00140221470012ADD5 /* CrepesSuzette.png */,
+				F6334B01140221470012ADD5 /* GaufresdeLiege.png */,
+				F6334B02140221470012ADD5 /* GingerSnaps.png */,
+				F6334B03140221470012ADD5 /* Macarons.png */,
+				F6334B04140221470012ADD5 /* TarteauxFraises.png */,
+				F6334B05140221470012ADD5 /* ThreeBerryCobbler.png */,
+			);
+			name = "Recipe Images";
 			sourceTree = "<group>";
 		};
 		F6E6B6BD1400F5F2003032AA /* View Controller */ = {
@@ -340,6 +369,13 @@
 				539FF1A011D41CB200EFF5ED /* Icon.png in Resources */,
 				539FF1A111D41CB200EFF5ED /* Icon@2x.png in Resources */,
 				539FF1A211D41CB200EFF5ED /* iTunesArtwork in Resources */,
+				F6334B06140221470012ADD5 /* ChocolateCake.png in Resources */,
+				F6334B07140221470012ADD5 /* CrepesSuzette.png in Resources */,
+				F6334B08140221470012ADD5 /* GaufresdeLiege.png in Resources */,
+				F6334B09140221470012ADD5 /* GingerSnaps.png in Resources */,
+				F6334B0A140221470012ADD5 /* Macarons.png in Resources */,
+				F6334B0B140221470012ADD5 /* TarteauxFraises.png in Resources */,
+				F6334B0C140221470012ADD5 /* ThreeBerryCobbler.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
