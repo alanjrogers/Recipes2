@@ -134,16 +134,21 @@
 }
 
 - (void)drawRect:(CGRect)rect {
-		
+	
+	// Background
 	UIImage* stretchableImage = [[UIImage imageNamed:@"segmented-stretch"] stretchableImageWithLeftCapWidth:5. topCapHeight:0.];
-	[stretchableImage drawInRect:rect];	
+	[stretchableImage drawInRect:rect];
 
+	// Separator
+	
+	//UIImage* separatorImage;
+	
 	__block CGFloat x = 0.;
 	
 	[self.items enumerateObjectsUsingBlock:^(_SWPTexturedSegment* obj, NSUInteger idx, BOOL *stop) {
 		CGRect titleRect = CGRectMake(x, SWP_SEGMENTED_CONTROL_HEIGHT - SWP_SEGMENTED_CONTROL_BASELINE - obj.size.height, obj.size.width, SWP_SEGMENTED_CONTROL_HEIGHT);
 		[[UIColor whiteColor] set];
-		CGContextSetShadowWithColor(UIGraphicsGetCurrentContext(), CGSizeMake(0, -1), 0, [UIColor blackColor].CGColor);
+		CGContextSetShadowWithColor(UIGraphicsGetCurrentContext(), CGSizeMake(0, -1.), 0, [UIColor blackColor].CGColor);
 		[obj.title drawInRect:titleRect withFont:[UIFont boldSystemFontOfSize:[UIFont smallSystemFontSize]] lineBreakMode:UILineBreakModeClip alignment:UITextAlignmentCenter];
 		x += obj.size.width;
 	}];
