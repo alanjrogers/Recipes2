@@ -16,6 +16,20 @@
 @synthesize tableView = _tableView, temperatureCell = _temperatureCell;
 
 #pragma mark -
+#pragma mark Memory management
+
+- (void)didReceiveMemoryWarning {
+	[super didReceiveMemoryWarning];
+	[_temperatureData release], _temperatureData = nil;
+}
+
+- (void)dealloc {
+    [_tableView release], _tableView = nil;
+    [_temperatureData release], _temperatureData = nil;
+    [super dealloc];
+}
+
+#pragma mark -
 #pragma mark View lifecycle
 
 - (void)viewDidLoad {
@@ -73,21 +87,6 @@
 		[array release];
 	}
 	return _temperatureData;
-}
-
-#pragma mark -
-#pragma mark Memory management
-
-- (void)didReceiveMemoryWarning {
-	[super didReceiveMemoryWarning];
-	[_temperatureData release], _temperatureData = nil;
-}
-
-
-- (void)dealloc {
-    [_tableView release], _tableView = nil;
-    [_temperatureData release], _temperatureData = nil;
-    [super dealloc];
 }
 
 @end

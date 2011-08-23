@@ -15,6 +15,13 @@
 @synthesize instructionsText = _instructionsText;
 @synthesize nameLabel = _nameLabel;
 
+- (void)dealloc {
+    [_recipe release], _recipe = nil;
+    [_instructionsText release], _instructionsText = nil;
+    [_nameLabel release], _nameLabel = nil;
+    [super dealloc];
+}
+
 - (void)viewDidLoad {
 	[super viewDidLoad];
     UINavigationItem *navigationItem = self.navigationItem;
@@ -36,13 +43,6 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Support portrait only
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
-- (void)dealloc {
-    [_recipe release], _recipe = nil;
-    [_instructionsText release], _instructionsText = nil;
-    [_nameLabel release], _nameLabel = nil;
-    [super dealloc];
 }
 
 @end

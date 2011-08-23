@@ -27,6 +27,19 @@
 #define INGREDIENTS_SECTION 1
 #define INSTRUCTIONS_SECTION 2
 
+#pragma mark -
+#pragma mark dealloc
+
+- (void)dealloc {
+    [_tableHeaderView release], _tableHeaderView = nil;
+    [_photoImageView release], _photoImageView = nil;
+    [_nameTextField release], _nameTextField = nil;
+    [_overviewTextField release], _overviewTextField = nil;
+    [_prepTimeTextField release], _prepTimeTextField = nil;
+    [_recipe release], _recipe = nil;
+    [_ingredients release], _ingredients = nil;
+    [super dealloc];
+}
 
 #pragma mark -
 #pragma mark View controller
@@ -130,7 +143,6 @@
     return rows;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = nil;
     
@@ -220,21 +232,6 @@
         [self.navigationController pushViewController:nextViewController animated:YES];
         [nextViewController release];
     }
-}
-
-
-#pragma mark -
-#pragma mark dealloc
-
-- (void)dealloc {
-    [_tableHeaderView release], _tableHeaderView = nil;
-    [_photoImageView release], _photoImageView = nil;
-    [_nameTextField release], _nameTextField = nil;
-    [_overviewTextField release], _overviewTextField = nil;
-    [_prepTimeTextField release], _prepTimeTextField = nil;
-    [_recipe release], _recipe = nil;
-    [_ingredients release], _ingredients = nil;
-    [super dealloc];
 }
 
 @end

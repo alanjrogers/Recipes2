@@ -31,6 +31,19 @@
 #define METRIC_INDEX 0
 #define IMPERIAL_INDEX 1
 
+- (void)dealloc {
+	[_pickerViewContainer release], _pickerViewContainer = nil;
+    
+    [_imperialPickerController release], _imperialPickerController = nil;
+	[_imperialPickerViewContainer release], _imperialPickerViewContainer = nil;
+    
+    [_metricPickerController release], _metricPickerController = nil;
+	[_metricPickerViewContainer release], _metricPickerViewContainer = nil;
+    
+	[_segmentedControl release];
+	[super dealloc];
+}
+
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
@@ -42,7 +55,6 @@
 	
 	[self toggleUnit];
 }
-
 
 - (void)viewDidUnload {    
 	self.pickerViewContainer = nil;
@@ -76,18 +88,4 @@
 	}
 }
 
-- (void)dealloc {
-	[_pickerViewContainer release], _pickerViewContainer = nil;
-    
-    [_imperialPickerController release], _imperialPickerController = nil;
-	[_imperialPickerViewContainer release], _imperialPickerViewContainer = nil;
-    
-    [_metricPickerController release], _metricPickerController = nil;
-	[_metricPickerViewContainer release], _metricPickerViewContainer = nil;
-    
-	[_segmentedControl release];
-	[super dealloc];
-}
-
 @end
-

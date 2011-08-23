@@ -12,26 +12,19 @@
 #import "SWPRecipeListTableViewController.h"
 #import "SWPUnitConverterTableViewController.h"
 
-void HandleCoreDataError(const char* function, const char* file, const int line, NSError* error);
-
 void HandleCoreDataError(const char* function, const char* file, const int line, NSError* error)
 {
 	// Handle the error...
 	NSLog(@"%s:%d - %s - Core Data error: %@", file, line, function, [error localizedDescription]);
 	NSArray* detailedErrors = [[error userInfo] objectForKey:NSDetailedErrorsKey];
-	if(detailedErrors != nil && [detailedErrors count] > 0) 
-	{
-		for(NSError* detailedError in detailedErrors) 
-		{
+	if(detailedErrors != nil && [detailedErrors count] > 0) {
+		for(NSError* detailedError in detailedErrors) {
 			NSLog(@"  DetailedError: %@", [detailedError userInfo]);
 		}
-	}
-	else 
-	{
+	} else {
 		NSLog(@"  %@", [error userInfo]);
 	}
 }
-
 
 @implementation SWPRecipesAppDelegate {
 	NSManagedObjectContext* _managedObjectContext;
@@ -45,6 +38,7 @@ void HandleCoreDataError(const char* function, const char* file, const int line,
 @synthesize converterNavigationController = _converterNavigationController;
 
 #pragma mark -
+#pragma mark Switching between recipes and unit converter
 
 - (void)switchToRecipesView {
 	self.recipeListController.managedObjectContext = self.managedObjectContext;
@@ -55,14 +49,33 @@ void HandleCoreDataError(const char* function, const char* file, const int line,
 	self.window.rootViewController = self.converterNavigationController;
 }
 
+- (void)segmentedControlValueChanged:(id)sender {
+	if ([(UISegmentedControl*)sender selectedSegmentIndex] == 0) {
+		[self switchToRecipesView];
+	} else {
+		[self switchToConverterView];
+	}
+}
+
+- (UISegmentedControl*)segmentedControlWithSelectedIndex:(NSUInteger)selectedSegmentIndex {
+	
+	UISegmentedControl* segmentedControl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Recipes", @"Converter", nil]];
+	
+	[segmentedControl setSegmentedControlStyle:UISegmentedControlStyleBar];
+	[segmentedControl setSelectedSegmentIndex:selectedSegmentIndex];
+	[segmentedControl addTarget:self action:@selector(segmentedControlValueChanged:) forControlEvents:UIControlEventValueChanged];
+	
+	return [segmentedControl autorelease];
+}
+
+#pragma mark -
+#pragma mark App lifecycle
+
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
 	[self switchToRecipesView];
 	[self.window makeKeyAndVisible];
 }
 
-/**
- applicationWillTerminate: saves changes in the application's managed object context before the application terminates.
- */
 - (void)applicationWillTerminate:(UIApplication *)application {
 	
     NSError *error;
@@ -73,14 +86,9 @@ void HandleCoreDataError(const char* function, const char* file, const int line,
     }
 }
 
-
 #pragma mark -
 #pragma mark Core Data stack
 
-/**
- Returns the managed object context for the application.
- If the context doesn't already exist, it is created and bound to the persistent store coordinator for the application.
- */
 - (NSManagedObjectContext *)managedObjectContext {
 	
     if (_managedObjectContext != nil) {
@@ -95,11 +103,6 @@ void HandleCoreDataError(const char* function, const char* file, const int line,
     return _managedObjectContext;
 }
 
-
-/**
- Returns the managed object model for the application.
- If the model doesn't already exist, it is created by merging all of the models found in the application bundle.
- */
 - (NSManagedObjectModel *)managedObjectModel {
     if (_managedObjectModel != nil) {
         return _managedObjectModel;
@@ -108,11 +111,6 @@ void HandleCoreDataError(const char* function, const char* file, const int line,
     return _managedObjectModel;
 }
 
-
-/**
- Returns the persistent store coordinator for the application.
- If the coordinator doesn't already exist, it is created and the application's store added to it.
- */
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
 	
     if (_persistentStoreCoordinator != nil) {
@@ -120,10 +118,7 @@ void HandleCoreDataError(const char* function, const char* file, const int line,
     }
 		
 	NSString *storePath = [[self applicationDocumentsDirectory] stringByAppendingPathComponent:@"Recipes.sqlite"];
-	/*
-	 Set up the store.
-	 For the sake of illustration, provide a pre-populated default store.
-	 */
+
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	// If the expected store doesn't exist, copy the default store.
 	if (![fileManager fileExistsAtPath:storePath]) {
@@ -157,7 +152,6 @@ void HandleCoreDataError(const char* function, const char* file, const int line,
 		NSManagedObjectModel *sourceModel = [NSManagedObjectModel mergedModelFromBundles:nil forStoreMetadata:sourceMetadata];
 		
 		if (sourceModel == nil) {
-			// deal with error
 			return nil;
 		}
 		
@@ -166,7 +160,6 @@ void HandleCoreDataError(const char* function, const char* file, const int line,
 		NSMappingModel *mappingModel = [NSMappingModel mappingModelFromBundles:nil forSourceModel:sourceModel destinationModel:destinationModel];
 		
 		if (mappingModel == nil) {
-			// deal with the error
 			[migrationManager release];
 			return nil;
 		}
@@ -183,7 +176,6 @@ void HandleCoreDataError(const char* function, const char* file, const int line,
 												  error:&error];
 		
 		if (!ok) {
-			// handle error
 			HandleCoreDataError(__PRETTY_FUNCTION__, __FILE__, __LINE__, error);
 			[migrationManager release];
 			return nil;
@@ -209,30 +201,8 @@ void HandleCoreDataError(const char* function, const char* file, const int line,
 #pragma mark -
 #pragma mark Application's documents directory
 
-/**
- Returns the path to the application's documents directory.
- */
 - (NSString *)applicationDocumentsDirectory {
 	return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-}
-
-- (void)segmentedControlValueChanged:(id)sender {
-	if ([(UISegmentedControl*)sender selectedSegmentIndex] == 0) {
-		[self switchToRecipesView];
-	} else {
-		[self switchToConverterView];
-	}
-}
-
-- (UISegmentedControl*)segmentedControlWithSelectedIndex:(NSUInteger)selectedSegmentIndex {
-			
-	UISegmentedControl* segmentedControl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Recipes", @"Converter", nil]];
-	
-	[segmentedControl setSegmentedControlStyle:UISegmentedControlStyleBar];
-	[segmentedControl setSelectedSegmentIndex:selectedSegmentIndex];
-	[segmentedControl addTarget:self action:@selector(segmentedControlValueChanged:) forControlEvents:UIControlEventValueChanged];
-	
-	return [segmentedControl autorelease];
 }
 
 #pragma mark -

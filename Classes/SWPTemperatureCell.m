@@ -19,7 +19,6 @@
     self.gLabel.text = [temperatureDictionary objectForKey:@"g"];
 }
 
-
 - (void)dealloc {
     [_cLabel release], _cLabel = nil;
     [_fLabel release], _fLabel = nil;

@@ -26,7 +26,6 @@
 
 @synthesize recipe = _recipe, nameLabel = _nameLabel, overviewLabel = _overviewLabel, prepTimeLabel = _prepTimeLabel;
 
-
 #pragma mark -
 #pragma mark Initialization
 
@@ -58,6 +57,17 @@
     }
 
     return self;
+}
+
+#pragma mark -
+#pragma mark Memory management
+
+- (void)dealloc {
+    [_recipe release], _recipe = nil;
+    [_nameLabel release], _nameLabel = nil;
+    [_overviewLabel release], _overviewLabel = nil;
+    [_prepTimeLabel release], _prepTimeLabel = nil;
+    [super dealloc];
 }
 
 #pragma mark -
@@ -121,7 +131,6 @@
     return CGRectMake(contentViewBounds.size.width - PREP_TIME_WIDTH - TEXT_RIGHT_MARGIN, 4.0, PREP_TIME_WIDTH, 16.0);
 }
 
-
 #pragma mark -
 #pragma mark Recipe set accessor
 
@@ -134,18 +143,6 @@
 	self.nameLabel.text = self.recipe.name;
 	self.overviewLabel.text = self.recipe.overview;
 	self.prepTimeLabel.text = self.recipe.prepTime;
-}
-
-
-#pragma mark -
-#pragma mark Memory management
-
-- (void)dealloc {
-    [_recipe release], _recipe = nil;
-    [_nameLabel release], _nameLabel = nil;
-    [_overviewLabel release], _overviewLabel = nil;
-    [_prepTimeLabel release], _prepTimeLabel = nil;
-    [super dealloc];
 }
 
 @end

@@ -29,11 +29,15 @@
 @synthesize pickerView = _pickerView;
 @synthesize label = _label;
 
+- (void)dealloc {
+    [_pickerView release], _pickerView = nil;
+	[_label release], _label = nil;
+	[super dealloc];
+}
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
 	return 4;
 }
-
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
 	
@@ -43,7 +47,6 @@
     }
     return 10;
 }
-
 
 - (UIView *)labelCellWidth:(CGFloat)width rightOffset:(CGFloat)offset {
 	
@@ -182,12 +185,6 @@
         [ouncesDecimal release];
         self.label.text = [NSString stringWithFormat:@"%@ oz", roundedOunces];
     }
-}
-
-- (void)dealloc {
-    [_pickerView release], _pickerView = nil;
-	[_label release], _label = nil;
-	[super dealloc];
 }
 
 @end

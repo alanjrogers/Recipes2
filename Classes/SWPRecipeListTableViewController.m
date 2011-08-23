@@ -17,6 +17,15 @@
 @synthesize managedObjectContext = _managedObjectContext, fetchedResultsController = _fetchedResultsController;
 
 #pragma mark -
+#pragma mark Memory management
+
+- (void)dealloc {
+	[_fetchedResultsController release], _fetchedResultsController = nil;
+	[_managedObjectContext release], _managedObjectContext = nil;
+    [super dealloc];
+}
+
+#pragma mark -
 #pragma mark UIViewController overrides
 
 - (void)viewDidLoad {
@@ -33,13 +42,7 @@
 	
 	NSError *error = nil;
 	if (![[self fetchedResultsController] performFetch:&error]) {
-		/*
-		 Replace this implementation with code to handle the error appropriately.
-		 
-		 abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
-		 */
-		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-		abort();
+		HandleCoreDataError(__PRETTY_FUNCTION__, __FILE__, __LINE__, error);
 	}		
 }
 
@@ -67,7 +70,6 @@
     [detailViewController release];
 }
 
-
 #pragma mark -
 #pragma mark Table view methods
 
@@ -81,7 +83,6 @@
     return count;
 }
 
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     NSInteger numberOfRows = 0;
 	
@@ -92,7 +93,6 @@
     
     return numberOfRows;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     // Dequeue or if necessary create a RecipeTableViewCell, then set its recipe to the recipe for the current row.
@@ -108,7 +108,6 @@
     
     return recipeCell;
 }
-
 
 - (void)configureCell:(SWPRecipeTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     // Configure the cell
@@ -154,14 +153,5 @@
 	
 	return _fetchedResultsController;
 }    
-
-#pragma mark -
-#pragma mark Memory management
-
-- (void)dealloc {
-	[_fetchedResultsController release], _fetchedResultsController = nil;
-	[_managedObjectContext release], _managedObjectContext = nil;
-    [super dealloc];
-}
 
 @end

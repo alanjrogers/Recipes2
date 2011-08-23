@@ -23,10 +23,4 @@
 
 @end
 
-@interface SWPRecipe (CoreDataGeneratedAccessors)
-- (void)addIngredientsObject:(NSManagedObject *)value;
-- (void)removeIngredientsObject:(NSManagedObject *)value;
-- (void)addIngredients:(NSSet *)value;
-- (void)removeIngredients:(NSSet *)value;
-@end
 

@@ -8,9 +8,7 @@
 
 #import "SWPImperialPickerController.h"
 
-
 @implementation SWPImperialPickerController
-
 
 // Identifiers and widths for the various components
 #define POUNDS_COMPONENT 0
@@ -29,6 +27,12 @@
 
 @synthesize pickerView = _pickerView;
 @synthesize label = _label;
+
+- (void)dealloc {
+	[_pickerView release], _pickerView = nil;
+	[_label release], _label = nil;
+	[super dealloc];
+}
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {	
 	return 2;
@@ -130,12 +134,5 @@
         self.label.text = [NSString stringWithFormat:@"%1.0f g", grams];
     }
 }
-
-- (void)dealloc {
-	[_pickerView release], _pickerView = nil;
-	[_label release], _label = nil;
-	[super dealloc];
-}
-	
 	
 @end

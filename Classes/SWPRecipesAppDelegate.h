@@ -24,8 +24,9 @@
 
 - (NSString *)applicationDocumentsDirectory;
 
-// Segmented Control
+// Segmented Control for switching between converter and Recipes.
 - (UISegmentedControl*)segmentedControlWithSelectedIndex:(NSUInteger)selectedSegmentIndex;
 
 @end
 
+extern void HandleCoreDataError(const char* function, const char* file, const int line, NSError* error);
