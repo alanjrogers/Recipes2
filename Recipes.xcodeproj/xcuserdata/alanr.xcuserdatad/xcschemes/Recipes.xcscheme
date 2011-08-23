@@ -15,7 +15,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
                BuildableName = "Recipes.app"
-               BlueprintName = "Recipes"
+               BlueprintName = "Recipes2"
                ReferencedContainer = "container:Recipes.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -40,7 +40,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
             BuildableName = "Recipes.app"
-            BlueprintName = "Recipes"
+            BlueprintName = "Recipes2"
             ReferencedContainer = "container:Recipes.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -57,7 +57,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
             BuildableName = "Recipes.app"
-            BlueprintName = "Recipes"
+            BlueprintName = "Recipes2"
             ReferencedContainer = "container:Recipes.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

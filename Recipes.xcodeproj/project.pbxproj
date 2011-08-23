@@ -69,7 +69,7 @@
 		184FEA3C0DEF6D4D00887625 /* SWPTemperatureConverterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWPTemperatureConverterViewController.h; path = Classes/SWPTemperatureConverterViewController.h; sourceTree = "<group>"; };
 		1D3623240D0F684500981E51 /* SWPRecipesAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWPRecipesAppDelegate.h; path = Classes/SWPRecipesAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* SWPRecipesAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWPRecipesAppDelegate.m; path = Classes/SWPRecipesAppDelegate.m; sourceTree = "<group>"; };
-		1D6058910D05DD3D006BFB54 /* Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* Recipes2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipes2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		280CEB680E38093400021185 /* SWPImperialPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWPImperialPickerController.h; path = Classes/SWPImperialPickerController.h; sourceTree = "<group>"; };
 		280CEB690E38093400021185 /* SWPImperialPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWPImperialPickerController.m; path = Classes/SWPImperialPickerController.m; sourceTree = "<group>"; };
 		280CEB6A0E38093400021185 /* SWPMetricPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWPMetricPickerController.h; path = Classes/SWPMetricPickerController.h; sourceTree = "<group>"; };
@@ -166,7 +166,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* Recipes.app */,
+				1D6058910D05DD3D006BFB54 /* Recipes2.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -339,9 +339,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D6058900D05DD3D006BFB54 /* Recipes */ = {
+		1D6058900D05DD3D006BFB54 /* Recipes2 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Recipes" */;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Recipes2" */;
 			buildPhases = (
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
@@ -351,9 +351,9 @@
 			);
 			dependencies = (
 			);
-			name = Recipes;
+			name = Recipes2;
 			productName = ChocolateCake;
-			productReference = 1D6058910D05DD3D006BFB54 /* Recipes.app */;
+			productReference = 1D6058910D05DD3D006BFB54 /* Recipes2.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -379,7 +379,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* Recipes */,
+				1D6058900D05DD3D006BFB54 /* Recipes2 */,
 			);
 		};
 /* End PBXProject section */
@@ -511,7 +511,7 @@
 				GCC_PREFIX_HEADER = Recipes_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				PRODUCT_NAME = Recipes;
+				PRODUCT_NAME = Recipes2;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -525,7 +525,7 @@
 				GCC_PREFIX_HEADER = Recipes_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				PRODUCT_NAME = Recipes;
+				PRODUCT_NAME = Recipes2;
 				SDKROOT = iphoneos;
 			};
 			name = Release;
@@ -566,7 +566,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Recipes" */ = {
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Recipes2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
