@@ -11,6 +11,7 @@
 #import "SWPRecipesAppDelegate.h"
 #import "SWPRecipeListTableViewController.h"
 #import "SWPUnitConverterTableViewController.h"
+#import "SWPTexturedSegmentedControl.h"
 
 void HandleCoreDataError(const char* function, const char* file, const int line, NSError* error)
 {
@@ -59,9 +60,8 @@ void HandleCoreDataError(const char* function, const char* file, const int line,
 
 - (UISegmentedControl*)segmentedControlWithSelectedIndex:(NSUInteger)selectedSegmentIndex {
 	
-	UISegmentedControl* segmentedControl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Recipes", @"Unit Converter", nil]];
+	SWPTexturedSegmentedControl* segmentedControl = [[SWPTexturedSegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Recipes", @"Unit Converter", nil]];
 	
-	[segmentedControl setSegmentedControlStyle:UISegmentedControlStyleBar];
 	[segmentedControl setSelectedSegmentIndex:selectedSegmentIndex];
 	[segmentedControl setWidth:145. forSegmentAtIndex:0];
 	[segmentedControl setWidth:145. forSegmentAtIndex:1];
