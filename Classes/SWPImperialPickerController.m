@@ -1,8 +1,8 @@
 /*
-     File: ImperialPickerController.m 
+     File: SWPImperialPickerController.m 
  Abstract: Controller to managed a picker view displaying imperial weights.
   
-  Version: 1.5
+  Version: 2.0
     
  */
 

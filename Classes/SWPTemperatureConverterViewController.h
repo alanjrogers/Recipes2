@@ -1,8 +1,8 @@
  /*
-     File: TemperatureConverterViewController.h
+     File: SWPTemperatureConverterViewController.h
  Abstract: View controller to display cooking temperatures in Centigrade, Fahrenheit, and Gas Mark.
  
-  Version: 1.5
+  Version: 2.0
   
  */
 

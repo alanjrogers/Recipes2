@@ -1,10 +1,10 @@
-//
-//  ExtractImagesMigrationPolicy.m
-//  Recipes
-//
-//  Created by Alan Rogers on 22/08/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
+/*
+ File: SWPExtractImagesMigrationPolicy.m
+ Abstract: Core Data migration policy to extract images from the old Recipes database.
+ 
+ Version: 2.0
+ */
+
 
 #import "SWPExtractImagesMigrationPolicy.h"
 

@@ -1,8 +1,8 @@
 /*
-     File: Recipe.h
+     File: SWPRecipe.h
  Abstract: Model class to represent a recipe.
  
-  Version: 1.5
+  Version: 2.0
  */
 
 @interface ImageToDataTransformer : NSValueTransformer

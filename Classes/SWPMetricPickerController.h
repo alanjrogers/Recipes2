@@ -1,8 +1,8 @@
 /*
-     File: MetricPickerController.h
+     File: SWPMetricPickerController.h
  Abstract: Controller to managed a picker view displaying metric weights.
  
-  Version: 1.5
+  Version: 2.0
   
  */
 

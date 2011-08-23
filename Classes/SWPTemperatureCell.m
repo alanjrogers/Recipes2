@@ -1,8 +1,8 @@
 /*
-     File: TemperatureCell.m 
+     File: SWPTemperatureCell.m 
  Abstract: A table view cell that displays temperature in Centigrade, Fahrenheit, and Gas Mark.
   
-  Version: 1.5
+  Version: 2.0
 
  */
 

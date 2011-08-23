@@ -1,8 +1,8 @@
 /*
-     File: Recipe.m 
+     File: SWPRecipe.m 
  Abstract: Model class to represent a recipe.
   
-  Version: 1.5
+  Version: 2.0
 */
 
 #import "SWPRecipe.h"

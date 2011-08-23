@@ -1,8 +1,8 @@
 /*
-     File: InstructionsViewController.m 
+     File: SWPInstructionsViewController.m 
  Abstract: View controller to manage a text view to allow the user to edit instructions for a recipe.
   
-  Version: 1.5
+  Version: 2.0
   
  */
 

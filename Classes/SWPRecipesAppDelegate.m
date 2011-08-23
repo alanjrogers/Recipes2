@@ -1,9 +1,12 @@
 /*
-     File: RecipesAppDelegate.m 
- Abstract: Application delegate that sets up a tab bar controller with two view controllers -- a navigation controller that in turn loads a table view controller to manage a list of recipes, and a unit converter view controller.
-  
-  Version: 1.5
-*/
+ File: SWPRecipesAppDelegate.h
+ Abstract: Application delegate that has: 
+ - a navigation controller that in turn loads a table view controller to manage a list of recipes, 
+ - a unit converter navigation view controller.
+ - Also handles Core Data setup/loading and migration
+ 
+ Version: 2.0
+ */
 
 #import "SWPRecipesAppDelegate.h"
 #import "SWPRecipeListTableViewController.h"

@@ -1,9 +1,9 @@
 /*
-     File: RecipeDetailViewController.m 
+     File: SWPRecipeDetailViewController.m 
  Abstract: Table view controller to manage an editable table view that displays information about a recipe.
  The table view uses different cell types for different row types.
   
-  Version: 1.5
+  Version: 2.0
   
  */
 

@@ -1,8 +1,8 @@
 /*
-     File: Ingredient.h
+     File: SWPIngredient.h
  Abstract: Model class to represent a recipe.
  
-  Version: 1.5
+  Version: 2.0
  */
 
 @class SWPRecipe;

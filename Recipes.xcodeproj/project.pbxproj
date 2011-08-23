@@ -39,7 +39,7 @@
 		53CE978F11C6E9DC00594C94 /* InstructionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53CE978D11C6E9DC00594C94 /* InstructionsView.xib */; };
 		53CE979211C6E9E800594C94 /* TemperatureConverter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53CE979011C6E9E800594C94 /* TemperatureConverter.xib */; };
 		53CE979511C6E9EF00594C94 /* WeightConverter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53CE979311C6E9EF00594C94 /* WeightConverter.xib */; };
-		53CE979B11C6EA0600594C94 /* SWPTemperatureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53CE979911C6EA0600594C94 /* SWPTemperatureCell.xib */; };
+		53CE979B11C6EA0600594C94 /* TemperatureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53CE979911C6EA0600594C94 /* TemperatureCell.xib */; };
 		F6334B06140221470012ADD5 /* ChocolateCake.png in Resources */ = {isa = PBXBuildFile; fileRef = F6334AFF140221470012ADD5 /* ChocolateCake.png */; };
 		F6334B07140221470012ADD5 /* CrepesSuzette.png in Resources */ = {isa = PBXBuildFile; fileRef = F6334B00140221470012ADD5 /* CrepesSuzette.png */; };
 		F6334B08140221470012ADD5 /* GaufresdeLiege.png in Resources */ = {isa = PBXBuildFile; fileRef = F6334B01140221470012ADD5 /* GaufresdeLiege.png */; };
@@ -49,9 +49,9 @@
 		F6334B0E140228570012ADD5 /* Cheesecake.png in Resources */ = {isa = PBXBuildFile; fileRef = F6334B0D140228570012ADD5 /* Cheesecake.png */; };
 		F6516D3413FF7D690022E6CE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6516D3313FF7D690022E6CE /* QuartzCore.framework */; };
 		F69F5B3314032CEE000EF070 /* base.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F69F5B3214032CEE000EF070 /* base.xcconfig */; };
+		F69F5B3514033951000EF070 /* RecipesV1toV2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = F69F5B3414033951000EF070 /* RecipesV1toV2.xcmappingmodel */; };
+		F69F5B38140339B9000EF070 /* SWPExtractImagesMigrationPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = F69F5B37140339B9000EF070 /* SWPExtractImagesMigrationPolicy.m */; };
 		F6B657891401D44C008DE9CD /* Recipes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F66BD8491401D03200A2F113 /* Recipes.xcdatamodeld */; };
-		F6C833791401D620002CB750 /* SWPExtractImagesMigrationPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C833781401D620002CB750 /* SWPExtractImagesMigrationPolicy.m */; };
-		F6CC705B1401EB6D007BBD40 /* RecipesV1toV2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = F6CC705A1401EB6D007BBD40 /* RecipesV1toV2.xcmappingmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,7 +103,7 @@
 		53CE978E11C6E9DC00594C94 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/InstructionsView.xib; sourceTree = SOURCE_ROOT; };
 		53CE979111C6E9E800594C94 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TemperatureConverter.xib; sourceTree = "<group>"; };
 		53CE979411C6E9EF00594C94 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WeightConverter.xib; sourceTree = "<group>"; };
-		53CE979A11C6EA0600594C94 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SWPTemperatureCell.xib; sourceTree = "<group>"; };
+		53CE979A11C6EA0600594C94 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TemperatureCell.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6334AFF140221470012ADD5 /* ChocolateCake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ChocolateCake.png; path = RecipeData/images/ChocolateCake.png; sourceTree = "<group>"; };
 		F6334B00140221470012ADD5 /* CrepesSuzette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CrepesSuzette.png; path = RecipeData/images/CrepesSuzette.png; sourceTree = "<group>"; };
@@ -116,9 +116,9 @@
 		F66BD84A1401D03200A2F113 /* Recipesv2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Recipesv2.xcdatamodel; sourceTree = "<group>"; };
 		F66BD84B1401D03200A2F113 /* Recipes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Recipes.xcdatamodel; sourceTree = "<group>"; };
 		F69F5B3214032CEE000EF070 /* base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = base.xcconfig; sourceTree = "<group>"; };
-		F6C833771401D620002CB750 /* SWPExtractImagesMigrationPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWPExtractImagesMigrationPolicy.h; sourceTree = "<group>"; };
-		F6C833781401D620002CB750 /* SWPExtractImagesMigrationPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWPExtractImagesMigrationPolicy.m; sourceTree = "<group>"; };
-		F6CC705A1401EB6D007BBD40 /* RecipesV1toV2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = RecipesV1toV2.xcmappingmodel; sourceTree = "<group>"; };
+		F69F5B3414033951000EF070 /* RecipesV1toV2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = RecipesV1toV2.xcmappingmodel; sourceTree = "<group>"; };
+		F69F5B36140339B9000EF070 /* SWPExtractImagesMigrationPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWPExtractImagesMigrationPolicy.h; path = Classes/SWPExtractImagesMigrationPolicy.h; sourceTree = "<group>"; };
+		F69F5B37140339B9000EF070 /* SWPExtractImagesMigrationPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWPExtractImagesMigrationPolicy.m; path = Classes/SWPExtractImagesMigrationPolicy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,14 +218,14 @@
 		28FCBE8F0DE69AD4007A15C7 /* Model and Model Classes */ = {
 			isa = PBXGroup;
 			children = (
-				28FCBE780DE69516007A15C7 /* SWPRecipe.h */,
+				F69F5B36140339B9000EF070 /* SWPExtractImagesMigrationPolicy.h */,
+				F69F5B37140339B9000EF070 /* SWPExtractImagesMigrationPolicy.m */,
+				F69F5B3414033951000EF070 /* RecipesV1toV2.xcmappingmodel */,
 				F66BD8491401D03200A2F113 /* Recipes.xcdatamodeld */,
-				F6CC705A1401EB6D007BBD40 /* RecipesV1toV2.xcmappingmodel */,
+				28FCBE780DE69516007A15C7 /* SWPRecipe.h */,
 				28FCBE790DE69516007A15C7 /* SWPRecipe.m */,
 				2858E7090FC6583300DEACE0 /* SWPIngredient.h */,
 				2858E70A0FC6583300DEACE0 /* SWPIngredient.m */,
-				F6C833771401D620002CB750 /* SWPExtractImagesMigrationPolicy.h */,
-				F6C833781401D620002CB750 /* SWPExtractImagesMigrationPolicy.m */,
 			);
 			name = "Model and Model Classes";
 			sourceTree = "<group>";
@@ -233,8 +233,8 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				F69F5B3014032CCF000EF070 /* Configuration */,
 				28CB440A0DF7129800C7BCF9 /* README */,
+				F69F5B3014032CCF000EF070 /* Configuration */,
 				28FCBE8F0DE69AD4007A15C7 /* Model and Model Classes */,
 				F6E6B6BD1400F5F2003032AA /* View Controller */,
 				286DDA180DE761A2005EF016 /* MainWindow */,
@@ -278,7 +278,7 @@
 				283EA3630DEE388300DBD352 /* SWPRecipeTableViewCell.m */,
 				28963B430DFC7F5F005CC955 /* SWPTemperatureCell.h */,
 				28963B440DFC7F5F005CC955 /* SWPTemperatureCell.m */,
-				53CE979911C6EA0600594C94 /* SWPTemperatureCell.xib */,
+				53CE979911C6EA0600594C94 /* TemperatureCell.xib */,
 			);
 			name = "Table Cells";
 			sourceTree = "<group>";
@@ -372,7 +372,7 @@
 				53CE978F11C6E9DC00594C94 /* InstructionsView.xib in Resources */,
 				53CE979211C6E9E800594C94 /* TemperatureConverter.xib in Resources */,
 				53CE979511C6E9EF00594C94 /* WeightConverter.xib in Resources */,
-				53CE979B11C6EA0600594C94 /* SWPTemperatureCell.xib in Resources */,
+				53CE979B11C6EA0600594C94 /* TemperatureCell.xib in Resources */,
 				539FF19C11D41CB200EFF5ED /* Icon-72.png in Resources */,
 				539FF19D11D41CB200EFF5ED /* Icon-Small-50.png in Resources */,
 				539FF19E11D41CB200EFF5ED /* Icon-Small.png in Resources */,
@@ -413,8 +413,8 @@
 				2858E66B0FC6404C00DEACE0 /* SWPInstructionsViewController.m in Sources */,
 				2858E70B0FC6583300DEACE0 /* SWPIngredient.m in Sources */,
 				F6B657891401D44C008DE9CD /* Recipes.xcdatamodeld in Sources */,
-				F6C833791401D620002CB750 /* SWPExtractImagesMigrationPolicy.m in Sources */,
-				F6CC705B1401EB6D007BBD40 /* RecipesV1toV2.xcmappingmodel in Sources */,
+				F69F5B3514033951000EF070 /* RecipesV1toV2.xcmappingmodel in Sources */,
+				F69F5B38140339B9000EF070 /* SWPExtractImagesMigrationPolicy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,12 +461,12 @@
 			name = WeightConverter.xib;
 			sourceTree = "<group>";
 		};
-		53CE979911C6EA0600594C94 /* SWPTemperatureCell.xib */ = {
+		53CE979911C6EA0600594C94 /* TemperatureCell.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				53CE979A11C6EA0600594C94 /* en */,
 			);
-			name = SWPTemperatureCell.xib;
+			name = TemperatureCell.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

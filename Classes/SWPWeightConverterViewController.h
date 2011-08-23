@@ -1,9 +1,9 @@
 /*
-     File: WeightConverterViewController.h
+     File: SWPWeightConverterViewController.h
  Abstract: View controller to manage conversion of metric to imperial units of weight and vice versa.
  The controller uses two UIPicker objects to allow the user to select the weight in metric or imperial units.
  
-  Version: 1.5
+  Version: 2.0
  
  */
 

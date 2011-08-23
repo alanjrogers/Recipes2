@@ -1,9 +1,9 @@
 /*
-     File: RecipeListTableViewController.m 
+     File: SWPRecipeListTableViewController.m 
  Abstract: Table view controller to manage an editable table view that displays a list of recipes.
  Recipes are displayed in a custom table view cell.
   
-  Version: 1.5
+  Version: 2.0
  */
 
 #import "SWPRecipeListTableViewController.h"
