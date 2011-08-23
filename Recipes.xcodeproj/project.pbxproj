@@ -48,6 +48,7 @@
 		F6334B0C140221470012ADD5 /* ThreeBerryCobbler.png in Resources */ = {isa = PBXBuildFile; fileRef = F6334B05140221470012ADD5 /* ThreeBerryCobbler.png */; };
 		F6334B0E140228570012ADD5 /* Cheesecake.png in Resources */ = {isa = PBXBuildFile; fileRef = F6334B0D140228570012ADD5 /* Cheesecake.png */; };
 		F6516D3413FF7D690022E6CE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6516D3313FF7D690022E6CE /* QuartzCore.framework */; };
+		F69F5B3314032CEE000EF070 /* base.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F69F5B3214032CEE000EF070 /* base.xcconfig */; };
 		F6B657891401D44C008DE9CD /* Recipes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F66BD8491401D03200A2F113 /* Recipes.xcdatamodeld */; };
 		F6C833791401D620002CB750 /* ExtractImagesMigrationPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C833781401D620002CB750 /* ExtractImagesMigrationPolicy.m */; };
 		F6CC705B1401EB6D007BBD40 /* RecipesV1toV2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = F6CC705A1401EB6D007BBD40 /* RecipesV1toV2.xcmappingmodel */; };
@@ -114,6 +115,7 @@
 		F6516D3313FF7D690022E6CE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F66BD84A1401D03200A2F113 /* Recipesv2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Recipesv2.xcdatamodel; sourceTree = "<group>"; };
 		F66BD84B1401D03200A2F113 /* Recipes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Recipes.xcdatamodel; sourceTree = "<group>"; };
+		F69F5B3214032CEE000EF070 /* base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = base.xcconfig; sourceTree = "<group>"; };
 		F6C833771401D620002CB750 /* ExtractImagesMigrationPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtractImagesMigrationPolicy.h; sourceTree = "<group>"; };
 		F6C833781401D620002CB750 /* ExtractImagesMigrationPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtractImagesMigrationPolicy.m; sourceTree = "<group>"; };
 		F6CC705A1401EB6D007BBD40 /* RecipesV1toV2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = RecipesV1toV2.xcmappingmodel; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				F69F5B3014032CCF000EF070 /* Configuration */,
 				28CB440A0DF7129800C7BCF9 /* README */,
 				28FCBE8F0DE69AD4007A15C7 /* Model and Model Classes */,
 				F6E6B6BD1400F5F2003032AA /* View Controller */,
@@ -292,6 +295,14 @@
 				F6334B05140221470012ADD5 /* ThreeBerryCobbler.png */,
 			);
 			name = "Recipe Images";
+			sourceTree = "<group>";
+		};
+		F69F5B3014032CCF000EF070 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				F69F5B3214032CEE000EF070 /* base.xcconfig */,
+			);
+			name = Configuration;
 			sourceTree = "<group>";
 		};
 		F6E6B6BD1400F5F2003032AA /* View Controller */ = {
@@ -376,6 +387,7 @@
 				F6334B0B140221470012ADD5 /* TarteauxFraises.png in Resources */,
 				F6334B0C140221470012ADD5 /* ThreeBerryCobbler.png in Resources */,
 				F6334B0E140228570012ADD5 /* Cheesecake.png in Resources */,
+				F69F5B3314032CEE000EF070 /* base.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +504,7 @@
 		};
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F69F5B3214032CEE000EF070 /* base.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -508,6 +521,7 @@
 		};
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F69F5B3214032CEE000EF070 /* base.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
