@@ -49,8 +49,8 @@ void HandleCoreDataError(const char* function, const char* file, const int line,
 	self.window.rootViewController = self.converterNavigationController;
 }
 
-- (void)segmentedControlValueChanged:(id)sender {
-	if ([(UISegmentedControl*)sender selectedSegmentIndex] == 0) {
+- (void)segmentedControlValueChanged:(UISegmentedControl*)sender {
+	if ([sender selectedSegmentIndex] == 0) {
 		[self switchToRecipesView];
 	} else {
 		[self switchToConverterView];
@@ -59,10 +59,13 @@ void HandleCoreDataError(const char* function, const char* file, const int line,
 
 - (UISegmentedControl*)segmentedControlWithSelectedIndex:(NSUInteger)selectedSegmentIndex {
 	
-	UISegmentedControl* segmentedControl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Recipes", @"Converter", nil]];
+	UISegmentedControl* segmentedControl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Recipes", @"Unit Converter", nil]];
 	
 	[segmentedControl setSegmentedControlStyle:UISegmentedControlStyleBar];
 	[segmentedControl setSelectedSegmentIndex:selectedSegmentIndex];
+	[segmentedControl setWidth:145. forSegmentAtIndex:0];
+	[segmentedControl setWidth:145. forSegmentAtIndex:1];
+	[segmentedControl setBackgroundColor:[UIColor clearColor]];
 	[segmentedControl addTarget:self action:@selector(segmentedControlValueChanged:) forControlEvents:UIControlEventValueChanged];
 	
 	return [segmentedControl autorelease];

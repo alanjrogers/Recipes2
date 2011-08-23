@@ -51,6 +51,8 @@
 		F69F5B3314032CEE000EF070 /* base.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F69F5B3214032CEE000EF070 /* base.xcconfig */; };
 		F69F5B3514033951000EF070 /* RecipesV1toV2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = F69F5B3414033951000EF070 /* RecipesV1toV2.xcmappingmodel */; };
 		F69F5B38140339B9000EF070 /* SWPExtractImagesMigrationPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = F69F5B37140339B9000EF070 /* SWPExtractImagesMigrationPolicy.m */; };
+		F69F5B3D14035EBA000EF070 /* SWPTexturedNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F69F5B3C14035EBA000EF070 /* SWPTexturedNavigationBar.m */; };
+		F69F5B3F14036565000EF070 /* navigation-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F69F5B3E14036565000EF070 /* navigation-background@2x.png */; };
 		F6B657891401D44C008DE9CD /* Recipes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F66BD8491401D03200A2F113 /* Recipes.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
@@ -119,6 +121,9 @@
 		F69F5B3414033951000EF070 /* RecipesV1toV2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = RecipesV1toV2.xcmappingmodel; sourceTree = "<group>"; };
 		F69F5B36140339B9000EF070 /* SWPExtractImagesMigrationPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWPExtractImagesMigrationPolicy.h; path = Classes/SWPExtractImagesMigrationPolicy.h; sourceTree = "<group>"; };
 		F69F5B37140339B9000EF070 /* SWPExtractImagesMigrationPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWPExtractImagesMigrationPolicy.m; path = Classes/SWPExtractImagesMigrationPolicy.m; sourceTree = "<group>"; };
+		F69F5B3B14035EBA000EF070 /* SWPTexturedNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWPTexturedNavigationBar.h; path = Classes/SWPTexturedNavigationBar.h; sourceTree = "<group>"; };
+		F69F5B3C14035EBA000EF070 /* SWPTexturedNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWPTexturedNavigationBar.m; path = Classes/SWPTexturedNavigationBar.m; sourceTree = "<group>"; };
+		F69F5B3E14036565000EF070 /* navigation-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigation-background@2x.png"; path = "images/navigation-background@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +198,7 @@
 		28EDDE630E043E7F0085763B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F69F5B3E14036565000EF070 /* navigation-background@2x.png */,
 				539FF19511D41CB200EFF5ED /* Icon-72.png */,
 				539FF19611D41CB200EFF5ED /* Icon-Small-50.png */,
 				539FF19711D41CB200EFF5ED /* Icon-Small.png */,
@@ -236,7 +242,8 @@
 				28CB440A0DF7129800C7BCF9 /* README */,
 				F69F5B3014032CCF000EF070 /* Configuration */,
 				28FCBE8F0DE69AD4007A15C7 /* Model and Model Classes */,
-				F6E6B6BD1400F5F2003032AA /* View Controller */,
+				F69F5B3914035E1F000EF070 /* Categories */,
+				F69F5B3A14035E8A000EF070 /* Custom Controls */,
 				286DDA180DE761A2005EF016 /* MainWindow */,
 				080E96DDFE201D6D7F000001 /* Recipe View Controllers */,
 				28E87BED0DF21E0D00EE412E /* Converter View Controllers */,
@@ -305,11 +312,20 @@
 			name = Configuration;
 			sourceTree = "<group>";
 		};
-		F6E6B6BD1400F5F2003032AA /* View Controller */ = {
+		F69F5B3914035E1F000EF070 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = "View Controller";
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		F69F5B3A14035E8A000EF070 /* Custom Controls */ = {
+			isa = PBXGroup;
+			children = (
+				F69F5B3B14035EBA000EF070 /* SWPTexturedNavigationBar.h */,
+				F69F5B3C14035EBA000EF070 /* SWPTexturedNavigationBar.m */,
+			);
+			name = "Custom Controls";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,6 +404,7 @@
 				F6334B0C140221470012ADD5 /* ThreeBerryCobbler.png in Resources */,
 				F6334B0E140228570012ADD5 /* Cheesecake.png in Resources */,
 				F69F5B3314032CEE000EF070 /* base.xcconfig in Resources */,
+				F69F5B3F14036565000EF070 /* navigation-background@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +432,7 @@
 				F6B657891401D44C008DE9CD /* Recipes.xcdatamodeld in Sources */,
 				F69F5B3514033951000EF070 /* RecipesV1toV2.xcmappingmodel in Sources */,
 				F69F5B38140339B9000EF070 /* SWPExtractImagesMigrationPolicy.m in Sources */,
+				F69F5B3D14035EBA000EF070 /* SWPTexturedNavigationBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

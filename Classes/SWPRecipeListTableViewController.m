@@ -47,9 +47,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-	
 	[((UISegmentedControl*)self.navigationItem.titleView) setSelectedSegmentIndex:0];
-	
 	[super viewWillAppear:animated];
 }
 
