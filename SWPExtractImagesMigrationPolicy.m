@@ -6,9 +6,9 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "ExtractImagesMigrationPolicy.h"
+#import "SWPExtractImagesMigrationPolicy.h"
 
-@implementation ExtractImagesMigrationPolicy
+@implementation SWPExtractImagesMigrationPolicy
 
 - (NSString *)applicationDocumentsDirectory {
 	return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];

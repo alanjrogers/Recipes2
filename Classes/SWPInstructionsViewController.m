@@ -6,10 +6,10 @@
   
  */
 
-#import "InstructionsViewController.h"
-#import "Recipe.h"
+#import "SWPInstructionsViewController.h"
+#import "SWPRecipe.h"
 
-@implementation InstructionsViewController
+@implementation SWPInstructionsViewController
 
 @synthesize recipe = _recipe;
 @synthesize instructionsText = _instructionsText;

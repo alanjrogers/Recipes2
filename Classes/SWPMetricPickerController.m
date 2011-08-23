@@ -6,9 +6,9 @@
  
  */
 
-#import "MetricPickerController.h"
+#import "SWPMetricPickerController.h"
 
-@implementation MetricPickerController
+@implementation SWPMetricPickerController
 
 // Identifiers and widths for the various components
 #define KG_COMPONENT 0

@@ -5,15 +5,15 @@
   Version: 1.5
 */
 
-@class RecipeListTableViewController;
-@class UnitConverterTableViewController;
+@class SWPRecipeListTableViewController;
+@class SWPUnitConverterTableViewController;
 
-@interface RecipesAppDelegate : NSObject <UIApplicationDelegate> 
+@interface SWPRecipesAppDelegate : NSObject <UIApplicationDelegate> 
 
 @property (nonatomic, retain) IBOutlet UINavigationController *recipesNavigationController;
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet RecipeListTableViewController *recipeListController;
+@property (nonatomic, retain) IBOutlet SWPRecipeListTableViewController *recipeListController;
 @property (nonatomic, retain) IBOutlet UINavigationController *converterNavigationController;
 
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;

@@ -5,9 +5,9 @@
   Version: 1.5
 */
 
-#import "Recipe.h"
+#import "SWPRecipe.h"
 
-@implementation Recipe
+@implementation SWPRecipe
 
 @dynamic name, image, overview, thumbnailPath, instructions, ingredients, type, prepTime;
 

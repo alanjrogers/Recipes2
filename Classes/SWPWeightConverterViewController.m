@@ -7,18 +7,18 @@
   
  */
 
-#import "WeightConverterViewController.h"
+#import "SWPWeightConverterViewController.h"
 
-#import "MetricPickerController.h"
-#import "ImperialPickerController.h"
+#import "SWPMetricPickerController.h"
+#import "SWPImperialPickerController.h"
 
-@interface WeightConverterViewController ()
+@interface SWPWeightConverterViewController ()
 
 @property (nonatomic, assign) NSUInteger selectedUnit;
 
 @end
 
-@implementation WeightConverterViewController
+@implementation SWPWeightConverterViewController
 
 @synthesize pickerViewContainer = _pickerViewContainer;
 @synthesize imperialPickerController = _imperialPickerController;

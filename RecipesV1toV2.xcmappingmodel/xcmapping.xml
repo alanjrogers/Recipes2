@@ -105,7 +105,7 @@ cBIAAYagrxECCgAHAAgAFwAYADQANQA2AEQARQBGAEcASABjAGQAZQBrAGwAeACKAIsAjACNAI4AjwCQ
         <relationship name="entitymapping" type="1/1" destination="XDDEVENTITYMAPPING" idrefs="z120"></relationship>
     </object>
     <object type="XDDEVENTITYMAPPING" id="z113">
-        <attribute name="migrationpolicyclassname" type="string">ExtractImagesMigrationPolicy</attribute>
+        <attribute name="migrationpolicyclassname" type="string">SWPExtractImagesMigrationPolicy</attribute>
         <attribute name="sourcename" type="string">Image</attribute>
         <attribute name="mappingtypename" type="string">Undefined</attribute>
         <attribute name="mappingnumber" type="int16">2</attribute>
@@ -149,14 +149,14 @@ cBIAAYagrxECCgAHAAgAFwAYADQANQA2AEQARQBGAEcASABjAGQAZQBrAGwAeACKAIsAjACNAI4AjwCQ
         <relationship name="entitymapping" type="1/1" destination="XDDEVENTITYMAPPING" idrefs="z110"></relationship>
     </object>
     <object type="XDDEVENTITYMAPPING" id="z120">
-        <attribute name="migrationpolicyclassname" type="string">ExtractImagesMigrationPolicy</attribute>
+        <attribute name="migrationpolicyclassname" type="string">SWPExtractImagesMigrationPolicy</attribute>
         <attribute name="sourcename" type="string">Recipe</attribute>
         <attribute name="mappingtypename" type="string">Undefined</attribute>
         <attribute name="mappingnumber" type="int16">1</attribute>
         <attribute name="destinationname" type="string">Recipe</attribute>
         <attribute name="autogenerateexpression" type="bool">1</attribute>
         <relationship name="mappingmodel" type="1/1" destination="XDDEVMAPPINGMODEL" idrefs="z111"></relationship>
-        <relationship name="attributemappings" type="0/0" destination="XDDEVATTRIBUTEMAPPING" idrefs="z108 z115 z122 z112 z114"></relationship>
+        <relationship name="attributemappings" type="0/0" destination="XDDEVATTRIBUTEMAPPING" idrefs="z122 z112 z115 z114 z108"></relationship>
         <relationship name="relationshipmappings" type="0/0" destination="XDDEVRELATIONSHIPMAPPING" idrefs="z118 z105 z103"></relationship>
     </object>
     <object type="XDDEVATTRIBUTEMAPPING" id="z121">

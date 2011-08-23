@@ -7,26 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		184FEA3D0DEF6D4D00887625 /* UnitConverterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184FEA380DEF6D4D00887625 /* UnitConverterTableViewController.m */; };
-		184FEA3E0DEF6D4D00887625 /* WeightConverterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184FEA3A0DEF6D4D00887625 /* WeightConverterViewController.m */; };
-		184FEA3F0DEF6D4D00887625 /* TemperatureConverterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184FEA3B0DEF6D4D00887625 /* TemperatureConverterViewController.m */; };
-		1D3623260D0F684500981E51 /* RecipesAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* RecipesAppDelegate.m */; };
+		184FEA3D0DEF6D4D00887625 /* SWPUnitConverterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184FEA380DEF6D4D00887625 /* SWPUnitConverterTableViewController.m */; };
+		184FEA3E0DEF6D4D00887625 /* SWPWeightConverterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184FEA3A0DEF6D4D00887625 /* SWPWeightConverterViewController.m */; };
+		184FEA3F0DEF6D4D00887625 /* SWPTemperatureConverterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184FEA3B0DEF6D4D00887625 /* SWPTemperatureConverterViewController.m */; };
+		1D3623260D0F684500981E51 /* SWPRecipesAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* SWPRecipesAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
-		280CEB6C0E38093400021185 /* ImperialPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280CEB690E38093400021185 /* ImperialPickerController.m */; };
-		280CEB6D0E38093400021185 /* MetricPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280CEB6B0E38093400021185 /* MetricPickerController.m */; };
+		280CEB6C0E38093400021185 /* SWPImperialPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280CEB690E38093400021185 /* SWPImperialPickerController.m */; };
+		280CEB6D0E38093400021185 /* SWPMetricPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280CEB6B0E38093400021185 /* SWPMetricPickerController.m */; };
 		282FFCBB0FC8AAB500A28FE2 /* Recipes.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 282FFCBA0FC8AAB500A28FE2 /* Recipes.sqlite */; };
-		283EA3640DEE388300DBD352 /* RecipeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 283EA3630DEE388300DBD352 /* RecipeTableViewCell.m */; };
-		2858E6570FC63C2500DEACE0 /* RecipeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F09150DCA9C0500D424D6 /* RecipeDetailViewController.m */; };
-		2858E66B0FC6404C00DEACE0 /* InstructionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 286DD99F0DE747BF005EF016 /* InstructionsViewController.m */; };
-		2858E70B0FC6583300DEACE0 /* Ingredient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2858E70A0FC6583300DEACE0 /* Ingredient.m */; };
-		28963B450DFC7F5F005CC955 /* TemperatureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28963B440DFC7F5F005CC955 /* TemperatureCell.m */; };
+		283EA3640DEE388300DBD352 /* SWPRecipeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 283EA3630DEE388300DBD352 /* SWPRecipeTableViewCell.m */; };
+		2858E6570FC63C2500DEACE0 /* SWPRecipeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F09150DCA9C0500D424D6 /* SWPRecipeDetailViewController.m */; };
+		2858E66B0FC6404C00DEACE0 /* SWPInstructionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 286DD99F0DE747BF005EF016 /* SWPInstructionsViewController.m */; };
+		2858E70B0FC6583300DEACE0 /* SWPIngredient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2858E70A0FC6583300DEACE0 /* SWPIngredient.m */; };
+		28963B450DFC7F5F005CC955 /* SWPTemperatureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28963B440DFC7F5F005CC955 /* SWPTemperatureCell.m */; };
 		28963B800DFC8214005CC955 /* TemperatureData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28963B7F0DFC8214005CC955 /* TemperatureData.plist */; };
 		28B35EC40FC5DCD100ED0C40 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B35EC30FC5DCD100ED0C40 /* CoreData.framework */; };
 		28B35EC60FC5DCD100ED0C40 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B35EC50FC5DCD100ED0C40 /* CoreGraphics.framework */; };
 		28B35EC80FC5DCD100ED0C40 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B35EC70FC5DCD100ED0C40 /* Foundation.framework */; };
 		28B35FB70FC5E10C00ED0C40 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B35EC90FC5DCD100ED0C40 /* UIKit.framework */; };
-		28FCBE7A0DE69516007A15C7 /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FCBE790DE69516007A15C7 /* Recipe.m */; };
-		28FCBF0C0DE6A6C6007A15C7 /* RecipeListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FCBF0B0DE6A6C6007A15C7 /* RecipeListTableViewController.m */; };
+		28FCBE7A0DE69516007A15C7 /* SWPRecipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FCBE790DE69516007A15C7 /* SWPRecipe.m */; };
+		28FCBF0C0DE6A6C6007A15C7 /* SWPRecipeListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FCBF0B0DE6A6C6007A15C7 /* SWPRecipeListTableViewController.m */; };
 		539FF19C11D41CB200EFF5ED /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 539FF19511D41CB200EFF5ED /* Icon-72.png */; };
 		539FF19D11D41CB200EFF5ED /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 539FF19611D41CB200EFF5ED /* Icon-Small-50.png */; };
 		539FF19E11D41CB200EFF5ED /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 539FF19711D41CB200EFF5ED /* Icon-Small.png */; };
@@ -39,7 +39,7 @@
 		53CE978F11C6E9DC00594C94 /* InstructionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53CE978D11C6E9DC00594C94 /* InstructionsView.xib */; };
 		53CE979211C6E9E800594C94 /* TemperatureConverter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53CE979011C6E9E800594C94 /* TemperatureConverter.xib */; };
 		53CE979511C6E9EF00594C94 /* WeightConverter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53CE979311C6E9EF00594C94 /* WeightConverter.xib */; };
-		53CE979B11C6EA0600594C94 /* TemperatureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53CE979911C6EA0600594C94 /* TemperatureCell.xib */; };
+		53CE979B11C6EA0600594C94 /* SWPTemperatureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53CE979911C6EA0600594C94 /* SWPTemperatureCell.xib */; };
 		F6334B06140221470012ADD5 /* ChocolateCake.png in Resources */ = {isa = PBXBuildFile; fileRef = F6334AFF140221470012ADD5 /* ChocolateCake.png */; };
 		F6334B07140221470012ADD5 /* CrepesSuzette.png in Resources */ = {isa = PBXBuildFile; fileRef = F6334B00140221470012ADD5 /* CrepesSuzette.png */; };
 		F6334B08140221470012ADD5 /* GaufresdeLiege.png in Resources */ = {isa = PBXBuildFile; fileRef = F6334B01140221470012ADD5 /* GaufresdeLiege.png */; };
@@ -50,45 +50,45 @@
 		F6516D3413FF7D690022E6CE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6516D3313FF7D690022E6CE /* QuartzCore.framework */; };
 		F69F5B3314032CEE000EF070 /* base.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F69F5B3214032CEE000EF070 /* base.xcconfig */; };
 		F6B657891401D44C008DE9CD /* Recipes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F66BD8491401D03200A2F113 /* Recipes.xcdatamodeld */; };
-		F6C833791401D620002CB750 /* ExtractImagesMigrationPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C833781401D620002CB750 /* ExtractImagesMigrationPolicy.m */; };
+		F6C833791401D620002CB750 /* SWPExtractImagesMigrationPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C833781401D620002CB750 /* SWPExtractImagesMigrationPolicy.m */; };
 		F6CC705B1401EB6D007BBD40 /* RecipesV1toV2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = F6CC705A1401EB6D007BBD40 /* RecipesV1toV2.xcmappingmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		180F09140DCA9C0500D424D6 /* RecipeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeDetailViewController.h; sourceTree = "<group>"; };
-		180F09150DCA9C0500D424D6 /* RecipeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeDetailViewController.m; sourceTree = "<group>"; };
-		184FEA370DEF6D4D00887625 /* UnitConverterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnitConverterTableViewController.h; path = Classes/UnitConverterTableViewController.h; sourceTree = "<group>"; };
-		184FEA380DEF6D4D00887625 /* UnitConverterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UnitConverterTableViewController.m; path = Classes/UnitConverterTableViewController.m; sourceTree = "<group>"; };
-		184FEA390DEF6D4D00887625 /* WeightConverterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeightConverterViewController.h; path = Classes/WeightConverterViewController.h; sourceTree = "<group>"; };
-		184FEA3A0DEF6D4D00887625 /* WeightConverterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeightConverterViewController.m; path = Classes/WeightConverterViewController.m; sourceTree = "<group>"; };
-		184FEA3B0DEF6D4D00887625 /* TemperatureConverterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TemperatureConverterViewController.m; path = Classes/TemperatureConverterViewController.m; sourceTree = "<group>"; };
-		184FEA3C0DEF6D4D00887625 /* TemperatureConverterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TemperatureConverterViewController.h; path = Classes/TemperatureConverterViewController.h; sourceTree = "<group>"; };
-		1D3623240D0F684500981E51 /* RecipesAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecipesAppDelegate.h; path = Classes/RecipesAppDelegate.h; sourceTree = "<group>"; };
-		1D3623250D0F684500981E51 /* RecipesAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecipesAppDelegate.m; path = Classes/RecipesAppDelegate.m; sourceTree = "<group>"; };
+		180F09140DCA9C0500D424D6 /* SWPRecipeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWPRecipeDetailViewController.h; sourceTree = "<group>"; };
+		180F09150DCA9C0500D424D6 /* SWPRecipeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWPRecipeDetailViewController.m; sourceTree = "<group>"; };
+		184FEA370DEF6D4D00887625 /* SWPUnitConverterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWPUnitConverterTableViewController.h; path = Classes/SWPUnitConverterTableViewController.h; sourceTree = "<group>"; };
+		184FEA380DEF6D4D00887625 /* SWPUnitConverterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWPUnitConverterTableViewController.m; path = Classes/SWPUnitConverterTableViewController.m; sourceTree = "<group>"; };
+		184FEA390DEF6D4D00887625 /* SWPWeightConverterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWPWeightConverterViewController.h; path = Classes/SWPWeightConverterViewController.h; sourceTree = "<group>"; };
+		184FEA3A0DEF6D4D00887625 /* SWPWeightConverterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWPWeightConverterViewController.m; path = Classes/SWPWeightConverterViewController.m; sourceTree = "<group>"; };
+		184FEA3B0DEF6D4D00887625 /* SWPTemperatureConverterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWPTemperatureConverterViewController.m; path = Classes/SWPTemperatureConverterViewController.m; sourceTree = "<group>"; };
+		184FEA3C0DEF6D4D00887625 /* SWPTemperatureConverterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWPTemperatureConverterViewController.h; path = Classes/SWPTemperatureConverterViewController.h; sourceTree = "<group>"; };
+		1D3623240D0F684500981E51 /* SWPRecipesAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWPRecipesAppDelegate.h; path = Classes/SWPRecipesAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* SWPRecipesAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWPRecipesAppDelegate.m; path = Classes/SWPRecipesAppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		280CEB680E38093400021185 /* ImperialPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImperialPickerController.h; path = Classes/ImperialPickerController.h; sourceTree = "<group>"; };
-		280CEB690E38093400021185 /* ImperialPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImperialPickerController.m; path = Classes/ImperialPickerController.m; sourceTree = "<group>"; };
-		280CEB6A0E38093400021185 /* MetricPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MetricPickerController.h; path = Classes/MetricPickerController.h; sourceTree = "<group>"; };
-		280CEB6B0E38093400021185 /* MetricPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MetricPickerController.m; path = Classes/MetricPickerController.m; sourceTree = "<group>"; };
+		280CEB680E38093400021185 /* SWPImperialPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWPImperialPickerController.h; path = Classes/SWPImperialPickerController.h; sourceTree = "<group>"; };
+		280CEB690E38093400021185 /* SWPImperialPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWPImperialPickerController.m; path = Classes/SWPImperialPickerController.m; sourceTree = "<group>"; };
+		280CEB6A0E38093400021185 /* SWPMetricPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWPMetricPickerController.h; path = Classes/SWPMetricPickerController.h; sourceTree = "<group>"; };
+		280CEB6B0E38093400021185 /* SWPMetricPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWPMetricPickerController.m; path = Classes/SWPMetricPickerController.m; sourceTree = "<group>"; };
 		282FFCBA0FC8AAB500A28FE2 /* Recipes.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = Recipes.sqlite; path = RecipeData/Recipes.sqlite; sourceTree = "<group>"; };
-		283EA3620DEE388300DBD352 /* RecipeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecipeTableViewCell.h; path = Classes/RecipeTableViewCell.h; sourceTree = "<group>"; };
-		283EA3630DEE388300DBD352 /* RecipeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecipeTableViewCell.m; path = Classes/RecipeTableViewCell.m; sourceTree = "<group>"; };
-		2858E7090FC6583300DEACE0 /* Ingredient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Ingredient.h; path = Classes/Ingredient.h; sourceTree = "<group>"; };
-		2858E70A0FC6583300DEACE0 /* Ingredient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Ingredient.m; path = Classes/Ingredient.m; sourceTree = "<group>"; };
-		286DD99E0DE747BF005EF016 /* InstructionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstructionsViewController.h; sourceTree = "<group>"; };
-		286DD99F0DE747BF005EF016 /* InstructionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstructionsViewController.m; sourceTree = "<group>"; };
-		28963B430DFC7F5F005CC955 /* TemperatureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TemperatureCell.h; path = Classes/TemperatureCell.h; sourceTree = "<group>"; };
-		28963B440DFC7F5F005CC955 /* TemperatureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TemperatureCell.m; path = Classes/TemperatureCell.m; sourceTree = "<group>"; };
+		283EA3620DEE388300DBD352 /* SWPRecipeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWPRecipeTableViewCell.h; path = Classes/SWPRecipeTableViewCell.h; sourceTree = "<group>"; };
+		283EA3630DEE388300DBD352 /* SWPRecipeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWPRecipeTableViewCell.m; path = Classes/SWPRecipeTableViewCell.m; sourceTree = "<group>"; };
+		2858E7090FC6583300DEACE0 /* SWPIngredient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWPIngredient.h; path = Classes/SWPIngredient.h; sourceTree = "<group>"; };
+		2858E70A0FC6583300DEACE0 /* SWPIngredient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWPIngredient.m; path = Classes/SWPIngredient.m; sourceTree = "<group>"; };
+		286DD99E0DE747BF005EF016 /* SWPInstructionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWPInstructionsViewController.h; sourceTree = "<group>"; };
+		286DD99F0DE747BF005EF016 /* SWPInstructionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWPInstructionsViewController.m; sourceTree = "<group>"; };
+		28963B430DFC7F5F005CC955 /* SWPTemperatureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWPTemperatureCell.h; path = Classes/SWPTemperatureCell.h; sourceTree = "<group>"; };
+		28963B440DFC7F5F005CC955 /* SWPTemperatureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWPTemperatureCell.m; path = Classes/SWPTemperatureCell.m; sourceTree = "<group>"; };
 		28963B7F0DFC8214005CC955 /* TemperatureData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = TemperatureData.plist; path = RecipeData/TemperatureData.plist; sourceTree = "<group>"; };
 		28B35EC30FC5DCD100ED0C40 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		28B35EC50FC5DCD100ED0C40 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28B35EC70FC5DCD100ED0C40 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		28B35EC90FC5DCD100ED0C40 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		28CB440A0DF7129800C7BCF9 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
-		28FCBE780DE69516007A15C7 /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Recipe.h; path = Classes/Recipe.h; sourceTree = "<group>"; };
-		28FCBE790DE69516007A15C7 /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Recipe.m; path = Classes/Recipe.m; sourceTree = "<group>"; };
-		28FCBF0A0DE6A6C6007A15C7 /* RecipeListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeListTableViewController.h; sourceTree = "<group>"; };
-		28FCBF0B0DE6A6C6007A15C7 /* RecipeListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeListTableViewController.m; sourceTree = "<group>"; };
+		28FCBE780DE69516007A15C7 /* SWPRecipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWPRecipe.h; path = Classes/SWPRecipe.h; sourceTree = "<group>"; };
+		28FCBE790DE69516007A15C7 /* SWPRecipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWPRecipe.m; path = Classes/SWPRecipe.m; sourceTree = "<group>"; };
+		28FCBF0A0DE6A6C6007A15C7 /* SWPRecipeListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWPRecipeListTableViewController.h; sourceTree = "<group>"; };
+		28FCBF0B0DE6A6C6007A15C7 /* SWPRecipeListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWPRecipeListTableViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Recipes_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipes_Prefix.pch; sourceTree = "<group>"; };
 		539FF19511D41CB200EFF5ED /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "images/Icon-72.png"; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 		53CE978E11C6E9DC00594C94 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/InstructionsView.xib; sourceTree = SOURCE_ROOT; };
 		53CE979111C6E9E800594C94 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TemperatureConverter.xib; sourceTree = "<group>"; };
 		53CE979411C6E9EF00594C94 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WeightConverter.xib; sourceTree = "<group>"; };
-		53CE979A11C6EA0600594C94 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TemperatureCell.xib; sourceTree = "<group>"; };
+		53CE979A11C6EA0600594C94 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SWPTemperatureCell.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6334AFF140221470012ADD5 /* ChocolateCake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ChocolateCake.png; path = RecipeData/images/ChocolateCake.png; sourceTree = "<group>"; };
 		F6334B00140221470012ADD5 /* CrepesSuzette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CrepesSuzette.png; path = RecipeData/images/CrepesSuzette.png; sourceTree = "<group>"; };
@@ -116,8 +116,8 @@
 		F66BD84A1401D03200A2F113 /* Recipesv2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Recipesv2.xcdatamodel; sourceTree = "<group>"; };
 		F66BD84B1401D03200A2F113 /* Recipes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Recipes.xcdatamodel; sourceTree = "<group>"; };
 		F69F5B3214032CEE000EF070 /* base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = base.xcconfig; sourceTree = "<group>"; };
-		F6C833771401D620002CB750 /* ExtractImagesMigrationPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtractImagesMigrationPolicy.h; sourceTree = "<group>"; };
-		F6C833781401D620002CB750 /* ExtractImagesMigrationPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtractImagesMigrationPolicy.m; sourceTree = "<group>"; };
+		F6C833771401D620002CB750 /* SWPExtractImagesMigrationPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWPExtractImagesMigrationPolicy.h; sourceTree = "<group>"; };
+		F6C833781401D620002CB750 /* SWPExtractImagesMigrationPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWPExtractImagesMigrationPolicy.m; sourceTree = "<group>"; };
 		F6CC705A1401EB6D007BBD40 /* RecipesV1toV2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = RecipesV1toV2.xcmappingmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,13 +140,13 @@
 		080E96DDFE201D6D7F000001 /* Recipe View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				28FCBF0A0DE6A6C6007A15C7 /* RecipeListTableViewController.h */,
-				28FCBF0B0DE6A6C6007A15C7 /* RecipeListTableViewController.m */,
-				180F09140DCA9C0500D424D6 /* RecipeDetailViewController.h */,
-				180F09150DCA9C0500D424D6 /* RecipeDetailViewController.m */,
+				28FCBF0A0DE6A6C6007A15C7 /* SWPRecipeListTableViewController.h */,
+				28FCBF0B0DE6A6C6007A15C7 /* SWPRecipeListTableViewController.m */,
+				180F09140DCA9C0500D424D6 /* SWPRecipeDetailViewController.h */,
+				180F09150DCA9C0500D424D6 /* SWPRecipeDetailViewController.m */,
 				53CE978711C6E9A200594C94 /* DetailHeaderView.xib */,
-				286DD99E0DE747BF005EF016 /* InstructionsViewController.h */,
-				286DD99F0DE747BF005EF016 /* InstructionsViewController.m */,
+				286DD99E0DE747BF005EF016 /* SWPInstructionsViewController.h */,
+				286DD99F0DE747BF005EF016 /* SWPInstructionsViewController.m */,
 				53CE978D11C6E9DC00594C94 /* InstructionsView.xib */,
 			);
 			name = "Recipe View Controllers";
@@ -164,8 +164,8 @@
 		286DDA180DE761A2005EF016 /* MainWindow */ = {
 			isa = PBXGroup;
 			children = (
-				1D3623240D0F684500981E51 /* RecipesAppDelegate.h */,
-				1D3623250D0F684500981E51 /* RecipesAppDelegate.m */,
+				1D3623240D0F684500981E51 /* SWPRecipesAppDelegate.h */,
+				1D3623250D0F684500981E51 /* SWPRecipesAppDelegate.m */,
 				53CE978411C6E99200594C94 /* MainWindow.xib */,
 			);
 			name = MainWindow;
@@ -174,18 +174,18 @@
 		28E87BED0DF21E0D00EE412E /* Converter View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				184FEA370DEF6D4D00887625 /* UnitConverterTableViewController.h */,
-				184FEA380DEF6D4D00887625 /* UnitConverterTableViewController.m */,
-				184FEA3C0DEF6D4D00887625 /* TemperatureConverterViewController.h */,
-				184FEA3B0DEF6D4D00887625 /* TemperatureConverterViewController.m */,
+				184FEA370DEF6D4D00887625 /* SWPUnitConverterTableViewController.h */,
+				184FEA380DEF6D4D00887625 /* SWPUnitConverterTableViewController.m */,
+				184FEA3C0DEF6D4D00887625 /* SWPTemperatureConverterViewController.h */,
+				184FEA3B0DEF6D4D00887625 /* SWPTemperatureConverterViewController.m */,
 				53CE979011C6E9E800594C94 /* TemperatureConverter.xib */,
-				184FEA390DEF6D4D00887625 /* WeightConverterViewController.h */,
-				184FEA3A0DEF6D4D00887625 /* WeightConverterViewController.m */,
+				184FEA390DEF6D4D00887625 /* SWPWeightConverterViewController.h */,
+				184FEA3A0DEF6D4D00887625 /* SWPWeightConverterViewController.m */,
 				53CE979311C6E9EF00594C94 /* WeightConverter.xib */,
-				280CEB680E38093400021185 /* ImperialPickerController.h */,
-				280CEB690E38093400021185 /* ImperialPickerController.m */,
-				280CEB6A0E38093400021185 /* MetricPickerController.h */,
-				280CEB6B0E38093400021185 /* MetricPickerController.m */,
+				280CEB680E38093400021185 /* SWPImperialPickerController.h */,
+				280CEB690E38093400021185 /* SWPImperialPickerController.m */,
+				280CEB6A0E38093400021185 /* SWPMetricPickerController.h */,
+				280CEB6B0E38093400021185 /* SWPMetricPickerController.m */,
 			);
 			name = "Converter View Controllers";
 			sourceTree = "<group>";
@@ -218,14 +218,14 @@
 		28FCBE8F0DE69AD4007A15C7 /* Model and Model Classes */ = {
 			isa = PBXGroup;
 			children = (
-				28FCBE780DE69516007A15C7 /* Recipe.h */,
+				28FCBE780DE69516007A15C7 /* SWPRecipe.h */,
 				F66BD8491401D03200A2F113 /* Recipes.xcdatamodeld */,
 				F6CC705A1401EB6D007BBD40 /* RecipesV1toV2.xcmappingmodel */,
-				28FCBE790DE69516007A15C7 /* Recipe.m */,
-				2858E7090FC6583300DEACE0 /* Ingredient.h */,
-				2858E70A0FC6583300DEACE0 /* Ingredient.m */,
-				F6C833771401D620002CB750 /* ExtractImagesMigrationPolicy.h */,
-				F6C833781401D620002CB750 /* ExtractImagesMigrationPolicy.m */,
+				28FCBE790DE69516007A15C7 /* SWPRecipe.m */,
+				2858E7090FC6583300DEACE0 /* SWPIngredient.h */,
+				2858E70A0FC6583300DEACE0 /* SWPIngredient.m */,
+				F6C833771401D620002CB750 /* SWPExtractImagesMigrationPolicy.h */,
+				F6C833781401D620002CB750 /* SWPExtractImagesMigrationPolicy.m */,
 			);
 			name = "Model and Model Classes";
 			sourceTree = "<group>";
@@ -274,11 +274,11 @@
 		966654DF0DED0F0D009F55E3 /* Table Cells */ = {
 			isa = PBXGroup;
 			children = (
-				283EA3620DEE388300DBD352 /* RecipeTableViewCell.h */,
-				283EA3630DEE388300DBD352 /* RecipeTableViewCell.m */,
-				28963B430DFC7F5F005CC955 /* TemperatureCell.h */,
-				28963B440DFC7F5F005CC955 /* TemperatureCell.m */,
-				53CE979911C6EA0600594C94 /* TemperatureCell.xib */,
+				283EA3620DEE388300DBD352 /* SWPRecipeTableViewCell.h */,
+				283EA3630DEE388300DBD352 /* SWPRecipeTableViewCell.m */,
+				28963B430DFC7F5F005CC955 /* SWPTemperatureCell.h */,
+				28963B440DFC7F5F005CC955 /* SWPTemperatureCell.m */,
+				53CE979911C6EA0600594C94 /* SWPTemperatureCell.xib */,
 			);
 			name = "Table Cells";
 			sourceTree = "<group>";
@@ -372,7 +372,7 @@
 				53CE978F11C6E9DC00594C94 /* InstructionsView.xib in Resources */,
 				53CE979211C6E9E800594C94 /* TemperatureConverter.xib in Resources */,
 				53CE979511C6E9EF00594C94 /* WeightConverter.xib in Resources */,
-				53CE979B11C6EA0600594C94 /* TemperatureCell.xib in Resources */,
+				53CE979B11C6EA0600594C94 /* SWPTemperatureCell.xib in Resources */,
 				539FF19C11D41CB200EFF5ED /* Icon-72.png in Resources */,
 				539FF19D11D41CB200EFF5ED /* Icon-Small-50.png in Resources */,
 				539FF19E11D41CB200EFF5ED /* Icon-Small.png in Resources */,
@@ -399,21 +399,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
-				1D3623260D0F684500981E51 /* RecipesAppDelegate.m in Sources */,
-				28FCBE7A0DE69516007A15C7 /* Recipe.m in Sources */,
-				28FCBF0C0DE6A6C6007A15C7 /* RecipeListTableViewController.m in Sources */,
-				283EA3640DEE388300DBD352 /* RecipeTableViewCell.m in Sources */,
-				184FEA3D0DEF6D4D00887625 /* UnitConverterTableViewController.m in Sources */,
-				184FEA3E0DEF6D4D00887625 /* WeightConverterViewController.m in Sources */,
-				184FEA3F0DEF6D4D00887625 /* TemperatureConverterViewController.m in Sources */,
-				28963B450DFC7F5F005CC955 /* TemperatureCell.m in Sources */,
-				280CEB6C0E38093400021185 /* ImperialPickerController.m in Sources */,
-				280CEB6D0E38093400021185 /* MetricPickerController.m in Sources */,
-				2858E6570FC63C2500DEACE0 /* RecipeDetailViewController.m in Sources */,
-				2858E66B0FC6404C00DEACE0 /* InstructionsViewController.m in Sources */,
-				2858E70B0FC6583300DEACE0 /* Ingredient.m in Sources */,
+				1D3623260D0F684500981E51 /* SWPRecipesAppDelegate.m in Sources */,
+				28FCBE7A0DE69516007A15C7 /* SWPRecipe.m in Sources */,
+				28FCBF0C0DE6A6C6007A15C7 /* SWPRecipeListTableViewController.m in Sources */,
+				283EA3640DEE388300DBD352 /* SWPRecipeTableViewCell.m in Sources */,
+				184FEA3D0DEF6D4D00887625 /* SWPUnitConverterTableViewController.m in Sources */,
+				184FEA3E0DEF6D4D00887625 /* SWPWeightConverterViewController.m in Sources */,
+				184FEA3F0DEF6D4D00887625 /* SWPTemperatureConverterViewController.m in Sources */,
+				28963B450DFC7F5F005CC955 /* SWPTemperatureCell.m in Sources */,
+				280CEB6C0E38093400021185 /* SWPImperialPickerController.m in Sources */,
+				280CEB6D0E38093400021185 /* SWPMetricPickerController.m in Sources */,
+				2858E6570FC63C2500DEACE0 /* SWPRecipeDetailViewController.m in Sources */,
+				2858E66B0FC6404C00DEACE0 /* SWPInstructionsViewController.m in Sources */,
+				2858E70B0FC6583300DEACE0 /* SWPIngredient.m in Sources */,
 				F6B657891401D44C008DE9CD /* Recipes.xcdatamodeld in Sources */,
-				F6C833791401D620002CB750 /* ExtractImagesMigrationPolicy.m in Sources */,
+				F6C833791401D620002CB750 /* SWPExtractImagesMigrationPolicy.m in Sources */,
 				F6CC705B1401EB6D007BBD40 /* RecipesV1toV2.xcmappingmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,12 +461,12 @@
 			name = WeightConverter.xib;
 			sourceTree = "<group>";
 		};
-		53CE979911C6EA0600594C94 /* TemperatureCell.xib */ = {
+		53CE979911C6EA0600594C94 /* SWPTemperatureCell.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				53CE979A11C6EA0600594C94 /* en */,
 			);
-			name = TemperatureCell.xib;
+			name = SWPTemperatureCell.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

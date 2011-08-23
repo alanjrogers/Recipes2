@@ -6,13 +6,13 @@
   
  */
 
-@class TemperatureCell;
+@class SWPTemperatureCell;
 
-@interface TemperatureConverterViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface SWPTemperatureConverterViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
   
 @property (nonatomic, readonly, retain) NSArray *temperatureData;
 
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
-@property (nonatomic, retain) IBOutlet TemperatureCell *temperatureCell;
+@property (nonatomic, retain) IBOutlet SWPTemperatureCell *temperatureCell;
 
 @end

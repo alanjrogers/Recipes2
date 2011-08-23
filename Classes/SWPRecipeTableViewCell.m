@@ -6,12 +6,12 @@
   
  */
 
-#import "RecipeTableViewCell.h"
+#import "SWPRecipeTableViewCell.h"
 
 #pragma mark -
 #pragma mark SubviewFrames category
 
-@interface RecipeTableViewCell (SubviewFrames)
+@interface SWPRecipeTableViewCell (SubviewFrames)
 - (CGRect)_imageViewFrame;
 - (CGRect)_nameLabelFrame;
 - (CGRect)_descriptionLabelFrame;
@@ -22,7 +22,7 @@
 #pragma mark -
 #pragma mark RecipeTableViewCell implementation
 
-@implementation RecipeTableViewCell
+@implementation SWPRecipeTableViewCell
 
 @synthesize recipe = _recipe, nameLabel = _nameLabel, overviewLabel = _overviewLabel, prepTimeLabel = _prepTimeLabel;
 
@@ -125,7 +125,7 @@
 #pragma mark -
 #pragma mark Recipe set accessor
 
-- (void)setRecipe:(Recipe *)newRecipe {
+- (void)setRecipe:(SWPRecipe *)newRecipe {
     if (newRecipe != _recipe) {
         [_recipe release];
         _recipe = [newRecipe retain];

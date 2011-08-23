@@ -6,13 +6,13 @@
   Version: 1.5
  */
 
-#import "RecipeListTableViewController.h"
-#import "RecipeDetailViewController.h"
-#import "Recipe.h"
-#import "RecipeTableViewCell.h"
-#import "RecipesAppDelegate.h"
+#import "SWPRecipeListTableViewController.h"
+#import "SWPRecipeDetailViewController.h"
+#import "SWPRecipe.h"
+#import "SWPRecipeTableViewCell.h"
+#import "SWPRecipesAppDelegate.h"
 
-@implementation RecipeListTableViewController
+@implementation SWPRecipeListTableViewController
 
 @synthesize managedObjectContext = _managedObjectContext, fetchedResultsController = _fetchedResultsController;
 
@@ -24,7 +24,7 @@
     // Configure the navigation bar
     self.title = @"Recipes";
 	
-	UISegmentedControl* segmentedControl = [((RecipesAppDelegate*)[[UIApplication sharedApplication] delegate]) segmentedControlWithSelectedIndex:0];
+	UISegmentedControl* segmentedControl = [((SWPRecipesAppDelegate*)[[UIApplication sharedApplication] delegate]) segmentedControlWithSelectedIndex:0];
 	
 	self.navigationItem.titleView = segmentedControl;
 	
@@ -58,9 +58,9 @@
 #pragma mark -
 #pragma mark Recipe support
 
-- (void)showRecipe:(Recipe *)recipe animated:(BOOL)animated {
+- (void)showRecipe:(SWPRecipe *)recipe animated:(BOOL)animated {
     // Create a detail view controller, set the recipe, then push it.
-    RecipeDetailViewController *detailViewController = [[RecipeDetailViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    SWPRecipeDetailViewController *detailViewController = [[SWPRecipeDetailViewController alloc] initWithStyle:UITableViewStyleGrouped];
     detailViewController.recipe = recipe;
     
     [self.navigationController pushViewController:detailViewController animated:animated];
@@ -98,9 +98,9 @@
     // Dequeue or if necessary create a RecipeTableViewCell, then set its recipe to the recipe for the current row.
     static NSString *RecipeCellIdentifier = @"RecipeCellIdentifier";
     
-    RecipeTableViewCell *recipeCell = (RecipeTableViewCell *)[tableView dequeueReusableCellWithIdentifier:RecipeCellIdentifier];
+    SWPRecipeTableViewCell *recipeCell = (SWPRecipeTableViewCell *)[tableView dequeueReusableCellWithIdentifier:RecipeCellIdentifier];
     if (recipeCell == nil) {
-        recipeCell = [[[RecipeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:RecipeCellIdentifier] autorelease];
+        recipeCell = [[[SWPRecipeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:RecipeCellIdentifier] autorelease];
 		recipeCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
@@ -110,14 +110,14 @@
 }
 
 
-- (void)configureCell:(RecipeTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+- (void)configureCell:(SWPRecipeTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     // Configure the cell
-	Recipe *recipe = (Recipe *)[self.fetchedResultsController objectAtIndexPath:indexPath];
+	SWPRecipe *recipe = (SWPRecipe *)[self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.recipe = recipe;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	Recipe *recipe = (Recipe *)[self.fetchedResultsController objectAtIndexPath:indexPath];
+	SWPRecipe *recipe = (SWPRecipe *)[self.fetchedResultsController objectAtIndexPath:indexPath];
     
     [self showRecipe:recipe animated:YES];
 }

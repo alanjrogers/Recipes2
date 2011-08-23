@@ -8,6 +8,6 @@
 
 #import <CoreData/CoreData.h>
 
-@interface ExtractImagesMigrationPolicy : NSEntityMigrationPolicy
+@interface SWPExtractImagesMigrationPolicy : NSEntityMigrationPolicy
 
 @end

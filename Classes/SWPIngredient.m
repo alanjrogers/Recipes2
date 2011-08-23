@@ -5,10 +5,10 @@
   Version: 1.5
 */
 
-#import "Ingredient.h"
-#import "Recipe.h"
+#import "SWPIngredient.h"
+#import "SWPRecipe.h"
 
-@implementation Ingredient 
+@implementation SWPIngredient 
 
 @dynamic name, amount, displayOrder, recipe;
 

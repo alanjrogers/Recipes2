@@ -7,17 +7,17 @@
  
  */
 
-@class MetricPickerController;
-@class ImperialPickerController;
+@class SWPMetricPickerController;
+@class SWPImperialPickerController;
 
-@interface WeightConverterViewController : UIViewController 
+@interface SWPWeightConverterViewController : UIViewController 
 
 @property (nonatomic, retain) IBOutlet UIView *pickerViewContainer;
 
-@property (nonatomic, retain) IBOutlet MetricPickerController *metricPickerController;
+@property (nonatomic, retain) IBOutlet SWPMetricPickerController *metricPickerController;
 @property (nonatomic, retain) IBOutlet UIView *metricPickerViewContainer;
 
-@property (nonatomic, retain) IBOutlet ImperialPickerController *imperialPickerController;
+@property (nonatomic, retain) IBOutlet SWPImperialPickerController *imperialPickerController;
 @property (nonatomic, retain) IBOutlet UIView *imperialPickerViewContainer;
 
 @property (nonatomic, retain) IBOutlet UISegmentedControl *segmentedControl;

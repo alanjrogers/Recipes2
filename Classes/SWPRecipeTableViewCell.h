@@ -6,11 +6,11 @@
 
  */
 
-#import "Recipe.h"
+#import "SWPRecipe.h"
 
-@interface RecipeTableViewCell : UITableViewCell 
+@interface SWPRecipeTableViewCell : UITableViewCell 
 
-@property (nonatomic, retain) Recipe *recipe;
+@property (nonatomic, retain) SWPRecipe *recipe;
 
 @property (nonatomic, retain) UILabel *nameLabel;
 @property (nonatomic, retain) UILabel *overviewLabel;

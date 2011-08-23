@@ -6,7 +6,7 @@
   
  */
 
-@interface MetricPickerController : NSObject <UIPickerViewDataSource, UIPickerViewDelegate> 
+@interface SWPMetricPickerController : NSObject <UIPickerViewDataSource, UIPickerViewDelegate> 
 
 @property (nonatomic, retain) IBOutlet UIPickerView *pickerView;
 @property (nonatomic, retain) IBOutlet UILabel *label;

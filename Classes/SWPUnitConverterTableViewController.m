@@ -7,13 +7,13 @@
   
  */
 
-#import "UnitConverterTableViewController.h"
+#import "SWPUnitConverterTableViewController.h"
 
-#import "WeightConverterViewController.h"
-#import "TemperatureConverterViewController.h"
-#import "RecipesAppDelegate.h"
+#import "SWPWeightConverterViewController.h"
+#import "SWPTemperatureConverterViewController.h"
+#import "SWPRecipesAppDelegate.h"
 
-@implementation UnitConverterTableViewController
+@implementation SWPUnitConverterTableViewController
 
 - (id)init {
     return [self initWithStyle:UITableViewStyleGrouped];
@@ -30,7 +30,7 @@
 	[super viewDidLoad];
 	self.title = @"Converter";
 
-	UISegmentedControl* segmentedControl = [((RecipesAppDelegate*)[[UIApplication sharedApplication] delegate]) segmentedControlWithSelectedIndex:1];
+	UISegmentedControl* segmentedControl = [((SWPRecipesAppDelegate*)[[UIApplication sharedApplication] delegate]) segmentedControlWithSelectedIndex:1];
 	
 	self.navigationItem.titleView = segmentedControl;
 }
@@ -82,10 +82,10 @@
     
     switch ([indexPath section]) {
         case WeightConverterIndex:
-            converterController = [[WeightConverterViewController alloc] initWithNibName:@"WeightConverter" bundle:nil];
+            converterController = [[SWPWeightConverterViewController alloc] initWithNibName:@"WeightConverter" bundle:nil];
             break;
         case TemperatureConverterIndex:
-            converterController = [[TemperatureConverterViewController alloc] initWithNibName:@"TemperatureConverter" bundle:nil];
+            converterController = [[SWPTemperatureConverterViewController alloc] initWithNibName:@"TemperatureConverter" bundle:nil];
             break;
     }
     

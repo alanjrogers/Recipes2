@@ -7,6 +7,6 @@
   
  */
 
-@interface UnitConverterTableViewController : UITableViewController
+@interface SWPUnitConverterTableViewController : UITableViewController
 
 @end

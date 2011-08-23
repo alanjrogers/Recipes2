@@ -6,7 +6,7 @@
  
  */
 
-@interface TemperatureCell : UITableViewCell
+@interface SWPTemperatureCell : UITableViewCell
 
 @property (nonatomic, retain) IBOutlet UILabel *cLabel;
 @property (nonatomic, retain) IBOutlet UILabel *fLabel;

@@ -8,7 +8,7 @@
 @interface ImageToDataTransformer : NSValueTransformer
 @end
 
-@interface Recipe : NSManagedObject
+@interface SWPRecipe : NSManagedObject
 
 @property (nonatomic, retain) NSString *instructions;
 @property (nonatomic, retain) NSString *name;
@@ -23,7 +23,7 @@
 
 @end
 
-@interface Recipe (CoreDataGeneratedAccessors)
+@interface SWPRecipe (CoreDataGeneratedAccessors)
 - (void)addIngredientsObject:(NSManagedObject *)value;
 - (void)removeIngredientsObject:(NSManagedObject *)value;
 - (void)addIngredients:(NSSet *)value;

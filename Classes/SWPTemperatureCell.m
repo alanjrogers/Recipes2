@@ -6,9 +6,9 @@
 
  */
 
-#import "TemperatureCell.h"
+#import "SWPTemperatureCell.h"
 
-@implementation TemperatureCell
+@implementation SWPTemperatureCell
 
 @synthesize cLabel = _cLabel, fLabel = _fLabel, gLabel = _gLabel;
 

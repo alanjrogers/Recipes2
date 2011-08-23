@@ -7,11 +7,11 @@
  
  */
 
-@class Recipe;
+@class SWPRecipe;
 
-@interface RecipeDetailViewController : UITableViewController <UINavigationControllerDelegate>
+@interface SWPRecipeDetailViewController : UITableViewController <UINavigationControllerDelegate>
 
-@property (nonatomic, retain) Recipe *recipe;
+@property (nonatomic, retain) SWPRecipe *recipe;
 @property (nonatomic, retain) NSMutableArray *ingredients;
 
 @property (nonatomic, retain) IBOutlet UIView *tableHeaderView;

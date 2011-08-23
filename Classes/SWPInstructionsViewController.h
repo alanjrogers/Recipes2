@@ -6,11 +6,11 @@
  
  */
 
-@class Recipe;
+@class SWPRecipe;
 
-@interface InstructionsViewController : UIViewController
+@interface SWPInstructionsViewController : UIViewController
 
-@property (nonatomic, retain) Recipe *recipe;
+@property (nonatomic, retain) SWPRecipe *recipe;
 @property (nonatomic, retain) IBOutlet UITextView *instructionsText;
 @property (nonatomic, retain) IBOutlet UILabel *nameLabel;
 

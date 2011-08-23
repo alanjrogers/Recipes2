@@ -6,10 +6,10 @@
     
  */
 
-#import "ImperialPickerController.h"
+#import "SWPImperialPickerController.h"
 
 
-@implementation ImperialPickerController
+@implementation SWPImperialPickerController
 
 
 // Identifiers and widths for the various components

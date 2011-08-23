@@ -6,7 +6,7 @@
  
  */
 
-@interface ImperialPickerController : NSObject <UIPickerViewDataSource, UIPickerViewDelegate>
+@interface SWPImperialPickerController : NSObject <UIPickerViewDataSource, UIPickerViewDelegate>
 
 @property (nonatomic, retain) IBOutlet UIPickerView *pickerView;
 @property (nonatomic, retain) IBOutlet UILabel *label;

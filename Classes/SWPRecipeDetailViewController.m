@@ -7,14 +7,14 @@
   
  */
 
-#import "RecipeDetailViewController.h"
+#import "SWPRecipeDetailViewController.h"
 
-#import "Recipe.h"
-#import "Ingredient.h"
+#import "SWPRecipe.h"
+#import "SWPIngredient.h"
 
-#import "InstructionsViewController.h"
+#import "SWPInstructionsViewController.h"
 
-@implementation RecipeDetailViewController
+@implementation SWPRecipeDetailViewController
 
 @synthesize recipe = _recipe;
 @synthesize ingredients = _ingredients;
@@ -151,7 +151,7 @@
 				cell.accessoryType = UITableViewCellAccessoryNone;
 			}
 			
-            Ingredient *ingredient = [self.ingredients objectAtIndex:row];
+            SWPIngredient *ingredient = [self.ingredients objectAtIndex:row];
             cell.textLabel.text = ingredient.name;
 			cell.detailTextLabel.text = ingredient.amount;
         } 
@@ -208,8 +208,8 @@
      */
     switch (section) {
         case INSTRUCTIONS_SECTION:
-            nextViewController = [[InstructionsViewController alloc] initWithNibName:@"InstructionsView" bundle:nil];
-            ((InstructionsViewController *)nextViewController).recipe = self.recipe;
+            nextViewController = [[SWPInstructionsViewController alloc] initWithNibName:@"InstructionsView" bundle:nil];
+            ((SWPInstructionsViewController *)nextViewController).recipe = self.recipe;
             break;
 		default:
             break;

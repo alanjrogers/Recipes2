@@ -5,9 +5,9 @@
   Version: 1.5
 */
 
-#import "RecipesAppDelegate.h"
-#import "RecipeListTableViewController.h"
-#import "UnitConverterTableViewController.h"
+#import "SWPRecipesAppDelegate.h"
+#import "SWPRecipeListTableViewController.h"
+#import "SWPUnitConverterTableViewController.h"
 
 void HandleCoreDataError(const char* function, const char* file, const int line, NSError* error);
 
@@ -30,7 +30,7 @@ void HandleCoreDataError(const char* function, const char* file, const int line,
 }
 
 
-@implementation RecipesAppDelegate {
+@implementation SWPRecipesAppDelegate {
 	NSManagedObjectContext* _managedObjectContext;
 	NSManagedObjectModel* _managedObjectModel;
 	NSPersistentStoreCoordinator* _persistentStoreCoordinator;

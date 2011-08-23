@@ -6,10 +6,10 @@
 
  */
 
-#import "TemperatureConverterViewController.h"
-#import "TemperatureCell.h"
+#import "SWPTemperatureConverterViewController.h"
+#import "SWPTemperatureCell.h"
 
-@implementation TemperatureConverterViewController {
+@implementation SWPTemperatureConverterViewController {
 	NSArray* _temperatureData;
 }
 
@@ -47,7 +47,7 @@
     static NSString *MyIdentifier = @"MyIdentifier";
     
     // Create a new TemperatureCell if necessary
-    TemperatureCell *cell = (TemperatureCell *)[self.tableView dequeueReusableCellWithIdentifier:MyIdentifier];
+    SWPTemperatureCell *cell = (SWPTemperatureCell *)[self.tableView dequeueReusableCellWithIdentifier:MyIdentifier];
     if (cell == nil) {
 		[[NSBundle mainBundle] loadNibNamed:@"TemperatureCell" owner:self options:nil];
 		cell = self.temperatureCell;

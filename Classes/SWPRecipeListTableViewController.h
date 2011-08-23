@@ -6,15 +6,15 @@
   Version: 1.5
 */
 
-@class Recipe;
-@class RecipeTableViewCell;
+@class SWPRecipe;
+@class SWPRecipeTableViewCell;
 
-@interface RecipeListTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@interface SWPRecipeListTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
-- (void)showRecipe:(Recipe *)recipe animated:(BOOL)animated;
-- (void)configureCell:(RecipeTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
+- (void)showRecipe:(SWPRecipe *)recipe animated:(BOOL)animated;
+- (void)configureCell:(SWPRecipeTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 
 @end
