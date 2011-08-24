@@ -55,6 +55,9 @@
 		F65EF1471404C34C00D80FFC /* RecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F65EF1421404C16A00D80FFC /* RecipeTableViewCell.xib */; };
 		F65EF1491404C3DB00D80FFC /* recipe-cell-background.png in Resources */ = {isa = PBXBuildFile; fileRef = F65EF1481404C3DB00D80FFC /* recipe-cell-background.png */; };
 		F65EF14B1404C7D100D80FFC /* granite-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F65EF14A1404C7D100D80FFC /* granite-background@2x.png */; };
+		F65EF14E1404CE0E00D80FFC /* recipe-cell-background-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F65EF14C1404CE0E00D80FFC /* recipe-cell-background-selected.png */; };
+		F65EF14F1404CE0E00D80FFC /* recipe-cell-background-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F65EF14D1404CE0E00D80FFC /* recipe-cell-background-selected@2x.png */; };
+		F65EF1521404D37F00D80FFC /* SWPRoundedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F65EF1511404D37F00D80FFC /* SWPRoundedImageView.m */; };
 		F69F5B3314032CEE000EF070 /* base.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F69F5B3214032CEE000EF070 /* base.xcconfig */; };
 		F69F5B3514033951000EF070 /* RecipesV1toV2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = F69F5B3414033951000EF070 /* RecipesV1toV2.xcmappingmodel */; };
 		F69F5B38140339B9000EF070 /* SWPExtractImagesMigrationPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = F69F5B37140339B9000EF070 /* SWPExtractImagesMigrationPolicy.m */; };
@@ -131,6 +134,10 @@
 		F65EF1441404C1D200D80FFC /* recipe-cell-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipe-cell-background@2x.png"; path = "images/recipe-cell-background@2x.png"; sourceTree = "<group>"; };
 		F65EF1481404C3DB00D80FFC /* recipe-cell-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipe-cell-background.png"; path = "images/recipe-cell-background.png"; sourceTree = "<group>"; };
 		F65EF14A1404C7D100D80FFC /* granite-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "granite-background@2x.png"; path = "images/granite-background@2x.png"; sourceTree = "<group>"; };
+		F65EF14C1404CE0E00D80FFC /* recipe-cell-background-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipe-cell-background-selected.png"; path = "images/recipe-cell-background-selected.png"; sourceTree = "<group>"; };
+		F65EF14D1404CE0E00D80FFC /* recipe-cell-background-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipe-cell-background-selected@2x.png"; path = "images/recipe-cell-background-selected@2x.png"; sourceTree = "<group>"; };
+		F65EF1501404D37F00D80FFC /* SWPRoundedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWPRoundedImageView.h; path = Classes/SWPRoundedImageView.h; sourceTree = "<group>"; };
+		F65EF1511404D37F00D80FFC /* SWPRoundedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWPRoundedImageView.m; path = Classes/SWPRoundedImageView.m; sourceTree = "<group>"; };
 		F66BD84A1401D03200A2F113 /* Recipesv2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Recipesv2.xcdatamodel; sourceTree = "<group>"; };
 		F66BD84B1401D03200A2F113 /* Recipes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Recipes.xcdatamodel; sourceTree = "<group>"; };
 		F69F5B3214032CEE000EF070 /* base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = base.xcconfig; sourceTree = "<group>"; };
@@ -217,6 +224,8 @@
 		28EDDE630E043E7F0085763B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F65EF14C1404CE0E00D80FFC /* recipe-cell-background-selected.png */,
+				F65EF14D1404CE0E00D80FFC /* recipe-cell-background-selected@2x.png */,
 				F65EF14A1404C7D100D80FFC /* granite-background@2x.png */,
 				F65EF1481404C3DB00D80FFC /* recipe-cell-background.png */,
 				F65EF1441404C1D200D80FFC /* recipe-cell-background@2x.png */,
@@ -353,6 +362,8 @@
 				F69F5B3C14035EBA000EF070 /* SWPTexturedNavigationBar.m */,
 				F69F5B421403C9A5000EF070 /* SWPTexturedSegmentedControl.h */,
 				F69F5B431403C9A5000EF070 /* SWPTexturedSegmentedControl.m */,
+				F65EF1501404D37F00D80FFC /* SWPRoundedImageView.h */,
+				F65EF1511404D37F00D80FFC /* SWPRoundedImageView.m */,
 			);
 			name = "Custom Controls";
 			sourceTree = "<group>";
@@ -442,6 +453,8 @@
 				F65EF1471404C34C00D80FFC /* RecipeTableViewCell.xib in Resources */,
 				F65EF1491404C3DB00D80FFC /* recipe-cell-background.png in Resources */,
 				F65EF14B1404C7D100D80FFC /* granite-background@2x.png in Resources */,
+				F65EF14E1404CE0E00D80FFC /* recipe-cell-background-selected.png in Resources */,
+				F65EF14F1404CE0E00D80FFC /* recipe-cell-background-selected@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +484,7 @@
 				F69F5B38140339B9000EF070 /* SWPExtractImagesMigrationPolicy.m in Sources */,
 				F69F5B3D14035EBA000EF070 /* SWPTexturedNavigationBar.m in Sources */,
 				F69F5B441403C9A5000EF070 /* SWPTexturedSegmentedControl.m in Sources */,
+				F65EF1521404D37F00D80FFC /* SWPRoundedImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

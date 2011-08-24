@@ -115,7 +115,7 @@
 		self.recipeTableViewCell = nil;
     }
     
-	//[self configureCell:recipeCell atIndexPath:indexPath];
+	[self configureCell:recipeCell atIndexPath:indexPath];
     
     return recipeCell;
 }

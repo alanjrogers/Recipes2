@@ -6,14 +6,16 @@
 
  */
 
-#import "SWPRecipe.h"
+@class SWPRoundedImageView;
+@class SWPRecipe;
 
 @interface SWPRecipeTableViewCell : UITableViewCell 
 
 @property (nonatomic, retain) SWPRecipe *recipe;
 
-@property (nonatomic, retain) UILabel *nameLabel;
-@property (nonatomic, retain) UILabel *overviewLabel;
-@property (nonatomic, retain) UILabel *prepTimeLabel;
+@property (nonatomic, retain) IBOutlet SWPRoundedImageView *recipeImageView;
+@property (nonatomic, retain) IBOutlet UILabel *nameLabel;
+@property (nonatomic, retain) IBOutlet UILabel *overviewLabel;
+@property (nonatomic, retain) IBOutlet UILabel *prepTimeLabel;
 
 @end
