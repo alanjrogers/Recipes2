@@ -17,6 +17,7 @@
 @implementation SWPRecipeListTableViewController
 
 @synthesize managedObjectContext = _managedObjectContext, fetchedResultsController = _fetchedResultsController;
+@synthesize recipeTableViewCell = _recipeTableViewCell;
 
 #pragma mark -
 #pragma mark Memory management
@@ -37,14 +38,24 @@
 	
 	SWPTexturedSegmentedControl* segmentedControl = [((SWPRecipesAppDelegate*)[[UIApplication sharedApplication] delegate]) segmentedControlWithSelectedIndex:0];
 	self.navigationItem.titleView = segmentedControl;
-		
-    // Set the table view's row height
-    self.tableView.rowHeight = 44.;
 	
+		
+    // configure the tableview
+    self.tableView.rowHeight = 184.;
+	self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+	self.tableView.backgroundView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"granite-background"]] autorelease];
+	[self.tableView setIndicatorStyle:UIScrollViewIndicatorStyleWhite];
+		
 	NSError *error = nil;
 	if (![[self fetchedResultsController] performFetch:&error]) {
 		HandleCoreDataError(__PRETTY_FUNCTION__, __FILE__, __LINE__, error);
 	}		
+}
+
+- (void)viewDidUnload {
+	self.recipeTableViewCell = nil;
+	
+	[super viewDidUnload];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -99,11 +110,12 @@
     
     SWPRecipeTableViewCell *recipeCell = (SWPRecipeTableViewCell *)[tableView dequeueReusableCellWithIdentifier:RecipeCellIdentifier];
     if (recipeCell == nil) {
-        recipeCell = [[[SWPRecipeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:RecipeCellIdentifier] autorelease];
-		recipeCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+		[[NSBundle mainBundle] loadNibNamed:@"RecipeTableViewCell" owner:self options:nil];
+		recipeCell = [[self.recipeTableViewCell retain] autorelease];
+		self.recipeTableViewCell = nil;
     }
     
-	[self configureCell:recipeCell atIndexPath:indexPath];
+	//[self configureCell:recipeCell atIndexPath:indexPath];
     
     return recipeCell;
 }

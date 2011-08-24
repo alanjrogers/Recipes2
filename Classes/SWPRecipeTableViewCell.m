@@ -29,38 +29,6 @@
 #pragma mark -
 #pragma mark Initialization
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
-
-	if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-		self.imageView.contentMode = UIViewContentModeScaleAspectFit;
-
-        _overviewLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-        [_overviewLabel setFont:[UIFont systemFontOfSize:12.0]];
-        [_overviewLabel setTextColor:[UIColor darkGrayColor]];
-        [_overviewLabel setHighlightedTextColor:[UIColor whiteColor]];
-        [self.contentView addSubview:_overviewLabel];
-
-        _prepTimeLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-        _prepTimeLabel.textAlignment = UITextAlignmentRight;
-        [_prepTimeLabel setFont:[UIFont systemFontOfSize:12.0]];
-        [_prepTimeLabel setTextColor:[UIColor blackColor]];
-        [_prepTimeLabel setHighlightedTextColor:[UIColor whiteColor]];
-		_prepTimeLabel.minimumFontSize = 7.0;
-		_prepTimeLabel.lineBreakMode = UILineBreakModeTailTruncation;
-        [self.contentView addSubview:_prepTimeLabel];
-
-        _nameLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-        [_nameLabel setFont:[UIFont boldSystemFontOfSize:14.0]];
-        [_nameLabel setTextColor:[UIColor blackColor]];
-        [_nameLabel setHighlightedTextColor:[UIColor whiteColor]];
-        [self.contentView addSubview:_nameLabel];
-    }
-
-    return self;
-}
-
-#pragma mark -
-#pragma mark Memory management
 
 - (void)dealloc {
     [_recipe release], _recipe = nil;

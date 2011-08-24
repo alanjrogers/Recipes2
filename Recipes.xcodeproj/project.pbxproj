@@ -51,6 +51,10 @@
 		F65EF13C1404631F00D80FFC /* segmented-divider@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F65EF13B1404631F00D80FFC /* segmented-divider@2x.png */; };
 		F65EF13F14049F1700D80FFC /* backbutton-stretch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F65EF13E14049F1700D80FFC /* backbutton-stretch@2x.png */; };
 		F65EF1411404A1F200D80FFC /* backbutton-stretch-highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F65EF1401404A1F200D80FFC /* backbutton-stretch-highlighted@2x.png */; };
+		F65EF1461404C34500D80FFC /* recipe-cell-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F65EF1441404C1D200D80FFC /* recipe-cell-background@2x.png */; };
+		F65EF1471404C34C00D80FFC /* RecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F65EF1421404C16A00D80FFC /* RecipeTableViewCell.xib */; };
+		F65EF1491404C3DB00D80FFC /* recipe-cell-background.png in Resources */ = {isa = PBXBuildFile; fileRef = F65EF1481404C3DB00D80FFC /* recipe-cell-background.png */; };
+		F65EF14B1404C7D100D80FFC /* granite-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F65EF14A1404C7D100D80FFC /* granite-background@2x.png */; };
 		F69F5B3314032CEE000EF070 /* base.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F69F5B3214032CEE000EF070 /* base.xcconfig */; };
 		F69F5B3514033951000EF070 /* RecipesV1toV2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = F69F5B3414033951000EF070 /* RecipesV1toV2.xcmappingmodel */; };
 		F69F5B38140339B9000EF070 /* SWPExtractImagesMigrationPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = F69F5B37140339B9000EF070 /* SWPExtractImagesMigrationPolicy.m */; };
@@ -123,6 +127,10 @@
 		F65EF13B1404631F00D80FFC /* segmented-divider@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "segmented-divider@2x.png"; path = "images/segmented-divider@2x.png"; sourceTree = "<group>"; };
 		F65EF13E14049F1700D80FFC /* backbutton-stretch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backbutton-stretch@2x.png"; path = "images/backbutton-stretch@2x.png"; sourceTree = "<group>"; };
 		F65EF1401404A1F200D80FFC /* backbutton-stretch-highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backbutton-stretch-highlighted@2x.png"; path = "images/backbutton-stretch-highlighted@2x.png"; sourceTree = "<group>"; };
+		F65EF1421404C16A00D80FFC /* RecipeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecipeTableViewCell.xib; sourceTree = "<group>"; };
+		F65EF1441404C1D200D80FFC /* recipe-cell-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipe-cell-background@2x.png"; path = "images/recipe-cell-background@2x.png"; sourceTree = "<group>"; };
+		F65EF1481404C3DB00D80FFC /* recipe-cell-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipe-cell-background.png"; path = "images/recipe-cell-background.png"; sourceTree = "<group>"; };
+		F65EF14A1404C7D100D80FFC /* granite-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "granite-background@2x.png"; path = "images/granite-background@2x.png"; sourceTree = "<group>"; };
 		F66BD84A1401D03200A2F113 /* Recipesv2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Recipesv2.xcdatamodel; sourceTree = "<group>"; };
 		F66BD84B1401D03200A2F113 /* Recipes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Recipes.xcdatamodel; sourceTree = "<group>"; };
 		F69F5B3214032CEE000EF070 /* base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = base.xcconfig; sourceTree = "<group>"; };
@@ -209,6 +217,9 @@
 		28EDDE630E043E7F0085763B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F65EF14A1404C7D100D80FFC /* granite-background@2x.png */,
+				F65EF1481404C3DB00D80FFC /* recipe-cell-background.png */,
+				F65EF1441404C1D200D80FFC /* recipe-cell-background@2x.png */,
 				F65EF1401404A1F200D80FFC /* backbutton-stretch-highlighted@2x.png */,
 				F65EF13E14049F1700D80FFC /* backbutton-stretch@2x.png */,
 				F65EF13B1404631F00D80FFC /* segmented-divider@2x.png */,
@@ -301,6 +312,7 @@
 				28963B430DFC7F5F005CC955 /* SWPTemperatureCell.h */,
 				28963B440DFC7F5F005CC955 /* SWPTemperatureCell.m */,
 				53CE979911C6EA0600594C94 /* TemperatureCell.xib */,
+				F65EF1421404C16A00D80FFC /* RecipeTableViewCell.xib */,
 			);
 			name = "Table Cells";
 			sourceTree = "<group>";
@@ -426,6 +438,10 @@
 				F65EF13C1404631F00D80FFC /* segmented-divider@2x.png in Resources */,
 				F65EF13F14049F1700D80FFC /* backbutton-stretch@2x.png in Resources */,
 				F65EF1411404A1F200D80FFC /* backbutton-stretch-highlighted@2x.png in Resources */,
+				F65EF1461404C34500D80FFC /* recipe-cell-background@2x.png in Resources */,
+				F65EF1471404C34C00D80FFC /* RecipeTableViewCell.xib in Resources */,
+				F65EF1491404C3DB00D80FFC /* recipe-cell-background.png in Resources */,
+				F65EF14B1404C7D100D80FFC /* granite-background@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
