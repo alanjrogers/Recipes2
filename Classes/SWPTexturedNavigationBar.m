@@ -7,6 +7,7 @@
 //
 
 #import "SWPTexturedNavigationBar.h"
+#import "SWPRecipesAppDelegate.h"
 
 #define SWP_BACK_BUTTON_HEIGHT 31.
 #define SWP_BACK_BUTTON_MAX_WIDTH 160.
@@ -29,7 +30,16 @@
 	[super dealloc];
 }
 
-- (UIBarButtonItem*)backButtonItemWithTitle:(NSString*)title target:(id)target action:(SEL)action {
+- (void)back:(id)sender {
+	// this ain't pretty :)
+	SWPRecipesAppDelegate* appDelegate = (SWPRecipesAppDelegate*)[[UIApplication sharedApplication] delegate];
+	UINavigationController* topNavigationController = (UINavigationController*)[[appDelegate window] rootViewController];
+	if (topNavigationController != nil) {
+		[topNavigationController popViewControllerAnimated:YES];
+	}
+}
+
+- (UIBarButtonItem*)backButtonItemWithTitle:(NSString*)title {
 	UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
 	
 	CGFloat leftCapWidth = 13.;
@@ -47,12 +57,12 @@
 	UIImage* highlightedButtonImage = [[UIImage imageNamed:@"backbutton-stretch-highlighted"] stretchableImageWithLeftCapWidth:leftCapWidth topCapHeight:0.];
 
 	CGSize textSize = [title sizeWithFont:button.titleLabel.font];
-	button.frame = CGRectMake(button.frame.origin.x, button.frame.origin.y, MIN(textSize.width + leftCapWidth*2., SWP_BACK_BUTTON_MAX_WIDTH), SWP_BACK_BUTTON_HEIGHT);
+	button.frame = CGRectMake(button.frame.origin.x, button.frame.origin.y + 2., MIN(textSize.width + leftCapWidth*2., SWP_BACK_BUTTON_MAX_WIDTH), SWP_BACK_BUTTON_HEIGHT);
 	[button setTitle:title forState:UIControlStateNormal];
 	[button setBackgroundImage:buttonImage forState:UIControlStateNormal];
 	[button setBackgroundImage:highlightedButtonImage forState:UIControlStateHighlighted];
 	
-	[button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+	[button addTarget:self action:@selector(back:) forControlEvents:UIControlEventTouchUpInside];
 
 	return [[[UIBarButtonItem alloc] initWithCustomView:button] autorelease];
 }

@@ -14,6 +14,7 @@
 
 #import "SWPInstructionsViewController.h"
 #import "SWPTexturedNavigationBar.h"
+#import "SWPRecipesAppDelegate.h"
 
 @implementation SWPRecipeDetailViewController
 
@@ -44,11 +45,6 @@
 
 #pragma mark -
 #pragma mark View controller
-// TODO: Move into UIViewController base class
-
-- (void)back:(id)sender {
-	[self.navigationController popViewControllerAnimated:YES];
-}
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
@@ -56,9 +52,7 @@
         [[NSBundle mainBundle] loadNibNamed:@"DetailHeaderView" owner:self options:nil];
         self.tableView.tableHeaderView = self.tableHeaderView;
     }
-	self.navigationItem.leftBarButtonItem = [(SWPTexturedNavigationBar*)self.navigationController.navigationBar backButtonItemWithTitle:@"Recipes" 
-																																 target:self 
-																																 action:@selector(back:)];	
+	self.navigationItem.leftBarButtonItem = [(SWPTexturedNavigationBar*)self.navigationController.navigationBar backButtonItemWithTitle:@"Recipes"]; 
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -91,10 +85,6 @@
 	
 	// Update recipe type and ingredients on return.
     [self.tableView reloadData]; 
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-	NSLog(@"%@ %@", self.navigationController.navigationBar.backItem, self.navigationController.navigationBar.backItem.backBarButtonItem);
 }
 
 - (void)viewDidUnload {
