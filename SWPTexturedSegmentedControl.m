@@ -56,8 +56,8 @@
 
 @end
 
-#define SWP_SEGMENTED_CONTROL_HEIGHT	29.
-#define SWP_SEGMENTED_CONTROL_BASELINE	7.
+#define SWP_SEGMENTED_CONTROL_HEIGHT	30.
+#define SWP_SEGMENTED_CONTROL_BASELINE	8.
 
 @implementation SWPTexturedSegmentedControl
 
@@ -157,11 +157,9 @@
 	__block CGFloat x = 0.;
 	CGColorRef shadowColor = CGColorCreateCopyWithAlpha([UIColor blackColor].CGColor, 0.45);
 
-	
-
 	NSUInteger itemCount = [self.items count];
 	[self.items enumerateObjectsUsingBlock:^(_SWPTexturedSegment* obj, NSUInteger idx, BOOL *stop) {
-		CGRect selectionFrame = CGRectMake(x, 0, obj.size.width, SWP_SEGMENTED_CONTROL_HEIGHT);
+		CGRect selectionFrame = CGRectMake(x, 1., obj.size.width, SWP_SEGMENTED_CONTROL_HEIGHT - 2.);
 		
 		if (idx == (NSUInteger)[self selectedSegmentIndex]) {
 			[[UIColor blackColor] set];
