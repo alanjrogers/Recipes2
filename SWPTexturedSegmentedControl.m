@@ -64,12 +64,6 @@
 @synthesize selectedSegmentIndex = _selectedSegmentIndex;
 @synthesize items = _items;
 
-/*The default value is UISegmentedControlNoSegment (no segment selected)
- until the user touches a segment. Set this property to -1 to turn off the current selection.
- UISegmentedControl ignores this property when the control is in momentary mode. 
- When the user touches a segment to change the selection, the control event UIControlEventValueChanged is generated;
- if the segmented control is set up to respond to this control event, it sends a action message to its target. */
-
 - (id)initWithItems:(NSArray *)items {
 	if (self = [super init]) {
 		_selectedSegmentIndex = UISegmentedControlNoSegment;
@@ -86,6 +80,19 @@
 - (void)dealloc {
 	[_items release], _items = nil;
 	[super dealloc];
+}
+
+#pragma mark - 
+#pragma mark Selected Segment
+
+- (void)setSelectedSegmentIndex:(NSInteger)selectedSegmentIndex {
+	if (_selectedSegmentIndex != selectedSegmentIndex) {
+		_selectedSegmentIndex = selectedSegmentIndex;
+		
+		if (_selectedSegmentIndex != UISegmentedControlNoSegment) {
+			[self sendActionsForControlEvents:UIControlEventValueChanged];
+		}
+	}
 }
 
 #pragma mark -
@@ -120,9 +127,13 @@
 
 - (CGFloat)_totalWidth {
 	__block CGFloat _totalWidth = 0.;
-	
+	NSUInteger itemCount = [self.items count];
 	[self.items enumerateObjectsUsingBlock:^(_SWPTexturedSegment* obj, NSUInteger idx, BOOL *stop) {
 		_totalWidth += obj.size.width;
+		// Add space for the separator
+		if (idx < (itemCount - 1)) {
+			_totalWidth += 1.;
+		}
 	}];
 	
 	return _totalWidth;
@@ -141,18 +152,77 @@
 
 	// Separator
 	
-	//UIImage* separatorImage;
+	UIImage* separatorImage = [UIImage imageNamed:@"segmented-divider"];
 	
 	__block CGFloat x = 0.;
+	CGColorRef shadowColor = CGColorCreateCopyWithAlpha([UIColor blackColor].CGColor, 0.45);
+
 	
+
+	NSUInteger itemCount = [self.items count];
 	[self.items enumerateObjectsUsingBlock:^(_SWPTexturedSegment* obj, NSUInteger idx, BOOL *stop) {
-		CGRect titleRect = CGRectMake(x, SWP_SEGMENTED_CONTROL_HEIGHT - SWP_SEGMENTED_CONTROL_BASELINE - obj.size.height, obj.size.width, SWP_SEGMENTED_CONTROL_HEIGHT);
+		CGRect selectionFrame = CGRectMake(x, 0, obj.size.width, SWP_SEGMENTED_CONTROL_HEIGHT);
+		
+		if (idx == (NSUInteger)[self selectedSegmentIndex]) {
+			[[UIColor blackColor] set];
+			UIRectCorner roundingCorners = 0;
+			if (idx == 0) {
+				roundingCorners = (UIRectCornerTopLeft | UIRectCornerBottomLeft);
+			} else if (idx == (itemCount - 1)) {
+				roundingCorners = (UIRectCornerTopRight | UIRectCornerBottomRight);
+			}
+			
+			UIBezierPath* selectionPath = [UIBezierPath bezierPathWithRoundedRect:selectionFrame 
+																byRoundingCorners:roundingCorners
+																	  cornerRadii:CGSizeMake(5., 5.)];
+			[selectionPath fillWithBlendMode:kCGBlendModeNormal alpha:0.3];
+		}
+		UIGraphicsPushContext(UIGraphicsGetCurrentContext());
+		
+		CGContextSetShadowWithColor(UIGraphicsGetCurrentContext(), CGSizeMake(0, -1.), 0, shadowColor);
 		[[UIColor whiteColor] set];
-		CGContextSetShadowWithColor(UIGraphicsGetCurrentContext(), CGSizeMake(0, -1.), 0, [UIColor blackColor].CGColor);
+		CGRect titleRect = CGRectMake(x, SWP_SEGMENTED_CONTROL_HEIGHT - SWP_SEGMENTED_CONTROL_BASELINE - obj.size.height, obj.size.width, SWP_SEGMENTED_CONTROL_HEIGHT);
 		[obj.title drawInRect:titleRect withFont:[UIFont boldSystemFontOfSize:[UIFont smallSystemFontSize]] lineBreakMode:UILineBreakModeClip alignment:UITextAlignmentCenter];
+		
+		UIGraphicsPopContext();
+
 		x += obj.size.width;
+		// Draw separators
+		if (idx < (itemCount - 1)) {
+			[separatorImage drawAtPoint:CGPointMake(x, 0.)];
+			x += 1.;
+		}
 	}];
 	
+	// TODO: // Draw selection
+	
+	CGColorRelease(shadowColor);
+}
+
+#pragma mark -
+#pragma mark Handling touches
+
+// We will mimic the behaviour of UISegmentedControl here
+// - action sent on touch down inside
+// - any touch down on the control will send the action
+// - before sending the action, work out which segmented was touched and select it.
+
+- (BOOL)beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event {
+	// Touch down inside!
+	if ([touch phase] == UITouchPhaseBegan) {
+		CGPoint touchPoint = [touch locationInView:self];
+		__block CGFloat x = 0.;
+
+		[self.items enumerateObjectsUsingBlock:^(_SWPTexturedSegment* obj, NSUInteger idx, BOOL *stop) {
+			if (CGRectContainsPoint(CGRectMake(x, 0., obj.size.width, SWP_SEGMENTED_CONTROL_HEIGHT), touchPoint)) {
+				[self setSelectedSegmentIndex:idx];
+				*stop = YES;
+			}
+			x += obj.size.width;
+		}];
+	}
+	
+	return NO;
 }
 
 @end

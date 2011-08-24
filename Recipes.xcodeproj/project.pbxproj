@@ -48,6 +48,7 @@
 		F6334B0C140221470012ADD5 /* ThreeBerryCobbler.png in Resources */ = {isa = PBXBuildFile; fileRef = F6334B05140221470012ADD5 /* ThreeBerryCobbler.png */; };
 		F6334B0E140228570012ADD5 /* Cheesecake.png in Resources */ = {isa = PBXBuildFile; fileRef = F6334B0D140228570012ADD5 /* Cheesecake.png */; };
 		F6516D3413FF7D690022E6CE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6516D3313FF7D690022E6CE /* QuartzCore.framework */; };
+		F65EF13C1404631F00D80FFC /* segmented-divider@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F65EF13B1404631F00D80FFC /* segmented-divider@2x.png */; };
 		F69F5B3314032CEE000EF070 /* base.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F69F5B3214032CEE000EF070 /* base.xcconfig */; };
 		F69F5B3514033951000EF070 /* RecipesV1toV2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = F69F5B3414033951000EF070 /* RecipesV1toV2.xcmappingmodel */; };
 		F69F5B38140339B9000EF070 /* SWPExtractImagesMigrationPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = F69F5B37140339B9000EF070 /* SWPExtractImagesMigrationPolicy.m */; };
@@ -117,6 +118,7 @@
 		F6334B05140221470012ADD5 /* ThreeBerryCobbler.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ThreeBerryCobbler.png; path = RecipeData/images/ThreeBerryCobbler.png; sourceTree = "<group>"; };
 		F6334B0D140228570012ADD5 /* Cheesecake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Cheesecake.png; path = RecipeData/images/Cheesecake.png; sourceTree = "<group>"; };
 		F6516D3313FF7D690022E6CE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F65EF13B1404631F00D80FFC /* segmented-divider@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "segmented-divider@2x.png"; path = "images/segmented-divider@2x.png"; sourceTree = "<group>"; };
 		F66BD84A1401D03200A2F113 /* Recipesv2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Recipesv2.xcdatamodel; sourceTree = "<group>"; };
 		F66BD84B1401D03200A2F113 /* Recipes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Recipes.xcdatamodel; sourceTree = "<group>"; };
 		F69F5B3214032CEE000EF070 /* base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = base.xcconfig; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 		28EDDE630E043E7F0085763B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F65EF13B1404631F00D80FFC /* segmented-divider@2x.png */,
 				F69F5B401403C97F000EF070 /* segmented-stretch@2x.png */,
 				F69F5B3E14036565000EF070 /* navigation-background@2x.png */,
 				539FF19511D41CB200EFF5ED /* Icon-72.png */,
@@ -414,6 +417,7 @@
 				F69F5B3314032CEE000EF070 /* base.xcconfig in Resources */,
 				F69F5B3F14036565000EF070 /* navigation-background@2x.png in Resources */,
 				F69F5B411403C97F000EF070 /* segmented-stretch@2x.png in Resources */,
+				F65EF13C1404631F00D80FFC /* segmented-divider@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
