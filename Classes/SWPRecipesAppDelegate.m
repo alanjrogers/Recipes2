@@ -58,14 +58,13 @@ void HandleCoreDataError(const char* function, const char* file, const int line,
 	}
 }
 
-- (UISegmentedControl*)segmentedControlWithSelectedIndex:(NSUInteger)selectedSegmentIndex {
+- (SWPTexturedSegmentedControl*)segmentedControlWithSelectedIndex:(NSUInteger)selectedSegmentIndex {
 	
 	SWPTexturedSegmentedControl* segmentedControl = [[SWPTexturedSegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Recipes", @"Unit Converter", nil]];
 	
 	[segmentedControl setSelectedSegmentIndex:selectedSegmentIndex];
 	[segmentedControl setWidth:145. forSegmentAtIndex:0];
 	[segmentedControl setWidth:145. forSegmentAtIndex:1];
-	[segmentedControl setBackgroundColor:[UIColor clearColor]];
 	[segmentedControl addTarget:self action:@selector(segmentedControlValueChanged:) forControlEvents:UIControlEventValueChanged];
 	
 	return [segmentedControl autorelease];

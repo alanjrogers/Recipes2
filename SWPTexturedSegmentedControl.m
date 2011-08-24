@@ -66,6 +66,8 @@
 
 - (id)initWithItems:(NSArray *)items {
 	if (self = [super init]) {
+		[self setBackgroundColor:[UIColor clearColor]];
+		[self setOpaque:NO];
 		_selectedSegmentIndex = UISegmentedControlNoSegment;
 		NSMutableArray* tempArray = [NSMutableArray arrayWithCapacity:[items count]];
 		

@@ -12,4 +12,6 @@
 
 @property (nonatomic, retain) UIImage* backgroundImage;
 
+- (UIBarButtonItem*)backButtonItemWithTitle:(NSString*)title target:(id)target action:(SEL)action;
+
 @end

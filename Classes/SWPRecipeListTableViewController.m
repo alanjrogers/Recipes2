@@ -11,6 +11,8 @@
 #import "SWPRecipe.h"
 #import "SWPRecipeTableViewCell.h"
 #import "SWPRecipesAppDelegate.h"
+#import "SWPTexturedSegmentedControl.h"
+#import "SWPTexturedNavigationBar.h"
 
 @implementation SWPRecipeListTableViewController
 
@@ -33,10 +35,9 @@
     // Configure the navigation bar
     self.title = @"Recipes";
 	
-	UISegmentedControl* segmentedControl = [((SWPRecipesAppDelegate*)[[UIApplication sharedApplication] delegate]) segmentedControlWithSelectedIndex:0];
-	
+	SWPTexturedSegmentedControl* segmentedControl = [((SWPRecipesAppDelegate*)[[UIApplication sharedApplication] delegate]) segmentedControlWithSelectedIndex:0];
 	self.navigationItem.titleView = segmentedControl;
-	
+		
     // Set the table view's row height
     self.tableView.rowHeight = 44.;
 	
