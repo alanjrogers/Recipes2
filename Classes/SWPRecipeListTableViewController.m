@@ -36,16 +36,16 @@
     // Configure the navigation bar
     self.title = @"Recipes";
 	
-	SWPTexturedSegmentedControl* segmentedControl = [((SWPRecipesAppDelegate*)[[UIApplication sharedApplication] delegate]) segmentedControlWithSelectedIndex:0];
-	self.navigationItem.titleView = segmentedControl;
+	// configure the tableview
 	
-		
-    // configure the tableview
-    self.tableView.rowHeight = 184.;
+	self.tableView.rowHeight = 184.;
 	self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 	self.tableView.backgroundView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"granite-background"]] autorelease];
 	[self.tableView setIndicatorStyle:UIScrollViewIndicatorStyleWhite];
-		
+
+	SWPTexturedSegmentedControl* segmentedControl = [((SWPRecipesAppDelegate*)[[UIApplication sharedApplication] delegate]) segmentedControlWithSelectedIndex:0];
+	self.navigationItem.titleView = segmentedControl;
+	
 	NSError *error = nil;
 	if (![[self fetchedResultsController] performFetch:&error]) {
 		HandleCoreDataError(__PRETTY_FUNCTION__, __FILE__, __LINE__, error);

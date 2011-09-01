@@ -9,16 +9,9 @@
 #import "SWPRoundedImageView.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface SWPRoundedImageView ()
-
-@property (nonatomic, retain) CALayer* shapeLayer;
-
-@end
-
 @implementation SWPRoundedImageView
 
 @synthesize image = _image;
-@synthesize shapeLayer = _shapeLayer;
 
 - (void)_commonInit {
 	[self setOpaque:NO];
@@ -35,6 +28,7 @@
 	[shapeLayer setPath:[roundedPath CGPath]];
 	
 	[self.layer setMask:shapeLayer];
+	[self.layer setMasksToBounds:YES];
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
@@ -58,7 +52,6 @@
 }
 
 - (void)dealloc {
-	[_shapeLayer release], _shapeLayer = nil;
 	[_image release], _image = nil;
 	[super dealloc];
 }
@@ -69,7 +62,10 @@
 	}
 	_image = [image retain];
 	
-	[(CAShapeLayer*)self.layer setContents:((id)_image.CGImage)];
+	[CATransaction begin];
+	[CATransaction setDisableActions:YES];
+	[self.layer setContents:((id)_image.CGImage)];
+	[CATransaction commit];
 }
 
 
