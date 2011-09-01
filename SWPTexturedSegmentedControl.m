@@ -193,9 +193,7 @@
 			x += 1.;
 		}
 	}];
-	
-	// TODO: // Draw selection
-	
+		
 	CGColorRelease(shadowColor);
 }
 
