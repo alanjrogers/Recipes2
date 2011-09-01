@@ -13,7 +13,6 @@
 #import "SWPWeightConverterViewController.h"
 #import "SWPTemperatureConverterViewController.h"
 #import "SWPRecipesAppDelegate.h"
-#import "SWPTexturedSegmentedControl.h"
 
 @implementation SWPUnitConverterTableViewController
 
@@ -32,7 +31,7 @@
 	[super viewDidLoad];
 	self.title = @"Converter";
 
-	SWPTexturedSegmentedControl* segmentedControl = [((SWPRecipesAppDelegate*)[[UIApplication sharedApplication] delegate]) segmentedControlWithSelectedIndex:1];
+	UISegmentedControl* segmentedControl = [((SWPRecipesAppDelegate*)[[UIApplication sharedApplication] delegate]) segmentedControlWithSelectedIndex:1];
 	self.navigationItem.titleView = segmentedControl;
 }
 

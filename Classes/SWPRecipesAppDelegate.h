@@ -9,7 +9,6 @@
 
 @class SWPRecipeListTableViewController;
 @class SWPUnitConverterTableViewController;
-@class SWPTexturedSegmentedControl;
 
 @interface SWPRecipesAppDelegate : NSObject <UIApplicationDelegate> 
 
@@ -26,7 +25,7 @@
 - (NSString *)applicationDocumentsDirectory;
 
 // Segmented Control for switching between converter and Recipes.
-- (SWPTexturedSegmentedControl*)segmentedControlWithSelectedIndex:(NSUInteger)selectedSegmentIndex;
+- (UISegmentedControl*)segmentedControlWithSelectedIndex:(NSUInteger)selectedSegmentIndex;
 
 @end
 

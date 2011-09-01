@@ -11,13 +11,10 @@
 #import "SWPRecipe.h"
 #import "SWPRecipeTableViewCell.h"
 #import "SWPRecipesAppDelegate.h"
-#import "SWPTexturedSegmentedControl.h"
-#import "SWPTexturedNavigationBar.h"
 
 @implementation SWPRecipeListTableViewController
 
 @synthesize managedObjectContext = _managedObjectContext, fetchedResultsController = _fetchedResultsController;
-@synthesize recipeTableViewCell = _recipeTableViewCell;
 
 #pragma mark -
 #pragma mark Memory management
@@ -38,12 +35,10 @@
 	
 	// configure the tableview
 	
-	self.tableView.rowHeight = 184.;
-	self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-	self.tableView.backgroundView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"granite-background"]] autorelease];
-	[self.tableView setIndicatorStyle:UIScrollViewIndicatorStyleWhite];
-
-	SWPTexturedSegmentedControl* segmentedControl = [((SWPRecipesAppDelegate*)[[UIApplication sharedApplication] delegate]) segmentedControlWithSelectedIndex:0];
+	// Set the table view's row height
+    self.tableView.rowHeight = 44.;
+	
+	UISegmentedControl* segmentedControl = [((SWPRecipesAppDelegate*)[[UIApplication sharedApplication] delegate]) segmentedControlWithSelectedIndex:0];
 	self.navigationItem.titleView = segmentedControl;
 	
 	NSError *error = nil;
@@ -52,9 +47,7 @@
 	}		
 }
 
-- (void)viewDidUnload {
-	self.recipeTableViewCell = nil;
-	
+- (void)viewDidUnload {	
 	[super viewDidUnload];
 }
 
@@ -110,9 +103,8 @@
     
     SWPRecipeTableViewCell *recipeCell = (SWPRecipeTableViewCell *)[tableView dequeueReusableCellWithIdentifier:RecipeCellIdentifier];
     if (recipeCell == nil) {
-		[[NSBundle mainBundle] loadNibNamed:@"RecipeTableViewCell" owner:self options:nil];
-		recipeCell = [[self.recipeTableViewCell retain] autorelease];
-		self.recipeTableViewCell = nil;
+		recipeCell = [[[SWPRecipeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:RecipeCellIdentifier] autorelease];
+		recipeCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
 	[self configureCell:recipeCell atIndexPath:indexPath];

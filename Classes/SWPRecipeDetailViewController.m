@@ -13,7 +13,6 @@
 #import "SWPIngredient.h"
 
 #import "SWPInstructionsViewController.h"
-#import "SWPTexturedNavigationBar.h"
 #import "SWPRecipesAppDelegate.h"
 
 @implementation SWPRecipeDetailViewController
@@ -52,7 +51,6 @@
         [[NSBundle mainBundle] loadNibNamed:@"DetailHeaderView" owner:self options:nil];
         self.tableView.tableHeaderView = self.tableHeaderView;
     }
-	self.navigationItem.leftBarButtonItem = [(SWPTexturedNavigationBar*)self.navigationController.navigationBar backButtonItemWithTitle:@"Recipes"]; 
 }
 
 - (void)viewWillAppear:(BOOL)animated {

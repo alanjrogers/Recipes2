@@ -14,8 +14,6 @@
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
-@property (nonatomic, retain) IBOutlet SWPRecipeTableViewCell* recipeTableViewCell;
-
 - (void)showRecipe:(SWPRecipe *)recipe animated:(BOOL)animated;
 - (void)configureCell:(SWPRecipeTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 
