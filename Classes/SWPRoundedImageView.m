@@ -7,14 +7,34 @@
 //
 
 #import "SWPRoundedImageView.h"
+#import <QuartzCore/QuartzCore.h>
+
+@interface SWPRoundedImageView ()
+
+@property (nonatomic, retain) CALayer* shapeLayer;
+
+@end
 
 @implementation SWPRoundedImageView
 
 @synthesize image = _image;
+@synthesize shapeLayer = _shapeLayer;
 
 - (void)_commonInit {
 	[self setOpaque:NO];
-	[self setBackgroundColor:[UIColor clearColor]];
+	[self.layer setContentsGravity:kCAGravityResizeAspectFill];
+	
+	CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+	[shapeLayer setFillColor:[[UIColor blackColor] CGColor]];
+	
+	UIBezierPath* roundedPath = [UIBezierPath bezierPathWithRoundedRect:[self bounds] 
+													  byRoundingCorners:UIRectCornerTopLeft|UIRectCornerTopRight
+															cornerRadii:CGSizeMake(5., 5.)];
+	
+	
+	[shapeLayer setPath:[roundedPath CGPath]];
+	
+	[self.layer setMask:shapeLayer];
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
@@ -38,6 +58,7 @@
 }
 
 - (void)dealloc {
+	[_shapeLayer release], _shapeLayer = nil;
 	[_image release], _image = nil;
 	[super dealloc];
 }
@@ -47,23 +68,8 @@
 		return;
 	}
 	_image = [image retain];
-	[self setNeedsDisplay];
-}
-
-- (void)drawRect:(CGRect)rect {
-	if (self.image == nil) {
-		[super drawRect:rect];
-	}
 	
-	UIBezierPath* roundedPath = [UIBezierPath bezierPathWithRoundedRect:rect 
-													  byRoundingCorners:UIRectCornerTopLeft|UIRectCornerTopRight
-															cornerRadii:CGSizeMake(5., 5.)];
-	
-	CGContextAddPath(UIGraphicsGetCurrentContext(), [roundedPath CGPath]);
-	CGContextClip(UIGraphicsGetCurrentContext());
-	
-	[self.image drawInRect:rect];
-
+	[(CAShapeLayer*)self.layer setContents:((id)_image.CGImage)];
 }
 
 
