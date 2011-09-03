@@ -46,6 +46,9 @@
 	SWPTexturedSegmentedControl* segmentedControl = [((SWPRecipesAppDelegate*)[[UIApplication sharedApplication] delegate]) segmentedControlWithSelectedIndex:0];
 	self.navigationItem.titleView = segmentedControl;
 	
+	// Add a shadow UIImageView 
+
+	
 	NSError *error = nil;
 	if (![[self fetchedResultsController] performFetch:&error]) {
 		HandleCoreDataError(__PRETTY_FUNCTION__, __FILE__, __LINE__, error);

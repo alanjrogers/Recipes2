@@ -10,8 +10,6 @@
 
 @interface SWPTexturedNavigationBar : UINavigationBar
 
-@property (nonatomic, retain) UIImage* backgroundImage;
-
 - (UIBarButtonItem*)backButtonItemWithTitle:(NSString*)title;
 
 @end

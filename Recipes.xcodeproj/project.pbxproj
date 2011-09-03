@@ -29,7 +29,6 @@
 		28FCBF0C0DE6A6C6007A15C7 /* SWPRecipeListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FCBF0B0DE6A6C6007A15C7 /* SWPRecipeListTableViewController.m */; };
 		539FF1A011D41CB200EFF5ED /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 539FF19911D41CB200EFF5ED /* Icon.png */; };
 		539FF1A111D41CB200EFF5ED /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 539FF19A11D41CB200EFF5ED /* Icon@2x.png */; };
-		539FF1A211D41CB200EFF5ED /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 539FF19B11D41CB200EFF5ED /* iTunesArtwork */; };
 		53CE978611C6E99200594C94 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53CE978411C6E99200594C94 /* MainWindow.xib */; };
 		53CE978911C6E9A200594C94 /* DetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53CE978711C6E9A200594C94 /* DetailHeaderView.xib */; };
 		53CE978F11C6E9DC00594C94 /* InstructionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53CE978D11C6E9DC00594C94 /* InstructionsView.xib */; };
@@ -44,6 +43,8 @@
 		F6334B0C140221470012ADD5 /* ThreeBerryCobbler.png in Resources */ = {isa = PBXBuildFile; fileRef = F6334B05140221470012ADD5 /* ThreeBerryCobbler.png */; };
 		F6334B0E140228570012ADD5 /* Cheesecake.png in Resources */ = {isa = PBXBuildFile; fileRef = F6334B0D140228570012ADD5 /* Cheesecake.png */; };
 		F647E707140FAE440024397E /* RecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F647E709140FAE440024397E /* RecipeTableViewCell.xib */; };
+		F64FD1371411E9EC009F7037 /* navigation-shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = F64FD1351411E9EC009F7037 /* navigation-shadow.png */; };
+		F64FD1381411E9EC009F7037 /* navigation-shadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F64FD1361411E9EC009F7037 /* navigation-shadow@2x.png */; };
 		F6516D3413FF7D690022E6CE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6516D3313FF7D690022E6CE /* QuartzCore.framework */; };
 		F65EF13C1404631F00D80FFC /* segmented-divider@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F65EF13B1404631F00D80FFC /* segmented-divider@2x.png */; };
 		F65EF13F14049F1700D80FFC /* backbutton-stretch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F65EF13E14049F1700D80FFC /* backbutton-stretch@2x.png */; };
@@ -51,9 +52,15 @@
 		F65EF1461404C34500D80FFC /* recipe-cell-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F65EF1441404C1D200D80FFC /* recipe-cell-background@2x.png */; };
 		F65EF1491404C3DB00D80FFC /* recipe-cell-background.png in Resources */ = {isa = PBXBuildFile; fileRef = F65EF1481404C3DB00D80FFC /* recipe-cell-background.png */; };
 		F65EF14B1404C7D100D80FFC /* granite-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F65EF14A1404C7D100D80FFC /* granite-background@2x.png */; };
-		F65EF14E1404CE0E00D80FFC /* recipe-cell-background-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F65EF14C1404CE0E00D80FFC /* recipe-cell-background-selected.png */; };
-		F65EF14F1404CE0E00D80FFC /* recipe-cell-background-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F65EF14D1404CE0E00D80FFC /* recipe-cell-background-selected@2x.png */; };
 		F65EF1521404D37F00D80FFC /* SWPRoundedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F65EF1511404D37F00D80FFC /* SWPRoundedImageView.m */; };
+		F695C6E41411E27E00F4A413 /* segmented-divider.png in Resources */ = {isa = PBXBuildFile; fileRef = F695C6DD1411E27E00F4A413 /* segmented-divider.png */; };
+		F695C6E51411E27E00F4A413 /* segmented-stretch.png in Resources */ = {isa = PBXBuildFile; fileRef = F695C6DE1411E27E00F4A413 /* segmented-stretch.png */; };
+		F695C6E61411E27E00F4A413 /* granite-background.png in Resources */ = {isa = PBXBuildFile; fileRef = F695C6DF1411E27E00F4A413 /* granite-background.png */; };
+		F695C6E71411E27E00F4A413 /* backbutton-stretch-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = F695C6E01411E27E00F4A413 /* backbutton-stretch-highlighted.png */; };
+		F695C6E81411E27E00F4A413 /* backbutton-stretch.png in Resources */ = {isa = PBXBuildFile; fileRef = F695C6E11411E27E00F4A413 /* backbutton-stretch.png */; };
+		F695C6E91411E27E00F4A413 /* recipe-cell-background-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = F695C6E21411E27E00F4A413 /* recipe-cell-background-highlighted.png */; };
+		F695C6EA1411E27E00F4A413 /* recipe-cell-background-highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F695C6E31411E27E00F4A413 /* recipe-cell-background-highlighted@2x.png */; };
+		F695C6EC1411E44D00F4A413 /* navigation-background.png in Resources */ = {isa = PBXBuildFile; fileRef = F695C6EB1411E44D00F4A413 /* navigation-background.png */; };
 		F69F5B3314032CEE000EF070 /* base.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F69F5B3214032CEE000EF070 /* base.xcconfig */; };
 		F69F5B3514033951000EF070 /* RecipesV1toV2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = F69F5B3414033951000EF070 /* RecipesV1toV2.xcmappingmodel */; };
 		F69F5B38140339B9000EF070 /* SWPExtractImagesMigrationPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = F69F5B37140339B9000EF070 /* SWPExtractImagesMigrationPolicy.m */; };
@@ -103,7 +110,6 @@
 		32CA4F630368D1EE00C91783 /* Recipes_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipes_Prefix.pch; sourceTree = "<group>"; };
 		539FF19911D41CB200EFF5ED /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = images/Icon.png; sourceTree = "<group>"; };
 		539FF19A11D41CB200EFF5ED /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "images/Icon@2x.png"; sourceTree = "<group>"; };
-		539FF19B11D41CB200EFF5ED /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = images/iTunesArtwork; sourceTree = "<group>"; };
 		53CE978511C6E99200594C94 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		53CE978811C6E9A200594C94 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailHeaderView.xib; sourceTree = SOURCE_ROOT; };
 		53CE978E11C6E9DC00594C94 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/InstructionsView.xib; sourceTree = SOURCE_ROOT; };
@@ -119,6 +125,8 @@
 		F6334B05140221470012ADD5 /* ThreeBerryCobbler.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ThreeBerryCobbler.png; path = RecipeData/images/ThreeBerryCobbler.png; sourceTree = "<group>"; };
 		F6334B0D140228570012ADD5 /* Cheesecake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Cheesecake.png; path = RecipeData/images/Cheesecake.png; sourceTree = "<group>"; };
 		F647E708140FAE440024397E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RecipeTableViewCell.xib; sourceTree = "<group>"; };
+		F64FD1351411E9EC009F7037 /* navigation-shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigation-shadow.png"; path = "images/navigation-shadow.png"; sourceTree = "<group>"; };
+		F64FD1361411E9EC009F7037 /* navigation-shadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigation-shadow@2x.png"; path = "images/navigation-shadow@2x.png"; sourceTree = "<group>"; };
 		F6516D3313FF7D690022E6CE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F65EF13B1404631F00D80FFC /* segmented-divider@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "segmented-divider@2x.png"; path = "images/segmented-divider@2x.png"; sourceTree = "<group>"; };
 		F65EF13E14049F1700D80FFC /* backbutton-stretch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backbutton-stretch@2x.png"; path = "images/backbutton-stretch@2x.png"; sourceTree = "<group>"; };
@@ -126,12 +134,18 @@
 		F65EF1441404C1D200D80FFC /* recipe-cell-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipe-cell-background@2x.png"; path = "images/recipe-cell-background@2x.png"; sourceTree = "<group>"; };
 		F65EF1481404C3DB00D80FFC /* recipe-cell-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipe-cell-background.png"; path = "images/recipe-cell-background.png"; sourceTree = "<group>"; };
 		F65EF14A1404C7D100D80FFC /* granite-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "granite-background@2x.png"; path = "images/granite-background@2x.png"; sourceTree = "<group>"; };
-		F65EF14C1404CE0E00D80FFC /* recipe-cell-background-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipe-cell-background-selected.png"; path = "images/recipe-cell-background-selected.png"; sourceTree = "<group>"; };
-		F65EF14D1404CE0E00D80FFC /* recipe-cell-background-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipe-cell-background-selected@2x.png"; path = "images/recipe-cell-background-selected@2x.png"; sourceTree = "<group>"; };
 		F65EF1501404D37F00D80FFC /* SWPRoundedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWPRoundedImageView.h; path = Classes/SWPRoundedImageView.h; sourceTree = "<group>"; };
 		F65EF1511404D37F00D80FFC /* SWPRoundedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWPRoundedImageView.m; path = Classes/SWPRoundedImageView.m; sourceTree = "<group>"; };
 		F66BD84A1401D03200A2F113 /* Recipesv2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Recipesv2.xcdatamodel; sourceTree = "<group>"; };
 		F66BD84B1401D03200A2F113 /* Recipes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Recipes.xcdatamodel; sourceTree = "<group>"; };
+		F695C6DD1411E27E00F4A413 /* segmented-divider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "segmented-divider.png"; path = "images/segmented-divider.png"; sourceTree = "<group>"; };
+		F695C6DE1411E27E00F4A413 /* segmented-stretch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "segmented-stretch.png"; path = "images/segmented-stretch.png"; sourceTree = "<group>"; };
+		F695C6DF1411E27E00F4A413 /* granite-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "granite-background.png"; path = "images/granite-background.png"; sourceTree = "<group>"; };
+		F695C6E01411E27E00F4A413 /* backbutton-stretch-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backbutton-stretch-highlighted.png"; path = "images/backbutton-stretch-highlighted.png"; sourceTree = "<group>"; };
+		F695C6E11411E27E00F4A413 /* backbutton-stretch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backbutton-stretch.png"; path = "images/backbutton-stretch.png"; sourceTree = "<group>"; };
+		F695C6E21411E27E00F4A413 /* recipe-cell-background-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipe-cell-background-highlighted.png"; path = "images/recipe-cell-background-highlighted.png"; sourceTree = "<group>"; };
+		F695C6E31411E27E00F4A413 /* recipe-cell-background-highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipe-cell-background-highlighted@2x.png"; path = "images/recipe-cell-background-highlighted@2x.png"; sourceTree = "<group>"; };
+		F695C6EB1411E44D00F4A413 /* navigation-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigation-background.png"; path = "images/navigation-background.png"; sourceTree = "<group>"; };
 		F69F5B3214032CEE000EF070 /* base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = base.xcconfig; sourceTree = "<group>"; };
 		F69F5B3414033951000EF070 /* RecipesV1toV2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = RecipesV1toV2.xcmappingmodel; sourceTree = "<group>"; };
 		F69F5B36140339B9000EF070 /* SWPExtractImagesMigrationPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWPExtractImagesMigrationPolicy.h; path = Classes/SWPExtractImagesMigrationPolicy.h; sourceTree = "<group>"; };
@@ -216,8 +230,16 @@
 		28EDDE630E043E7F0085763B /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				F65EF14C1404CE0E00D80FFC /* recipe-cell-background-selected.png */,
-				F65EF14D1404CE0E00D80FFC /* recipe-cell-background-selected@2x.png */,
+				F64FD1351411E9EC009F7037 /* navigation-shadow.png */,
+				F64FD1361411E9EC009F7037 /* navigation-shadow@2x.png */,
+				F695C6EB1411E44D00F4A413 /* navigation-background.png */,
+				F695C6DD1411E27E00F4A413 /* segmented-divider.png */,
+				F695C6DE1411E27E00F4A413 /* segmented-stretch.png */,
+				F695C6DF1411E27E00F4A413 /* granite-background.png */,
+				F695C6E01411E27E00F4A413 /* backbutton-stretch-highlighted.png */,
+				F695C6E11411E27E00F4A413 /* backbutton-stretch.png */,
+				F695C6E21411E27E00F4A413 /* recipe-cell-background-highlighted.png */,
+				F695C6E31411E27E00F4A413 /* recipe-cell-background-highlighted@2x.png */,
 				F65EF14A1404C7D100D80FFC /* granite-background@2x.png */,
 				F65EF1481404C3DB00D80FFC /* recipe-cell-background.png */,
 				F65EF1441404C1D200D80FFC /* recipe-cell-background@2x.png */,
@@ -228,7 +250,6 @@
 				F69F5B3E14036565000EF070 /* navigation-background@2x.png */,
 				539FF19911D41CB200EFF5ED /* Icon.png */,
 				539FF19A11D41CB200EFF5ED /* Icon@2x.png */,
-				539FF19B11D41CB200EFF5ED /* iTunesArtwork */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -419,7 +440,6 @@
 				53CE979B11C6EA0600594C94 /* TemperatureCell.xib in Resources */,
 				539FF1A011D41CB200EFF5ED /* Icon.png in Resources */,
 				539FF1A111D41CB200EFF5ED /* Icon@2x.png in Resources */,
-				539FF1A211D41CB200EFF5ED /* iTunesArtwork in Resources */,
 				F6334B06140221470012ADD5 /* ChocolateCake.png in Resources */,
 				F6334B07140221470012ADD5 /* CrepesSuzette.png in Resources */,
 				F6334B08140221470012ADD5 /* GaufresdeLiege.png in Resources */,
@@ -437,8 +457,16 @@
 				F647E707140FAE440024397E /* RecipeTableViewCell.xib in Resources */,
 				F65EF1491404C3DB00D80FFC /* recipe-cell-background.png in Resources */,
 				F65EF14B1404C7D100D80FFC /* granite-background@2x.png in Resources */,
-				F65EF14E1404CE0E00D80FFC /* recipe-cell-background-selected.png in Resources */,
-				F65EF14F1404CE0E00D80FFC /* recipe-cell-background-selected@2x.png in Resources */,
+				F695C6E41411E27E00F4A413 /* segmented-divider.png in Resources */,
+				F695C6E51411E27E00F4A413 /* segmented-stretch.png in Resources */,
+				F695C6E61411E27E00F4A413 /* granite-background.png in Resources */,
+				F695C6E71411E27E00F4A413 /* backbutton-stretch-highlighted.png in Resources */,
+				F695C6E81411E27E00F4A413 /* backbutton-stretch.png in Resources */,
+				F695C6E91411E27E00F4A413 /* recipe-cell-background-highlighted.png in Resources */,
+				F695C6EA1411E27E00F4A413 /* recipe-cell-background-highlighted@2x.png in Resources */,
+				F695C6EC1411E44D00F4A413 /* navigation-background.png in Resources */,
+				F64FD1371411E9EC009F7037 /* navigation-shadow.png in Resources */,
+				F64FD1381411E9EC009F7037 /* navigation-shadow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

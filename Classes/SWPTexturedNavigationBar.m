@@ -9,18 +9,30 @@
 #import "SWPTexturedNavigationBar.h"
 #import "SWPRecipesAppDelegate.h"
 
-#define SWP_BACK_BUTTON_HEIGHT 31.
+#define SWP_BACK_BUTTON_HEIGHT 32.
 #define SWP_BACK_BUTTON_MAX_WIDTH 160.
 
-
-@implementation SWPTexturedNavigationBar
-
-@synthesize backgroundImage = _backgroundImage;
+@implementation SWPTexturedNavigationBar {
+	UIImage* _backgroundImage;
+}
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
 	self = [super initWithCoder:aDecoder];
 	if (self != nil) {
 		_backgroundImage = [[UIImage imageNamed:@"navigation-background"] retain];
+		
+		self.clipsToBounds = NO;
+		
+		UIImageView* shadowView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"navigation-shadow"]];
+		
+		CGRect shadowFrame = [self bounds];
+		shadowFrame.origin.y = CGRectGetHeight(shadowFrame);
+		shadowFrame.size.height = 5.;
+		[shadowView setFrame:shadowFrame];
+		[shadowView setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin];
+		[self addSubview:shadowView];
+				
+		[shadowView release];
 	}
 	return self;
 }
@@ -68,11 +80,7 @@
 }
 
 - (void)drawRect:(CGRect)rect {
-	if (self.backgroundImage != nil) {
-		[self.backgroundImage drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
-	} else {
-		[super drawRect:rect];
-	}
+	[_backgroundImage drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
 }
 
 @end
