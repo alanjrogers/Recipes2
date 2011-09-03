@@ -20,6 +20,8 @@
 	CAShapeLayer *shapeLayer = [CAShapeLayer layer];
 	[shapeLayer setFillColor:[[UIColor blackColor] CGColor]];
 	
+	// take one point of the bottom of the shape layer to draw in the bottom line
+	
 	UIBezierPath* roundedPath = [UIBezierPath bezierPathWithRoundedRect:[self bounds] 
 													  byRoundingCorners:UIRectCornerTopLeft|UIRectCornerTopRight
 															cornerRadii:CGSizeMake(5., 5.)];
@@ -29,6 +31,18 @@
 	
 	[self.layer setMask:shapeLayer];
 	[self.layer setMasksToBounds:YES];
+	
+	// Draw the line at the bottom
+	CALayer* lineLayer = [CALayer layer];
+	CGRect lineRect = [self bounds];
+	
+	lineRect.origin.y = CGRectGetMaxY(lineRect) - 0.5;
+	lineRect.size.height = 1.;
+	
+	[lineLayer setOpaque:NO];
+	[lineLayer setFrame:lineRect];
+	[lineLayer setBackgroundColor:[UIColor colorWithWhite:0.0 alpha:.2].CGColor];
+	[self.layer addSublayer:lineLayer];
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
