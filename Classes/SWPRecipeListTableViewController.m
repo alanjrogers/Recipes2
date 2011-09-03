@@ -13,6 +13,7 @@
 #import "SWPRecipesAppDelegate.h"
 
 @implementation SWPRecipeListTableViewController
+@synthesize recipeCell = _recipeCell;
 
 @synthesize managedObjectContext = _managedObjectContext, fetchedResultsController = _fetchedResultsController;
 
@@ -22,6 +23,7 @@
 - (void)dealloc {
 	[_fetchedResultsController release], _fetchedResultsController = nil;
 	[_managedObjectContext release], _managedObjectContext = nil;
+	[_recipeCell release];
     [super dealloc];
 }
 
@@ -35,11 +37,16 @@
 	
 	// configure the tableview
 	
+	// give it a backgroundView
+	UIImageView* backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"granite-background"]];
+	self.tableView.backgroundView = backgroundImageView;
+	[backgroundImageView release];
+	
 	// Set the table view's row height
-    self.tableView.rowHeight = 44.;
-	
-	// Set the tableView's backgroundView
-	
+    self.tableView.rowHeight = 184.;
+	self.tableView.indicatorStyle = UIScrollViewIndicatorStyleWhite;
+	self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+		
 	UISegmentedControl* segmentedControl = [((SWPRecipesAppDelegate*)[[UIApplication sharedApplication] delegate]) segmentedControlWithSelectedIndex:0];
 	self.navigationItem.titleView = segmentedControl;
 	
@@ -50,6 +57,7 @@
 }
 
 - (void)viewDidUnload {	
+	[self setRecipeCell:nil];
 	[super viewDidUnload];
 }
 
@@ -105,8 +113,12 @@
     
     SWPRecipeTableViewCell *recipeCell = (SWPRecipeTableViewCell *)[tableView dequeueReusableCellWithIdentifier:RecipeCellIdentifier];
     if (recipeCell == nil) {
-		recipeCell = [[[SWPRecipeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:RecipeCellIdentifier] autorelease];
-		recipeCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+		[[NSBundle mainBundle] loadNibNamed:@"RecipeCell" owner:self options:nil];
+		// self.recipecell now points to a new instance of SWPRecipeTableViewCell
+		
+		recipeCell = self.recipeCell;
+		self.recipeCell = nil;
+		
     }
     
 	[self configureCell:recipeCell atIndexPath:indexPath];

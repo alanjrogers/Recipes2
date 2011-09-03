@@ -7,11 +7,13 @@
  */
 
 @class SWPRecipe;
+@class SWPTopRoundedImageView;
 
-@interface SWPRecipeTableViewCell : UITableViewCell 
+@interface SWPRecipeTableViewCell : UITableViewCell
 
 @property (nonatomic, retain) SWPRecipe *recipe;
 
+@property (nonatomic, retain) IBOutlet SWPTopRoundedImageView *recipeImageView;
 @property (nonatomic, retain) IBOutlet UILabel *nameLabel;
 @property (nonatomic, retain) IBOutlet UILabel *overviewLabel;
 @property (nonatomic, retain) IBOutlet UILabel *prepTimeLabel;

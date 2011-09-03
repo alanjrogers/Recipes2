@@ -11,8 +11,10 @@
 
 @interface SWPRecipeListTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
+
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, retain) IBOutlet SWPRecipeTableViewCell *recipeCell;
 
 - (void)showRecipe:(SWPRecipe *)recipe animated:(BOOL)animated;
 - (void)configureCell:(SWPRecipeTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
