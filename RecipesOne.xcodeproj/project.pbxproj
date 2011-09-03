@@ -86,8 +86,8 @@
 		28FCBF0B0DE6A6C6007A15C7 /* SWPRecipeListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWPRecipeListTableViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Recipes_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipes_Prefix.pch; sourceTree = "<group>"; };
-		539FF19911D41CB200EFF5ED /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = images/Icon.png; sourceTree = "<group>"; };
-		539FF19A11D41CB200EFF5ED /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "images/Icon@2x.png"; sourceTree = "<group>"; };
+		539FF19911D41CB200EFF5ED /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		539FF19A11D41CB200EFF5ED /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		53CE978511C6E99200594C94 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		53CE978811C6E9A200594C94 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailHeaderView.xib; sourceTree = SOURCE_ROOT; };
 		53CE978E11C6E9DC00594C94 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/InstructionsView.xib; sourceTree = SOURCE_ROOT; };
@@ -187,6 +187,7 @@
 				539FF19A11D41CB200EFF5ED /* Icon@2x.png */,
 			);
 			name = Images;
+			path = images;
 			sourceTree = "<group>";
 		};
 		28EDDE6E0E043EF10085763B /* Application Resources */ = {
@@ -333,7 +334,7 @@
 			attributes = {
 				LastUpgradeCheck = 0420;
 			};
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Recipes" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "RecipesOne" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -535,7 +536,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Recipes" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "RecipesOne" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,

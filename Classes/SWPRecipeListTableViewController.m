@@ -38,6 +38,8 @@
 	// Set the table view's row height
     self.tableView.rowHeight = 44.;
 	
+	// Set the tableView's backgroundView
+	
 	UISegmentedControl* segmentedControl = [((SWPRecipesAppDelegate*)[[UIApplication sharedApplication] delegate]) segmentedControlWithSelectedIndex:0];
 	self.navigationItem.titleView = segmentedControl;
 	
