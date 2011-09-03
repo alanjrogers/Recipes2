@@ -57,13 +57,12 @@
 
 - (void)viewDidUnload {
 	self.recipeTableViewCell = nil;
-	
 	[super viewDidUnload];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-	[((UISegmentedControl*)self.navigationItem.titleView) setSelectedSegmentIndex:0];
 	[super viewWillAppear:animated];
+	[((UISegmentedControl*)self.navigationItem.titleView) setSelectedSegmentIndex:0];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

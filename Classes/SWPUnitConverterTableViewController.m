@@ -36,12 +36,10 @@
 	self.navigationItem.titleView = segmentedControl;
 }
 
-// TODO: Figure out how to fix this :P
 - (void)viewWillAppear:(BOOL)animated {
-	
+	[super viewWillAppear:animated];
 	[((UISegmentedControl*)self.navigationItem.titleView) setSelectedSegmentIndex:1];
 	
-	[super viewWillAppear:animated];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
