@@ -7,9 +7,13 @@ Version 2.0
 
 This is a modified version of the iPhoneRecipes sample from Apple to be used in a Workshop at Swipe Conference.
 
-- Replaced Tab bar with a segmented control.
-- Changed content with improved images.
-- Removed editing and adding functionality.
+- Replaced Tab bar with a segmented control in a Navigation Bar.
+- Changed content and added better recipe images.
+- Removed editing and add Recipe functionality.
+
+Designs: (in the /Designs directory).
+- Implemented Listing Screen design.
+- Added Textured Navigation bar and segmented control and back button.
 
 ================================================================================
 BUILD REQUIREMENTS:
@@ -21,20 +25,22 @@ RUNTIME REQUIREMENTS:
 
 iPhone OS 4.3 or later.
 
-================================================================================
-
-
-
 ===========================================================================
-CHANGES FROM PREVIOUS VERSIONS:]
+CHANGES FROM PREVIOUS VERSIONS:
 
-Version 2.0 (by Alan Rogers
+Version 2.0 (by Alan Rogers)
 - Deployment target set to iPhone OS 4.3.
 - Removed Editing/Adding/Deleting Recipe functionality.
 - Prefixed all classes with SWP.
 - Updated Core Data model to use bundled images.
 - Updated recipes and images.
 - Replaced Tab bar navigation with a navigation bar segmented control.
+
+===========================================================================
+
+APPLE VERSIONS BELOW HERE
+
+===========================================================================
 
 Version 1.4
 - Deployment target set to iPhone OS 3.2.
