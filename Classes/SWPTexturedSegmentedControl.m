@@ -177,6 +177,7 @@
 																	  cornerRadii:CGSizeMake(5., 5.)];
 			[selectionPath fillWithBlendMode:kCGBlendModeNormal alpha:0.3];
 		}
+		
 		UIGraphicsPushContext(UIGraphicsGetCurrentContext());
 		
 		CGContextSetShadowWithColor(UIGraphicsGetCurrentContext(), CGSizeMake(0, -1.), 0, shadowColor);
@@ -185,7 +186,7 @@
 		[obj.title drawInRect:titleRect withFont:[UIFont boldSystemFontOfSize:[UIFont smallSystemFontSize]] lineBreakMode:UILineBreakModeClip alignment:UITextAlignmentCenter];
 		
 		UIGraphicsPopContext();
-
+		
 		x += obj.size.width;
 		// Draw separators
 		if (idx < (itemCount - 1)) {

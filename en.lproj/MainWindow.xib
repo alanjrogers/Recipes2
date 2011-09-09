@@ -2,10 +2,10 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">512</int>
-		<string key="IBDocument.SystemVersion">11B26</string>
+		<string key="IBDocument.SystemVersion">11C48</string>
 		<string key="IBDocument.InterfaceBuilderVersion">1617</string>
-		<string key="IBDocument.AppKitVersion">1138</string>
-		<string key="IBDocument.HIToolboxVersion">566.00</string>
+		<string key="IBDocument.AppKitVersion">1138.18</string>
+		<string key="IBDocument.HIToolboxVersion">567.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			<string key="NS.object.0">534</string>
@@ -123,7 +123,6 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<object class="IBUIViewController" id="993222738">
 						<object class="IBUINavigationItem" key="IBUINavigationItem" id="572417173">
-							<reference key="IBUINavigationBar"/>
 							<string key="IBUITitle"/>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
@@ -349,7 +348,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">88</int>
+			<int key="maxID">89</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -357,9 +356,74 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">SWPRecipeListTableViewController</string>
 					<string key="superclassName">UITableViewController</string>
+					<object class="NSMutableDictionary" key="outlets">
+						<string key="NS.key.0">recipeTableViewCell</string>
+						<string key="NS.object.0">SWPRecipeTableViewCell</string>
+					</object>
+					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<string key="NS.key.0">recipeTableViewCell</string>
+						<object class="IBToOneOutletInfo" key="NS.object.0">
+							<string key="name">recipeTableViewCell</string>
+							<string key="candidateClassName">SWPRecipeTableViewCell</string>
+						</object>
+					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/SWPRecipeListTableViewController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">SWPRecipeTableViewCell</string>
+					<string key="superclassName">UITableViewCell</string>
+					<object class="NSMutableDictionary" key="outlets">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>nameLabel</string>
+							<string>overviewLabel</string>
+							<string>prepTimeLabel</string>
+							<string>recipeImageView</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>UILabel</string>
+							<string>UILabel</string>
+							<string>UILabel</string>
+							<string>SWPRoundedImageView</string>
+						</object>
+					</object>
+					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>nameLabel</string>
+							<string>overviewLabel</string>
+							<string>prepTimeLabel</string>
+							<string>recipeImageView</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBToOneOutletInfo">
+								<string key="name">nameLabel</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">overviewLabel</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">prepTimeLabel</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">recipeImageView</string>
+								<string key="candidateClassName">SWPRoundedImageView</string>
+							</object>
+						</object>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/SWPRecipeTableViewCell.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -414,6 +478,14 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/SWPRecipesAppDelegate.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">SWPRoundedImageView</string>
+					<string key="superclassName">UIView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/SWPRoundedImageView.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
