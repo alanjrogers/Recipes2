@@ -34,7 +34,7 @@ Version 2.0 (by Alan Rogers)
 - Prefixed all classes with SWP.
 - Updated Core Data model to use bundled images.
 - Updated recipes and images.
-- Replaced Tab bar navigation with a navigation bar segmented control.
+- Replaced Tab bar navigation with a navigation bar and segmented control.
 
 ===========================================================================
 
